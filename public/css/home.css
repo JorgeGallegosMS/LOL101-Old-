@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+:root {
+    font-family: 'Lato';
+}
+
 * {
     box-sizing: border-box;
 }
@@ -31,12 +35,10 @@ body {
 .champion-name {
     letter-spacing: 1px;
     display: block;
-    font-family: 'Lato';
     color: black;
     padding: 1rem 0;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: bold;
-    max-width: 90%;
 }
 
 .champion-image {
