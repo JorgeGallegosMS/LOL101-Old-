@@ -4,8 +4,8 @@ const express = require('express')
 const app = express()
 const fetch = require('node-fetch')
 const exphbs = require('express-handlebars')
-const utils = require('./utils')
-const middleware = require('./middleware')
+const utils = require('./helpers/utils')
+const middleware = require('./middleware/middleware')
 
 app.use(express.json())
 
@@ -22,13 +22,7 @@ app.get('/', (req, res) => {
 // Displays all champions
 app.get('/champions', async (req, res) => {
     try {
-        utils.getChampionsList(res.version)
-        const champs = {}
-
-        champsList.sort()
-        champsList.forEach(champ => {
-            champs[champ[0]] = champ[1]
-        })
+        const champs = await utils.getChampionsData(res.version)
         // JSON data
         res.send(champs)
         // res.render('home', { champs })

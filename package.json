@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "container": "docker run -it -p 3000:3000 riot_api",
+    "docker_build": "docker build -t riot_api . && docker run -it -p 3000:3000 riot_api",
+    "delete_all": "docker rmi -f $(docker images -q)"
   },
   "keywords": [],
   "author": "Jorge Gallegos",
