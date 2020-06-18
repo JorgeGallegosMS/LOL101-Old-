@@ -32,6 +32,7 @@ const getChampionsData = async version => {
         let champ_name = champ[1]
         champs[current_champ] = {'name': champ_name}
         champs[current_champ].title = capitalize(champions[champ_name].title)
+        champs[current_champ].id = parseInt(champions[champ_name].key)
         champs[current_champ].difficulty = champions[champion].info.difficulty
         champs[current_champ].skins = []
         champs[current_champ].tips = {}
@@ -63,8 +64,6 @@ const getSingleChampionData = async (version, champsDict) => {
 }
 
 const getSkins = (champion, champsDict) => {
-    console.log(champion.spells[0].id)
-    console.log(champion.spells[0].leveltip.effect[0])
     champion.skins.forEach(skin => {
         const current_skin =  {
             'skin_name': skin.name,
