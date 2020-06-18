@@ -39,10 +39,39 @@ const getChampionsData = async version => {
         champs[current_champ].tips.playingAs = []
         champs[current_champ].tips.playingAgainst = []
     })
+    await getChampionRotations(champs)
 
     await getSingleChampionData(version, champs)
 
     return champs
+}
+const getChampionRotations = async(champsDict) => {
+    try {
+        const champ_data = await fetch('https://na1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-f8cbf137-23de-4400-b4cf-0578c9844a1e')
+        const data = await champ_data.json()
+        const freeRotation = data['freeChampionIds']
+        const freeRotationNewPlayers = data['freeChampionIdsForNewPlayers']
+        let champion_rotation = []
+        // console.log(freeRotation)
+        // console.log(freeRotationNewPlayers)
+        // console.log(data)
+        for (champion in champsDict) {
+            const champ_name = champsDict[champion].name
+            const champ_id = champsDict[champion].id
+            if (freeRotation.includes(champ_id)) {
+                const freeRotationChamp = {
+                    'champ_id': champ_id,
+                    'champ_name': champ_name,
+                    'loading_art': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ_name}_0.jpg`
+                }
+                champion_rotation.push(freeRotationChamp)
+            }
+        }
+        console.log(champion_rotation)
+        return champion_rotation
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 const getSingleChampionData = async (version, champsDict) => {
@@ -54,9 +83,9 @@ const getSingleChampionData = async (version, champsDict) => {
             const champ = data.data
             const current_champ = champ[`${champ_name}`]
             
-            getSkins(current_champ, champsDict)
-            getTips(current_champ, champsDict)
-            getAbilities(current_champ, champsDict)
+            // getSkins(current_champ, champsDict)
+            // getTips(current_champ, champsDict)
+            // getAbilities(current_champ, champsDict)
         }
     } catch (err){
         console.error(err)
