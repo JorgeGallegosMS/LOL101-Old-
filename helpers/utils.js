@@ -14,38 +14,46 @@ const getVersion = async () => {
 
 /**
  * Calls the Riot API and returns an object of champion names sorted alphabetically
+ * @param version
+ * The current version of the API
  */
 const getChampionsData = async version => {
     const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
     const data = await response.json()
     const champions = data.data
     const champsList = []
-    const champs = {}
+    const champs = {
+        "version": version
+    }
 
     for (champion in champions) {
         champsList.push([champions[champion]['name'], champions[champion]['id']])
     }
 
+    dataSetup(champsList, champs, champions)
+
+    await getSingleChampionData(version, champs)
+    await getChampionRotations(champs)
+
+    return champs
+}
+
+const dataSetup = (champsList, champsDict, data) => {
     champsList.sort()
     champsList.forEach(champ => {
         let current_champ = champ[0]
         let champ_name = champ[1]
-        champs[current_champ] = {'name': champ_name}
-        champs[current_champ].title = capitalize(champions[champ_name].title)
-        champs[current_champ].id = parseInt(champions[champ_name].key)
-        champs[current_champ].difficulty = champions[champion].info.difficulty
-        champs[current_champ].skins = []
-        champs[current_champ].tips = {}
-        champs[current_champ].tips.playingAs = []
-        champs[current_champ].tips.playingAgainst = []
+        champsDict[current_champ] = {'name': champ_name}
+        champsDict[current_champ].title = capitalize(data[champ_name].title)
+        champsDict[current_champ].id = parseInt(data[champ_name].key)
+        champsDict[current_champ].difficulty = data[champion].info.difficulty
+        champsDict[current_champ].skins = []
+        champsDict[current_champ].tips = {}
+        champsDict[current_champ].tips.playingAs = []
+        champsDict[current_champ].tips.playingAgainst = []
     })
-    await getChampionRotations(champs)
-
-    await getSingleChampionData(version, champs)
-
-    return champs
 }
-const getChampionRotations = async(champsDict) => {
+const getChampionRotations = async champsDict => {
     try {
         const champ_data = await fetch('https://na1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-f8cbf137-23de-4400-b4cf-0578c9844a1e')
         const data = await champ_data.json()
@@ -67,7 +75,7 @@ const getChampionRotations = async(champsDict) => {
                 champion_rotation.push(freeRotationChamp)
             }
         }
-        console.log(champion_rotation)
+        // console.log(champion_rotation)
         return champion_rotation
     } catch (err) {
         console.log(err)
@@ -77,15 +85,17 @@ const getChampionRotations = async(champsDict) => {
 const getSingleChampionData = async (version, champsDict) => {
     try {
         for (champion in champsDict) {
-            const champ_name = champsDict[champion].name
-            const champ_data = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${champ_name}.json`)
-            const data = await champ_data.json()
-            const champ = data.data
-            const current_champ = champ[`${champ_name}`]
-            
-            // getSkins(current_champ, champsDict)
-            // getTips(current_champ, champsDict)
-            // getAbilities(current_champ, champsDict)
+            if (champsDict[champion].hasOwnProperty('name')){
+                const champ_name = champsDict[champion].name
+                const champ_data = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${champ_name}.json`)
+                const data = await champ_data.json()
+                const champ = data.data
+                const current_champ = champ[`${champ_name}`]
+                
+                getSkins(current_champ, champsDict)
+                getTips(current_champ, champsDict)
+                getAbilities(current_champ, champsDict)
+            }
         }
     } catch (err){
         console.error(err)
