@@ -158,6 +158,10 @@ ul li a {
     animation-name: appear;
     animation-duration: 2s;
     transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
     
 }
 
@@ -227,12 +231,25 @@ ul li a {
 
 .rectangle {
     height: 100px;
-    width: 500px;
+    width: 540px;
     background-color: #B8F2FF;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: appear;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
 }
 .rectangle > h3 {
-color: 000000;
-font-size: 80px;
+    color: #181F20;
+    font-size: 50px;
+    padding-top: 25px;
+    padding-left: 30px;
+    font-weight: normal;
+}
+
+.rectangle > h3 > text {
+    font-weight: bold;
 
 }
 

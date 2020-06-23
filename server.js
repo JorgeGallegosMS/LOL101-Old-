@@ -4,28 +4,36 @@ const express = require('express')
 const app = express()
 const fetch = require('node-fetch')
 const exphbs = require('express-handlebars')
-const utils = require('./utils')
-const middleware = require('./middleware')
+const utils = require('./helpers/utils')
+const middleware = require('./middleware/middleware')
+const fs = require('fs')
 
-app.use(express.json())
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+app.use(express.static("public"));
 
-app.engine('handlebars', exphbs({defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts'}));
-app.set('view engine', 'handlebars');
-app.use(express.static('public'));
+app.use(middleware.setAPIVersion);
+app.use(middleware.setChampionsData);
 
-app.use(middleware.getAPIVersion)
+// app.get("/", (req, res) => {
+//   res.redirect("/champions");
+// });
 
-// Placeholder routes for Front-End
-app.get('/', (req, res) => {
+app.get('/dev', (req, res) => {
     res.render('index', {
         style: 'home.css'
     })
 })
 
-app.get('/champions', (req, res) => {
-    res.render('champion', {
-        style: 'champion.css'
-    })
+// Displays all champions
+app.get('/champions', async (req, res) => {
+    try {
+        // JSON data
+        res.send(res.champs)
+        // res.render('home', { champs })
+    } catch (err){
+        console.error(err)
+    }
 })
 
 // // Displays all champions
@@ -47,18 +55,35 @@ app.get('/champions', (req, res) => {
 // })
 
 // Displays a single champion
-// app.get('/champions/:name', async (req, res) => {
-//     try {
-//         const name = utils.capitalize(req.params.name)
-//         const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${res.version}/data/en_US/champion/${name}.json`)
-//         const data = await response.json()
-//         const champion = data.data
-//         // JSON data
-//         res.send(champion)
-//         // res.render('champion', { name, api_version })
-//     } catch (err){
-//         console.error(err)
-//     }
-// })
+app.get("/champions/:name", (req, res) => {
+  try {
+    const name = utils.capitalize(req.params.name);
+    // JSON data
+    res.send(res.champs[name]);
+    // res.render('champion', { name, api_version })
+  } catch (err) {
+    console.error(err);
+  }
+});
 
-app.listen(3000, () => console.log(`Listening on port ${port}`))
+app.get("/rotation", async (req, res) => {
+
+    const freeRotation = {
+        "type": "Free Rotation"
+    }
+
+    const rotation = await utils.getChampionRotations(res.champs)
+
+    rotation.forEach(champion => {
+        for (champ in res.champs) {
+            if (res.champs[champ].hasOwnProperty('id')){
+                if (champion.champ_id == res.champs[champ].id){
+                    freeRotation[champ] = res.champs[champ]
+                }
+            }
+        }
+    })
+    res.send(freeRotation)
+})
+
+app.listen(3000, () => console.log(`Listening on port ${port}`));
