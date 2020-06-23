@@ -1,0 +1,248 @@
+/* ---- RESET STYLESHEET ---- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ---- CODE ---- */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    position: relative;
+    background-color: #3D494E;
+    
+
+}
+
+
+
+.navbar {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    flex: 0.5;
+    
+    
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+ul li a::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: trnasparent
+}
+ul li a {
+    color: black;
+    padding: 0 15px;
+    color: white;
+
+   
+}
+
+
+.container {
+    width: 100%;
+    max-width: 92rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    animation-name: appear;
+    animation-duration: 2s;
+    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    
+}
+
+.header-brand {
+    font-family: Cormorant Garamond;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 31px;
+    color: white;
+    letter-spacing: 1px;
+    border-right: 5px solid #D0A85D;
+    text-align: center;
+    display: block;
+    margin: 0 100px;
+ 
+
+}
+
+.header-brand::before {
+    content:" ";
+    bottom: 10px;
+    height: 2px;
+    background: #D0A85D;
+    display: block;
+    left: 40px;
+    width: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-brand:hover,.header-brand.active {color: white;}
+.header-brand:hover::before, .header-brand.active::before {width: 100%;}
+
+.logo > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    align-items: center;
+    padding: 230px 0px 0px 0px;
+    filter: contrast(148%);
+    filter: drop-shadow(5px 5px 35px #111111);
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+
+}
+
+.frame {
+    width: 90%;
+    height: 60%;
+    margin-left: 80px;
+    margin-top: 100px;
+    margin-right: auto;
+    border: 1px solid #D0A85D;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    border-radius: 2%;
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+} 
+
+
+.rectangle {
+    height: 100px;
+    width: 500px;
+    background-color: #B8F2FF;
+}
+.rectangle > h3 {
+color: 000000;
+font-size: 80px;
+
+}
+
+
+@keyframes appear {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes text-a {
+    0% { color: transparent }
+    100% { color: white }
+}
