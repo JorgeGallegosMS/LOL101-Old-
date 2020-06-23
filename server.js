@@ -12,7 +12,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
 
-app.use(middleware.getAPIVersion);
+app.use(middleware.setAPIVersion);
+app.use(middleware.setChampionsData);
 
 app.get("/", (req, res) => {
   res.redirect("/champions");
@@ -21,18 +22,8 @@ app.get("/", (req, res) => {
 // Displays all champions
 app.get('/champions', async (req, res) => {
     try {
-        let champs = JSON.parse(fs.readFileSync('champions.json'))
-
-        // Rewrites champions.json file if the Riot API version changes
-        if (res.version != champs.version){
-            const data = await utils.getChampionsData(res.version)
-            fs.writeFileSync('./champions.json', JSON.stringify(data, null, 4))
-            champs = JSON.parse(fs.readFileSync('champions.json'))
-        }
-
-
         // JSON data
-        res.send(champs)
+        res.send(res.champs)
         // res.render('home', { champs })
     } catch (err){
         console.error(err)
@@ -40,20 +31,35 @@ app.get('/champions', async (req, res) => {
 })
 
 // Displays a single champion
-app.get("/champions/:name", async (req, res) => {
+app.get("/champions/:name", (req, res) => {
   try {
     const name = utils.capitalize(req.params.name);
-    const response = await fetch(
-      `http://ddragon.leagueoflegends.com/cdn/${res.version}/data/en_US/champion/${name}.json`
-    );
-    const data = await response.json();
-    const champion = data.data;
     // JSON data
-    res.send(champion);
+    res.send(res.champs[name]);
     // res.render('champion', { name, api_version })
   } catch (err) {
     console.error(err);
   }
 });
+
+app.get("/rotation", async (req, res) => {
+
+    const freeRotation = {
+        "type": "Free Rotation"
+    }
+
+    const rotation = await utils.getChampionRotations(res.champs)
+
+    rotation.forEach(champion => {
+        for (champ in res.champs) {
+            if (res.champs[champ].hasOwnProperty('id')){
+                if (champion.champ_id == res.champs[champ].id){
+                    freeRotation[champ] = res.champs[champ]
+                }
+            }
+        }
+    })
+    res.send(freeRotation)
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -1,4 +1,7 @@
+require('dotenv').config()
 const fetch = require('node-fetch')
+
+const key = process.env.RIOT_API_KEY
 
 const capitalize = word => {
     return word.charAt(0).toUpperCase() + word.slice(1)
@@ -27,13 +30,12 @@ const getChampionsData = async version => {
     }
 
     for (champion in champions) {
-        champsList.push([champions[champion]['name'], champions[champion]['id']])
+        champsList.push([getCleanedName(champions[champion]['name']), champions[champion]['id']])
     }
 
     dataSetup(champsList, champs, champions)
 
     await getSingleChampionData(version, champs)
-    await getChampionRotations(champs)
 
     return champs
 }
@@ -47,6 +49,8 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].title = capitalize(data[champ_name].title)
         champsDict[current_champ].id = parseInt(data[champ_name].key)
         champsDict[current_champ].difficulty = data[champion].info.difficulty
+        champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/10.12.1/img/champion/${champ_name}.png`
+        champsDict[current_champ].abilities = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
         champsDict[current_champ].tips.playingAs = []
@@ -55,12 +59,11 @@ const dataSetup = (champsList, champsDict, data) => {
 }
 const getChampionRotations = async champsDict => {
     try {
-        const champ_data = await fetch('https://na1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-f8cbf137-23de-4400-b4cf-0578c9844a1e')
+        const champ_data = await fetch(`https://na1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${key}`)
         const data = await champ_data.json()
         const freeRotation = data['freeChampionIds']
         const freeRotationNewPlayers = data['freeChampionIdsForNewPlayers']
         let champion_rotation = []
-        // console.log(freeRotation)
         // console.log(freeRotationNewPlayers)
         // console.log(data)
         for (champion in champsDict) {
@@ -103,31 +106,69 @@ const getSingleChampionData = async (version, champsDict) => {
 }
 
 const getSkins = (champion, champsDict) => {
+    const name = getCleanedName(champion.name)
     champion.skins.forEach(skin => {
         const current_skin =  {
             'skin_name': skin.name,
-            'skin_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`
+            'splash_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`,
+            'loadingScreen_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_${skin.num}.jpg`
         }
-        champsDict[champion.name].skins.push(current_skin)
+
+        champsDict[name].skins.push(current_skin)
     })
 }
 
 const getTips = (champion, champsDict) => {
+    const name = getCleanedName(champion.name)
     champion.allytips.forEach(tip =>{
-        champsDict[champion.name].tips.playingAs.push(tip)
+        champsDict[name].tips.playingAs.push(tip)
     })
 
     champion.enemytips.forEach(tip =>{
-        champsDict[champion.name].tips.playingAgainst.push(tip)
+        champsDict[name].tips.playingAgainst.push(tip)
     })
 }
 
 const getAbilities = (champion, champsDict) => {
+    const name = getCleanedName(champion.name)
+    champion.spells.forEach(spell => {
+        const spell_id = spell.id
+        const spell_name = spell.name
+        const description = spell.description
+        const cooldown = spell.cooldown
 
+        const data = {
+            'id': spell_id,
+            'name': spell_name,
+            'description': description,
+            'cooldown': cooldown
+        }
+
+        champsDict[name].abilities.push(data)
+    })
+}
+
+const getCleanedName = name => {
+    return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
+}
+
+const getChampionByName = (name, champsDict) => {
+    let champ
+    name.replace(/[^a-z0-9]/gi, '').toLowerCase()
+    for (champion in champsDict){
+        if (champsDict[champion].hasOwnProperty('name')){
+            current_champ = champsDict[champion]
+            if (champion.toLowerCase() == name.toLowerCase()){
+                champ = current_champ
+                res.send(champ)
+            }
+        }
+    }
 }
 
 module.exports = {
     capitalize,
     getVersion,
-    getChampionsData
+    getChampionsData,
+    getChampionRotations
 }
