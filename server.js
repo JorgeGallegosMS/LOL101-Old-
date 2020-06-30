@@ -15,9 +15,9 @@ app.use(express.static("public"));
 app.use(middleware.setAPIVersion);
 app.use(middleware.setChampionsData);
 
-// app.get("/", (req, res) => {
-//   res.redirect("/champions");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/champions");
+});
 
 app.get('/dev', (req, res) => {
     res.render('index', {
@@ -67,23 +67,24 @@ app.get("/champions/:name", (req, res) => {
 });
 
 app.get("/rotation", async (req, res) => {
-
     const freeRotation = {
-        "type": "Free Rotation"
-    }
-
-    const rotation = await utils.getChampionRotations(res.champs)
-
+      type: "Free Rotation"
+    };
+  
+    const rotation = await utils.getChampionRotations(res.champs);
+  
     rotation.forEach(champion => {
-        for (champ in res.champs) {
-            if (res.champs[champ].hasOwnProperty('id')){
-                if (champion.champ_id == res.champs[champ].id){
-                    freeRotation[champ] = res.champs[champ]
-                }
-            }
+      for (champ in res.champs) {
+        if (res.champs[champ].hasOwnProperty("id")) {
+          if (champion.champ_id == res.champs[champ].id) {
+            freeRotation[champ] = res.champs[champ];
+          }
         }
-    })
-    res.send(freeRotation)
-})
+      }
+    });
+    // res.send(freeRotation)
+    console.log(freeRotation)
+    res.render("rotation", freeRotation);
+  });
 
 app.listen(3000, () => console.log(`Listening on port ${port}`));

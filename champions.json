@@ -1,5 +1,5 @@
 {
-    "version": "10.12.1",
+    "version": "10.13.1",
     "Aatrox": {
         "name": "Aatrox",
         "title": "The Darkin Blade",
@@ -776,7 +776,7 @@
             {
                 "id": "AnnieE",
                 "name": "Molten Shield",
-                "description": "Grants Annie increased percentage Damage Reduction, a burst of movement speed, and damages enemies who attack her with basic attacks.",
+                "description": "Grants Annie increased percentage Damage Reduction, a burst of Movement Speed, and damages enemies who attack her with basic attacks.",
                 "cooldown": [
                     14,
                     13,
@@ -1673,7 +1673,7 @@
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Braum_10.jpg"
             },
             {
-                "skin_name": "Mafia Braum",
+                "skin_name": "Crime City Braum",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_11.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Braum_11.jpg"
             },
@@ -4165,7 +4165,7 @@
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Graves_2.jpg"
             },
             {
-                "skin_name": "Mafia Graves",
+                "skin_name": "Crime City Graves",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Graves_3.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Graves_3.jpg"
             },
@@ -4417,6 +4417,11 @@
                 "skin_name": "Dragon Trainer Heimerdinger",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_6.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Heimerdinger_6.jpg"
+            },
+            {
+                "skin_name": "Pool Party Heimerdinger",
+                "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_15.jpg",
+                "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Heimerdinger_15.jpg"
             }
         ],
         "tips": {
@@ -4953,6 +4958,11 @@
                 "skin_name": "Hextech Jarvan IV",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/JarvanIV_9.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/JarvanIV_9.jpg"
+            },
+            {
+                "skin_name": "Pool Party Jarvan IV",
+                "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/JarvanIV_11.jpg",
+                "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/JarvanIV_11.jpg"
             }
         ],
         "tips": {
@@ -5354,7 +5364,7 @@
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg"
             },
             {
-                "skin_name": "Mafia Jinx",
+                "skin_name": "Crime City Jinx",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_1.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_1.jpg"
             },
@@ -8146,7 +8156,7 @@
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/MissFortune_5.jpg"
             },
             {
-                "skin_name": "Mafia Miss Fortune",
+                "skin_name": "Crime City Miss Fortune",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_6.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/MissFortune_6.jpg"
             },
@@ -9402,6 +9412,11 @@
                 "skin_name": "Victorious Orianna",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_8.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Orianna_8.jpg"
+            },
+            {
+                "skin_name": "Pool Party Orianna",
+                "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_11.jpg",
+                "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Orianna_11.jpg"
             }
         ],
         "tips": {
@@ -12457,6 +12472,11 @@
                 "skin_name": "Star Guardian Syndra",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Syndra_6.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Syndra_6.jpg"
+            },
+            {
+                "skin_name": "Pool Party Syndra",
+                "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Syndra_7.jpg",
+                "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Syndra_7.jpg"
             }
         ],
         "tips": {
@@ -12628,6 +12648,11 @@
                 "skin_name": "SSG Taliyah",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taliyah_2.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Taliyah_2.jpg"
+            },
+            {
+                "skin_name": "Pool Party Taliyah",
+                "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taliyah_3.jpg",
+                "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Taliyah_3.jpg"
             }
         ],
         "tips": {
@@ -13649,7 +13674,7 @@
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Twitch_3.jpg"
             },
             {
-                "skin_name": "Gangster Twitch",
+                "skin_name": "Crime City Twitch",
                 "splash_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_4.jpg",
                 "loadingScreen_url": "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Twitch_4.jpg"
             },
@@ -14373,10 +14398,10 @@
                 "description": "Vi charges her gauntlets and unleashes a vault shattering punch, carrying her forward. Enemies she hits are knocked back and receive a stack of Denting Blows.",
                 "cooldown": [
                     12,
-                    11,
-                    10,
+                    10.5,
                     9,
-                    8
+                    7.5,
+                    6
                 ]
             },
             {
