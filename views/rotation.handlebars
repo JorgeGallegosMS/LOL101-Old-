@@ -1,5 +1,9 @@
 {{#each this }}
     <h1>{{ this.name }}</h1>
-    <img src="{{ this.icon }}">
+{{#each this.skins as |item| }}
+    {{#if @first }}
+            <img src="{{ item.loadingScreen_url }}">
+    {{/if}}
+{{/each}}
 {{/each}}
 
