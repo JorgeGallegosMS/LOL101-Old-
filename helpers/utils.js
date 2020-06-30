@@ -50,6 +50,7 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].id = parseInt(data[champ_name].key)
         champsDict[current_champ].difficulty = data[champion].info.difficulty
         champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/10.12.1/img/champion/${champ_name}.png`
+        champsDict[current_champ].lore = ''
         champsDict[current_champ].abilities = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
@@ -94,7 +95,7 @@ const getSingleChampionData = async (version, champsDict) => {
                 const data = await champ_data.json()
                 const champ = data.data
                 const current_champ = champ[`${champ_name}`]
-                
+                getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
                 getAbilities(current_champ, champsDict)
@@ -116,6 +117,11 @@ const getSkins = (champion, champsDict) => {
 
         champsDict[name].skins.push(current_skin)
     })
+}
+
+const getLore = (champion, champsDict) => {
+    const name = getCleanedName(champion.name)
+    champsDict[name].lore = champion.lore
 }
 
 const getTips = (champion, champsDict) => {
