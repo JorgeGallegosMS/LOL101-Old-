@@ -95,6 +95,7 @@ const getSingleChampionData = async (version, champsDict) => {
                 const data = await champ_data.json()
                 const champ = data.data
                 const current_champ = champ[`${champ_name}`]
+                // getRecommendedItems(current_champ, champsDict)
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
@@ -172,9 +173,55 @@ const getChampionByName = (name, champsDict) => {
     }
 }
 
+const getRecommendedItems = async (champion, champsDict) => {
+    // getItemInfo(champion)
+    //Loop through all recommended sets, and check if mode is CLASSIC
+
+    const name = getCleanedName(champion.name)
+    test = champion.recommended
+    const item_block = {}        
+
+    for (n = 0; n < test.length; n++) {
+        if (test[n].mode == "CLASSIC") {
+            for (i = 0; i < test[n].blocks.length; i++) {
+                item_block[test[n].blocks[i].type] = {
+                    'items': test[n].blocks[i].items,
+                }
+                let list = item_block[test[n].blocks[i].type].items
+                // console.log(list)
+                for (j= 0; j < list.length; j++) {
+                    const id = list[j].id
+                    list[j]["info"] = await getItemInfo(id)
+                    // console.log(list.length)
+
+                }
+                // console.log(list)
+
+            }
+            console.log(item_block)
+
+            // console.log(test.blocks.length)
+
+                }
+            }
+}
+
+const getItemInfo = async itemId => {
+    const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
+    const data = await champ_data.json()
+    const list_of_items = data.data
+    return list_of_items[itemId]
+}
+
 module.exports = {
     capitalize,
     getVersion,
     getChampionsData,
     getChampionRotations
 }
+/*
+(node:10407) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'blocks' of undefined
+    at getRecommendedItems (/Users/beckhaywood/dev/homework/LOL101/helpers/utils.js:184:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:10407) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 116)
+*/
