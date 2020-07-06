@@ -8,11 +8,15 @@ const capitalize = word => {
 }
 
 const getVersion = async () => {
-    const version_list = await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
-    const versions = await version_list.json()
-    const version = versions[0]
-
-    return version
+    try {
+        const version_list = await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
+        const versions = await version_list.json()
+        const version = versions[0]
+    
+        return version
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 /**
@@ -21,23 +25,27 @@ const getVersion = async () => {
  * The current version of the API
  */
 const getChampionsData = async version => {
-    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
-    const data = await response.json()
-    const champions = data.data
-    const champsList = []
-    const champs = {
-        "version": version
+    try {
+        const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
+        const data = await response.json()
+        const champions = data.data
+        const champsList = []
+        const champs = {
+            "version": version
+        }
+    
+        for (champion in champions) {
+            champsList.push([getCleanedName(champions[champion]['name']), champions[champion]['id']])
+        }
+    
+        dataSetup(champsList, champs, champions)
+    
+        await getSingleChampionData(version, champs)
+    
+        return champs
+    } catch (err) {
+        console.error(err)
     }
-
-    for (champion in champions) {
-        champsList.push([getCleanedName(champions[champion]['name']), champions[champion]['id']])
-    }
-
-    dataSetup(champsList, champs, champions)
-
-    await getSingleChampionData(version, champs)
-
-    return champs
 }
 
 const dataSetup = (champsList, champsDict, data) => {
@@ -51,6 +59,7 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].difficulty = data[champion].info.difficulty
         champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/10.12.1/img/champion/${champ_name}.png`
         champsDict[current_champ].lore = ''
+        champsDict[current_champ].tags = data[champ_name].tags
         champsDict[current_champ].abilities = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
@@ -99,7 +108,7 @@ const getSingleChampionData = async (version, champsDict) => {
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
-                getAbilities(current_champ, champsDict)
+                getAbilities(version, current_champ, champsDict)
             }
         }
     } catch (err){
@@ -136,21 +145,31 @@ const getTips = (champion, champsDict) => {
     })
 }
 
-const getAbilities = (champion, champsDict) => {
+const getAbilities = (version, champion, champsDict) => {
     const name = getCleanedName(champion.name)
     champion.spells.forEach(spell => {
         const spell_id = spell.id
         const spell_name = spell.name
         const description = spell.description
         const cooldown = spell.cooldown
+        const cooldownString = spell.cooldownBurn
+        const damage = spell.effect[1][0] == 0 ? "?" : spell.effect[1]
+        const damageString = damage == "?" ? "?" : spell.effectBurn[1]
+        const costType = spell.costType == 'No Cost' ? spell.costType : champion.partype
+        const icon = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spell_id}.png`
 
         const data = {
             'id': spell_id,
             'name': spell_name,
+            'costType': costType,
+            'icon': icon,
             'description': description,
-            'cooldown': cooldown
+            'cooldownString': cooldownString,
+            'cooldown': cooldown,
+            'damageString': damageString,
+            'damage': damage
         }
-
+        // console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -159,19 +178,10 @@ const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
 
-const getChampionByName = (name, champsDict) => {
-    let champ
-    name.replace(/[^a-z0-9]/gi, '').toLowerCase()
-    for (champion in champsDict){
-        if (champsDict[champion].hasOwnProperty('name')){
-            current_champ = champsDict[champion]
-            if (champion.toLowerCase() == name.toLowerCase()){
-                champ = current_champ
-                res.send(champ)
-            }
-        }
-    }
-}
+// const cleanTooltip = tooltip => {
+//     cleaned = tooltip.replace(/[{}]/g, '')
+//     return cleaned.slice(0,20)
+// }
 
 const getRecommendedItems = async (champion, champsDict) => {
     // getItemInfo(champion)
@@ -219,9 +229,3 @@ module.exports = {
     getChampionsData,
     getChampionRotations
 }
-/*
-(node:10407) UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'blocks' of undefined
-    at getRecommendedItems (/Users/beckhaywood/dev/homework/LOL101/helpers/utils.js:184:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-(node:10407) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 116)
-*/
