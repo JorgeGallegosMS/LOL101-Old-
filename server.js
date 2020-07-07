@@ -25,18 +25,26 @@ app.get('/dev', (req, res) => {
     })
 })
 
+app.get('/dev2', (req, res) => {
+    res.render('champion', {
+        style: 'champion.css'
+    })
+})
+
 // Displays all champions
 app.get('/champions', async (req, res) => {
     try {
         // JSON data
-        res.send(res.champs)
+        res.champs
         // res.render('home', { champs })
+        res.render('index', {
+        style:'home.css', champs })
     } catch (err){
         console.error(err)
     }
 })
 
-// // Displays all champions
+// Displays all champions
 // app.get('/champions', async (req, res) => {
 //     try {
 //         utils.getChampionsList(res.version)
@@ -47,8 +55,8 @@ app.get('/champions', async (req, res) => {
 //             champs[champ[0]] = champ[1]
 //         })
 //         // JSON data
-//         res.send(champs)
-//         // res.render('home', { champs })
+//         res.render('index', {
+//             style: 'home.css', champs })
 //     } catch (err){
 //         console.error(err)
 //     }

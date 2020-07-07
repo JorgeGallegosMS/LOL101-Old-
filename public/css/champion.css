@@ -1,3 +1,234 @@
-body {
-    background-color: purple;
+/* ---- RESET STYLESHEET ---- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ---- CODE ---- */
+
+
+body {
+    background-image: url("/./static/test1-edit.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+
+}   
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+.navbar {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    flex: 0.5;
+    
+    
+    
+}
+
+
+li img {
+    height: 25px; 
+
+}
+ul li {
+    display: inline-block;
+    margin: 0 20px;
+    text-decoration: none;
+
+
+}
+
+ul li a::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: transparent
+}
+ul li a {
+    color: black;
+    padding: 0 15px;
+    color: white;
+    padding: 10px 20px;
+
+   
+}
+
+.header-brand {
+    font-family: Cormorant Garamond;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 31px;
+    color: white;
+    letter-spacing: 1px;
+    border-right: 5px solid #D0A85D;
+    text-align: center;
+    display: block;
+    margin: 0 100px;
+ 
+
+}
+
+.header-brand::before {
+    content:" ";
+    bottom: 10px;
+    height: 2px;
+    background: #D0A85D;
+    display: block;
+    left: 40px;
+    width: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-brand:hover,.header-brand.active {color: white;}
+.header-brand:hover::before, .header-brand.active::before {width: 100%;}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.section-container {
+    display: grid;
+    grid-gap: 100px;
+    grid-template-areas: "showcase showcase top-box-a";
+    padding-top: 50px;
+    justify-items: center;
+
+}
+
+.item-container {
+    width: 460px;
+    height: 100px;
+    background-color:  #3D494E;
+    position: relative;
+    margin-left: 30px;
+}
+
+.a-b-container {
+    width: 600px;
+    height: 600px;
+    background-color:  #3D494E;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    margin-left: 30px;
+
+}
+
+.splash-art {
+    grid-area: 1 / col4-start / last-line / 6;
+    width: 350px;
+    height: 600px;
+    background-color:  #3D494E;
+    position: relative;
+    margin-right: 50px;
+    align-items: center;
+}
+
+

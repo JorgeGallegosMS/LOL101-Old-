@@ -24,6 +24,17 @@
                 <div class="rectangle">
                 <h3>Choose Your <text>Legend</text></h3>
                 </div>
+                <div class="container">
+            {{#each champs}}
+        <div class="champion {{ @key }}">
+            <a target="_blank" class="champion-link" href="/champions/{{ @key }}">
+                <p class="champion-name">{{ @key }}</p>
+                <img class="champion-image" src="http://ddragon.leagueoflegends.com/cdn/10.10.3216176/img/champion/{{ this }}.png" alt="">
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</div>
             </div>
         
         <h1></h1>

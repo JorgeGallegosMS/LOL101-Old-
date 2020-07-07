@@ -139,7 +139,7 @@ ul li a::after {
     content: '';
     width: 100%;
     height: 10px;
-    background: trnasparent
+    background: transparent;
 }
 ul li a {
     color: black;
@@ -251,6 +251,38 @@ ul li a {
 .rectangle > h3 > text {
     font-weight: bold;
 
+}
+
+.champions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.champion {
+    padding: 10px;
+    text-align: center;
+}
+
+.champion-link p {
+    margin: 0;
+}
+
+.champion-name {
+    letter-spacing: 1px;
+    display: block;
+    color: black;
+    padding: 1rem 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.champion-image {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 10px 30px -2px rgba(56,56,56,1);
 }
 
 
