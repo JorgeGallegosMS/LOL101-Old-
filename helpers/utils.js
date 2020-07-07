@@ -35,7 +35,7 @@ const getChampionsData = async version => {
         }
     
         for (champion in champions) {
-            champsList.push([getCleanedName(champions[champion]['name']), champions[champion]['id']])
+            champsList.push([champions[champion]['name'], champions[champion]['id']])
         }
     
         dataSetup(champsList, champs, champions)
@@ -51,9 +51,10 @@ const getChampionsData = async version => {
 const dataSetup = (champsList, champsDict, data) => {
     champsList.sort()
     champsList.forEach(champ => {
-        let current_champ = champ[0]
+        let current_champ = getCleanedName(champ[0])
         let champ_name = champ[1]
-        champsDict[current_champ] = {'name': champ_name}
+        champsDict[current_champ] = {'name': champ[0]}
+        champsDict[current_champ].nickname = champ_name
         champsDict[current_champ].title = capitalize(data[champ_name].title)
         champsDict[current_champ].id = parseInt(data[champ_name].key)
         champsDict[current_champ].difficulty = data[champion].info.difficulty
