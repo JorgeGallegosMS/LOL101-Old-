@@ -8,11 +8,15 @@ const capitalize = word => {
 }
 
 const getVersion = async () => {
-    const version_list = await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
-    const versions = await version_list.json()
-    const version = versions[0]
-
-    return version
+    try {
+        const version_list = await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
+        const versions = await version_list.json()
+        const version = versions[0]
+    
+        return version
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 /**
@@ -21,23 +25,27 @@ const getVersion = async () => {
  * The current version of the API
  */
 const getChampionsData = async version => {
-    const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
-    const data = await response.json()
-    const champions = data.data
-    const champsList = []
-    const champs = {
-        "version": version
+    try {
+        const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
+        const data = await response.json()
+        const champions = data.data
+        const champsList = []
+        const champs = {
+            "version": version
+        }
+    
+        for (champion in champions) {
+            champsList.push([getCleanedName(champions[champion]['name']), champions[champion]['id']])
+        }
+    
+        dataSetup(champsList, champs, champions)
+    
+        await getSingleChampionData(version, champs)
+    
+        return champs
+    } catch (err) {
+        console.error(err)
     }
-
-    for (champion in champions) {
-        champsList.push([getCleanedName(champions[champion]['name']), champions[champion]['id']])
-    }
-
-    dataSetup(champsList, champs, champions)
-
-    await getSingleChampionData(version, champs)
-
-    return champs
 }
 
 const dataSetup = (champsList, champsDict, data) => {
@@ -50,6 +58,8 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].id = parseInt(data[champ_name].key)
         champsDict[current_champ].difficulty = data[champion].info.difficulty
         champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/10.12.1/img/champion/${champ_name}.png`
+        champsDict[current_champ].lore = ''
+        champsDict[current_champ].tags = data[champ_name].tags
         champsDict[current_champ].abilities = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
@@ -94,10 +104,11 @@ const getSingleChampionData = async (version, champsDict) => {
                 const data = await champ_data.json()
                 const champ = data.data
                 const current_champ = champ[`${champ_name}`]
-                
+                // getRecommendedItems(current_champ, champsDict)
+                getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
-                getAbilities(current_champ, champsDict)
+                getAbilities(version, current_champ, champsDict)
             }
         }
     } catch (err){
@@ -118,6 +129,11 @@ const getSkins = (champion, champsDict) => {
     })
 }
 
+const getLore = (champion, champsDict) => {
+    const name = getCleanedName(champion.name)
+    champsDict[name].lore = champion.lore
+}
+
 const getTips = (champion, champsDict) => {
     const name = getCleanedName(champion.name)
     champion.allytips.forEach(tip =>{
@@ -129,21 +145,31 @@ const getTips = (champion, champsDict) => {
     })
 }
 
-const getAbilities = (champion, champsDict) => {
+const getAbilities = (version, champion, champsDict) => {
     const name = getCleanedName(champion.name)
     champion.spells.forEach(spell => {
         const spell_id = spell.id
         const spell_name = spell.name
         const description = spell.description
         const cooldown = spell.cooldown
+        const cooldownString = spell.cooldownBurn
+        const damage = spell.effect[1][0] == 0 ? "?" : spell.effect[1]
+        const damageString = damage == "?" ? "?" : spell.effectBurn[1]
+        const costType = spell.costType == 'No Cost' ? spell.costType : champion.partype
+        const icon = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spell_id}.png`
 
         const data = {
             'id': spell_id,
             'name': spell_name,
+            'costType': costType,
+            'icon': icon,
             'description': description,
-            'cooldown': cooldown
+            'cooldownString': cooldownString,
+            'cooldown': cooldown,
+            'damageString': damageString,
+            'damage': damage
         }
-
+        // console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -152,18 +178,49 @@ const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
 
-const getChampionByName = (name, champsDict) => {
-    let champ
-    name.replace(/[^a-z0-9]/gi, '').toLowerCase()
-    for (champion in champsDict){
-        if (champsDict[champion].hasOwnProperty('name')){
-            current_champ = champsDict[champion]
-            if (champion.toLowerCase() == name.toLowerCase()){
-                champ = current_champ
-                res.send(champ)
+// const cleanTooltip = tooltip => {
+//     cleaned = tooltip.replace(/[{}]/g, '')
+//     return cleaned.slice(0,20)
+// }
+
+const getRecommendedItems = async (champion, champsDict) => {
+    // getItemInfo(champion)
+    //Loop through all recommended sets, and check if mode is CLASSIC
+
+    const name = getCleanedName(champion.name)
+    test = champion.recommended
+    const item_block = {}        
+
+    for (n = 0; n < test.length; n++) {
+        if (test[n].mode == "CLASSIC") {
+            for (i = 0; i < test[n].blocks.length; i++) {
+                item_block[test[n].blocks[i].type] = {
+                    'items': test[n].blocks[i].items,
+                }
+                let list = item_block[test[n].blocks[i].type].items
+                // console.log(list)
+                for (j= 0; j < list.length; j++) {
+                    const id = list[j].id
+                    list[j]["info"] = await getItemInfo(id)
+                    // console.log(list.length)
+
+                }
+                // console.log(list)
+
             }
-        }
-    }
+            console.log(item_block)
+
+            // console.log(test.blocks.length)
+
+                }
+            }
+}
+
+const getItemInfo = async itemId => {
+    const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
+    const data = await champ_data.json()
+    const list_of_items = data.data
+    return list_of_items[itemId]
 }
 
 module.exports = {
