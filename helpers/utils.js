@@ -170,7 +170,7 @@ const getAbilities = (version, champion, champsDict) => {
             'damageString': damageString,
             'damage': damage
         }
-        // console.log(cleanTooltip(spell.tooltip))
+        console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -179,10 +179,10 @@ const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
 
-// const cleanTooltip = tooltip => {
-//     cleaned = tooltip.replace(/[{}]/g, '')
-//     return cleaned.slice(0,20)
-// }
+const cleanTooltip = tooltip => {
+    cleaned = tooltip.replace(/[{}]/g, '')
+    return cleaned.slice(0,20)
+}
 
 const getRecommendedItems = async (champion, champsDict) => {
     // getItemInfo(champion)
