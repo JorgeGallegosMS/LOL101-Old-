@@ -1,10 +1,71 @@
 require('dotenv').config()
 const fetch = require('node-fetch')
 
-const key = process.env.RIOT_API_KEY
+const key = 'RGAPI-61e32dfb-82d7-4b1f-8a00-203addf728c3'
+
 
 const capitalize = word => {
     return word.charAt(0).toUpperCase() + word.slice(1)
+}
+
+const getAccountInfo = async query => {
+    let region = 'na'
+    // let query = 'AlaskaTryndamere'
+    const resOne = await fetch(`https://${region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${key}`)
+    const resOneData = await resOne.json()
+    // console.log(resOne)
+    const summonerID = resOneData.id
+    console.log(summonerID)
+    // console.log(resOneData)
+    const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
+    const resTwoData = await resTwo.json()
+    // console.log(resTwoData)
+    try {
+        if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
+
+            const summonerInfo = {
+                'lvl': resOneData.summonerLevel,
+                'profileIconID': resOneData.profileIconId,
+                'summonerName': resOneData.name,
+                'soloDuo': { 
+                    'rank': resTwoData[0].tier,
+                    'tier': resTwoData[0].rank,
+                    'lp': resTwoData[0].leaguePoints,
+                    'wins': resTwoData[0].wins,
+                    'losses': resTwoData[0].losses,
+                    'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
+                }
+            }
+            console.log(summonerInfo)
+            return summonerInfo
+        } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
+    
+            const summonerInfo = {
+                'lvl': resOneData.summonerLevel,
+                'profileIconID': resOneData.profileIconId,
+                'summonerName': resOneData.name,
+                'soloDuo': { 
+                    'rank': resTwoData[1].tier,
+                    'tier': resTwoData[1].rank,
+                    'lp': resTwoData[1].leaguePoints,
+                    'wins': resTwoData[1].wins,
+                    'losses': resTwoData[1].losses,
+                    'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
+                }
+            }
+            console.log(summonerInfo)
+            return summonerInfo
+        }
+        
+    } catch (error) {
+        const summonerInfo = {
+            'lvl': resOneData.summonerLevel,
+            'profileIconID': resOneData.profileIconId,
+            'summonerName': resOneData.name
+        }
+        console.log(summonerInfo)
+        return summonerInfo
+    }
 }
 
 const getVersion = async () => {
@@ -18,7 +79,6 @@ const getVersion = async () => {
         console.error(err)
     }
 }
-
 /**
  * Calls the Riot API and returns an object of champion names sorted alphabetically
  * @param version
@@ -105,6 +165,10 @@ const getSingleChampionData = async (version, champsDict) => {
                 const data = await champ_data.json()
                 const champ = data.data
                 const current_champ = champ[`${champ_name}`]
+
+                // let query = 'AnchorageAlaska'
+                // getAccountInfo(query)
+
                 // getRecommendedItems(current_champ, champsDict)
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
@@ -175,6 +239,130 @@ const getAbilities = (version, champion, champsDict) => {
     })
 }
 
+    
+    
+    
+    // try {
+    //     if ((resTwoData[1].queueType == 'RANKED_SOLO_5x5') && (resTwoData[0].queueType == 'RANKED_FLEX_SR')) {
+    //         console.log('Placed in both')
+    //     }
+    // } catch (err) {
+    //     console.log(err)
+    // }
+
+    // if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
+    //     const summonerInfo = {
+    //         'lvl': resOneData.summonerLevel,
+    //         'profileIconID': resOneData.profileIconId,
+    //         'summonerName': resOneData.name,
+    //         'solo/duo': { 
+    //             'rank': resTwoData[0].tier,
+    //             'tier': resTwoData[0].rank,
+    //             'lp': resTwoData[0].leaguePoints,
+    //             'wins': resTwoData[0].wins,
+    //             'losses': resTwoData[0].losses,
+    //             'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
+    //         }
+    //     }
+    //     console.log(summonerInfo)
+
+
+
+    // } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
+    //     const summonerInfo = {
+    //         'lvl': resOneData.summonerLevel,
+    //         'profileIconID': resOneData.profileIconId,
+    //         'summonerName': resOneData.name,
+    //         'solo/duo': { 
+    //             'rank': resTwoData[1].tier,
+    //             'tier': resTwoData[1].rank,
+    //             'lp': resTwoData[1].leaguePoints,
+    //             'wins': resTwoData[1].wins,
+    //             'losses': resTwoData[1].losses,
+    //             'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
+    //         },
+    //         'flex': {
+    //             'rank': resTwoData[0].tier,
+    //             'tier': resTwoData[0].rank,
+    //             'lp': resTwoData[0].leaguePoints,
+    //             'wins': resTwoData[0].wins,
+    //             'losses': resTwoData[0].losses,
+    //             'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
+    //         }
+    //     }
+    //     console.log(summonerInfo)
+
+    // } else if (resTwoData[0].queueType == 'RANKED_FLEX_SR') {
+    //     const summonerInfo = {
+    //         'lvl': resOneData.summonerLevel,
+    //         'profileIconID': resOneData.profileIconId,
+    //         'summonerName': resOneData.name,
+    //         'flex': {
+    //             'rank': resTwoData[0].tier,
+    //             'tier': resTwoData[0].rank,
+    //             'lp': resTwoData[0].leaguePoints,
+    //             'wins': resTwoData[0].wins,
+    //             'losses': resTwoData[0].losses,
+    //             'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
+    //         }
+    //     }
+    //     console.log(summonerInfo)
+    // } else {
+    //     const summonerInfo = {
+    //         'lvl': resOneData.summonerLevel,
+    //         'profileIconID': resOneData.profileIconId,
+    //         'summonerName': resOneData.name
+    //     }
+    //     console.log(summonerInfo)
+    // }
+    
+    /* 
+    [ { leagueId: 'beac6303-09ea-40f0-9f82-ac0590427de9',
+    queueType: 'RANKED_FLEX_SR',
+    tier: 'PLATINUM',
+    rank: 'IV',
+    summonerId: '0OnX9EQsRu4MeQSClTSjokSK0rXdAoPxL5-KqI-LYqRIk48',
+    summonerName: 'AlaskaTryndamere',
+    leaguePoints: 6,
+    wins: 28,
+    losses: 26,
+    veteran: false,
+    inactive: false,
+    freshBlood: false,
+    hotStreak: false },
+  { leagueId: '7a29f64c-a114-4a5a-969c-98cbb74e9e40',
+    queueType: 'RANKED_SOLO_5x5',
+    tier: 'PLATINUM',
+    rank: 'IV',
+    summonerId: '0OnX9EQsRu4MeQSClTSjokSK0rXdAoPxL5-KqI-LYqRIk48',
+    summonerName: 'AlaskaTryndamere',
+    leaguePoints: 67,
+    wins: 66,
+    losses: 49,
+    veteran: false,
+    inactive: false,
+    freshBlood: false,
+    hotStreak: false } ]*/
+    /*
+    
+            if responseJSON_2[0]["queueType"] == "RANKED_SOLO_5x5":
+                infoNum = 0
+            elif responseJSON_2[1]["queueType"] == "RANKED_SOLO_5x5":
+                infoNum = 1
+            else:
+                infoNum = 2
+            
+            tier = responseJSON_2[infoNum]["tier"].lower().capitalize()
+            rank = responseJSON_2[infoNum]["rank"]
+            wins = str(responseJSON_2[infoNum]["wins"])
+            losses = str(responseJSON_2[infoNum]["losses"])
+
+            winrate_dec = responseJSON_2[infoNum]["wins"]/(responseJSON_2[infoNum]["wins"] + responseJSON_2[infoNum]["losses"])
+            winrate = str(round(winrate_dec * 100, 2))
+
+        */
+
+
 const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
@@ -228,5 +416,6 @@ module.exports = {
     capitalize,
     getVersion,
     getChampionsData,
-    getChampionRotations
+    getChampionRotations,
+    getAccountInfo
 }
