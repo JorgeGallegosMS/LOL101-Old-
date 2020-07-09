@@ -100,7 +100,7 @@ const getSingleChampionData = async (version, champsDict) => {
     try {
         for (champion in champsDict) {
             if (champsDict[champion].hasOwnProperty('name')){
-                const champ_name = champsDict[champion].name
+                const champ_name = champsDict[champion].nickname
                 const champ_data = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${champ_name}.json`)
                 const data = await champ_data.json()
                 const champ = data.data
@@ -170,7 +170,7 @@ const getAbilities = (version, champion, champsDict) => {
             'damageString': damageString,
             'damage': damage
         }
-        console.log(cleanTooltip(spell.tooltip))
+        // console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -224,9 +224,40 @@ const getItemInfo = async itemId => {
     return list_of_items[itemId]
 }
 
+const getItemsData = async version => {
+    try {
+        const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/item.json`)
+        const data = await response.json()
+        const items = data.data
+
+        const itemsDict = {
+            'version': version
+        }
+
+        for (item in items){
+            const current = items[item]
+            const singleItem = {
+                'name': current.name,
+                'id': `${item}`,
+                'description': current.description,
+                'text': current.plaintext,
+                'totalGold': current.gold.total,
+                'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
+            }
+
+            itemsDict[current.name] = singleItem
+        }
+
+        return itemsDict
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 module.exports = {
     capitalize,
     getVersion,
     getChampionsData,
-    getChampionRotations
+    getChampionRotations,
+    getItemsData
 }

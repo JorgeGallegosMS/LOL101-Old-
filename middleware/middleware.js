@@ -29,7 +29,26 @@ const setChampionsData = async (req, res, next) => {
     }
 }
 
+const setItemsData = async (req, res, next) => {
+    try {
+        let items = JSON.parse(fs.readFileSync('items.json'))
+    
+            // Rewrites champions.json file if the Riot API version changes
+            if (res.version != items.version){
+                const data = await utils.getItemsData(res.version)
+                fs.writeFileSync('./items.json', JSON.stringify(data, null, 4))
+                items = JSON.parse(fs.readFileSync('items.json'))
+            }
+    
+        res.items = items
+        next()
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 module.exports = {
     setAPIVersion,
-    setChampionsData
+    setChampionsData,
+    setItemsData
 }
