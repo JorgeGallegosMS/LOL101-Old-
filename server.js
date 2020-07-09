@@ -11,6 +11,7 @@ app.use(express.static("public"));
 
 app.use(middleware.setAPIVersion);
 app.use(middleware.setChampionsData);
+app.use(middleware.setItemsData);
 
 app.get("/", (req, res) => {
   res.redirect("/champions");
@@ -71,4 +72,13 @@ app.get("/search-rank", async (req, res) => {
     console.log({rank})
     res.render('search_rank', {rank})
 })
+
+app.get('/items', async (req, res) => {
+    try {
+        res.send(res.items)
+    } catch (err) {
+        console.error(err)
+    }
+})  
+
 app.listen(3000, () => console.log(`Listening on port ${port}`));

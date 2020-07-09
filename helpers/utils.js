@@ -90,6 +90,7 @@ const getChampionsData = async version => {
         const data = await response.json()
         const champions = data.data
         const champsList = []
+        const itemsDict = getItemsData(version)
         const champs = {
             "version": version
         }
@@ -100,7 +101,7 @@ const getChampionsData = async version => {
     
         dataSetup(champsList, champs, champions)
     
-        await getSingleChampionData(version, champs)
+        await getSingleChampionData(version, champs, itemsDict)
     
         return champs
     } catch (err) {
@@ -122,6 +123,7 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].lore = ''
         champsDict[current_champ].tags = data[champ_name].tags
         champsDict[current_champ].abilities = []
+        champsDict[current_champ].recommended = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
         champsDict[current_champ].tips.playingAs = []
@@ -156,20 +158,19 @@ const getChampionRotations = async champsDict => {
     }
 }
 
-const getSingleChampionData = async (version, champsDict) => {
+const getSingleChampionData = async (version, champsDict, itemsDict) => {
     try {
+        const itemDict = await getItemsData(version)
         for (champion in champsDict) {
             if (champsDict[champion].hasOwnProperty('name')){
-                const champ_name = champsDict[champion].name
+                const champ_name = champsDict[champion].nickname
                 const champ_data = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${champ_name}.json`)
                 const data = await champ_data.json()
                 const champ = data.data
                 const current_champ = champ[`${champ_name}`]
-
                 // let query = 'AnchorageAlaska'
                 // getAccountInfo(query)
-
-                // getRecommendedItems(current_champ, champsDict)
+                getRecommendedItems(current_champ, champsDict, itemDict)
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
@@ -239,146 +240,23 @@ const getAbilities = (version, champion, champsDict) => {
     })
 }
 
-    
-    
-    
-    // try {
-    //     if ((resTwoData[1].queueType == 'RANKED_SOLO_5x5') && (resTwoData[0].queueType == 'RANKED_FLEX_SR')) {
-    //         console.log('Placed in both')
-    //     }
-    // } catch (err) {
-    //     console.log(err)
-    // }
-
-    // if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
-    //     const summonerInfo = {
-    //         'lvl': resOneData.summonerLevel,
-    //         'profileIconID': resOneData.profileIconId,
-    //         'summonerName': resOneData.name,
-    //         'solo/duo': { 
-    //             'rank': resTwoData[0].tier,
-    //             'tier': resTwoData[0].rank,
-    //             'lp': resTwoData[0].leaguePoints,
-    //             'wins': resTwoData[0].wins,
-    //             'losses': resTwoData[0].losses,
-    //             'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
-    //         }
-    //     }
-    //     console.log(summonerInfo)
-
-
-
-    // } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
-    //     const summonerInfo = {
-    //         'lvl': resOneData.summonerLevel,
-    //         'profileIconID': resOneData.profileIconId,
-    //         'summonerName': resOneData.name,
-    //         'solo/duo': { 
-    //             'rank': resTwoData[1].tier,
-    //             'tier': resTwoData[1].rank,
-    //             'lp': resTwoData[1].leaguePoints,
-    //             'wins': resTwoData[1].wins,
-    //             'losses': resTwoData[1].losses,
-    //             'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
-    //         },
-    //         'flex': {
-    //             'rank': resTwoData[0].tier,
-    //             'tier': resTwoData[0].rank,
-    //             'lp': resTwoData[0].leaguePoints,
-    //             'wins': resTwoData[0].wins,
-    //             'losses': resTwoData[0].losses,
-    //             'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
-    //         }
-    //     }
-    //     console.log(summonerInfo)
-
-    // } else if (resTwoData[0].queueType == 'RANKED_FLEX_SR') {
-    //     const summonerInfo = {
-    //         'lvl': resOneData.summonerLevel,
-    //         'profileIconID': resOneData.profileIconId,
-    //         'summonerName': resOneData.name,
-    //         'flex': {
-    //             'rank': resTwoData[0].tier,
-    //             'tier': resTwoData[0].rank,
-    //             'lp': resTwoData[0].leaguePoints,
-    //             'wins': resTwoData[0].wins,
-    //             'losses': resTwoData[0].losses,
-    //             'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
-    //         }
-    //     }
-    //     console.log(summonerInfo)
-    // } else {
-    //     const summonerInfo = {
-    //         'lvl': resOneData.summonerLevel,
-    //         'profileIconID': resOneData.profileIconId,
-    //         'summonerName': resOneData.name
-    //     }
-    //     console.log(summonerInfo)
-    // }
-    
-    /* 
-    [ { leagueId: 'beac6303-09ea-40f0-9f82-ac0590427de9',
-    queueType: 'RANKED_FLEX_SR',
-    tier: 'PLATINUM',
-    rank: 'IV',
-    summonerId: '0OnX9EQsRu4MeQSClTSjokSK0rXdAoPxL5-KqI-LYqRIk48',
-    summonerName: 'AlaskaTryndamere',
-    leaguePoints: 6,
-    wins: 28,
-    losses: 26,
-    veteran: false,
-    inactive: false,
-    freshBlood: false,
-    hotStreak: false },
-  { leagueId: '7a29f64c-a114-4a5a-969c-98cbb74e9e40',
-    queueType: 'RANKED_SOLO_5x5',
-    tier: 'PLATINUM',
-    rank: 'IV',
-    summonerId: '0OnX9EQsRu4MeQSClTSjokSK0rXdAoPxL5-KqI-LYqRIk48',
-    summonerName: 'AlaskaTryndamere',
-    leaguePoints: 67,
-    wins: 66,
-    losses: 49,
-    veteran: false,
-    inactive: false,
-    freshBlood: false,
-    hotStreak: false } ]*/
-    /*
-    
-            if responseJSON_2[0]["queueType"] == "RANKED_SOLO_5x5":
-                infoNum = 0
-            elif responseJSON_2[1]["queueType"] == "RANKED_SOLO_5x5":
-                infoNum = 1
-            else:
-                infoNum = 2
-            
-            tier = responseJSON_2[infoNum]["tier"].lower().capitalize()
-            rank = responseJSON_2[infoNum]["rank"]
-            wins = str(responseJSON_2[infoNum]["wins"])
-            losses = str(responseJSON_2[infoNum]["losses"])
-
-            winrate_dec = responseJSON_2[infoNum]["wins"]/(responseJSON_2[infoNum]["wins"] + responseJSON_2[infoNum]["losses"])
-            winrate = str(round(winrate_dec * 100, 2))
-
-        */
-
-
 const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
 
-// const cleanTooltip = tooltip => {
-//     cleaned = tooltip.replace(/[{}]/g, '')
-//     return cleaned.slice(0,20)
-// }
+const cleanTooltip = tooltip => {
+    cleaned = tooltip.replace(/[{}]/g, '')
+    return cleaned.slice(0,20)
+}
 
-const getRecommendedItems = async (champion, champsDict) => {
+const getRecommendedItems = async (champion, champsDict, itemDict) => {
     // getItemInfo(champion)
     //Loop through all recommended sets, and check if mode is CLASSIC
 
     const name = getCleanedName(champion.name)
     test = champion.recommended
     const item_block = {}        
+    const recommended = []
 
     for (n = 0; n < test.length; n++) {
         if (test[n].mode == "CLASSIC") {
@@ -390,26 +268,63 @@ const getRecommendedItems = async (champion, champsDict) => {
                 // console.log(list)
                 for (j= 0; j < list.length; j++) {
                     const id = list[j].id
-                    list[j]["info"] = await getItemInfo(id)
+                    list[j]["info"] = itemDict[id]
                     // console.log(list.length)
 
                 }
                 // console.log(list)
 
             }
-            console.log(item_block)
+            // console.log(item_block)
+            // recommended.push(item_block)
+            champsDict[name].recommended.push(item_block)
+
+
+            
 
             // console.log(test.blocks.length)
 
                 }
             }
+    console.log(recommended)
+    return recommended
 }
 
-const getItemInfo = async itemId => {
-    const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
-    const data = await champ_data.json()
-    const list_of_items = data.data
-    return list_of_items[itemId]
+// const getItemInfo = async itemId => {
+//     const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
+//     const data = await champ_data.json()
+//     const list_of_items = data.data
+//     return list_of_items[itemId]
+// }
+
+const getItemsData = async version => {
+    try {
+        const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/item.json`)
+        const data = await response.json()
+        const items = data.data
+
+        const itemsDict = {
+            'version': version
+        }
+
+        for (item in items){
+            const current = items[item]
+            const singleItem = {
+                'name': current.name,
+                'id': `${item}`,
+                'description': current.description,
+                'text': current.plaintext,
+                'totalGold': current.gold.total,
+                'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
+            }
+
+            itemsDict[item] = singleItem
+        }
+
+        return itemsDict
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 module.exports = {
@@ -417,5 +332,7 @@ module.exports = {
     getVersion,
     getChampionsData,
     getChampionRotations,
-    getAccountInfo
+    getAccountInfo,
+    getItemsData,
+    getRecommendedItems
 }
