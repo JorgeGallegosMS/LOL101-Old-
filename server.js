@@ -12,6 +12,7 @@ app.use(express.static("public"));
 
 app.use(middleware.setAPIVersion);
 app.use(middleware.setChampionsData);
+app.use(middleware.setItemsData);
 
 app.get("/", (req, res) => {
   res.redirect("/champions");
@@ -68,6 +69,14 @@ app.get("/rotation", async (req, res) => {
             }
         })
         res.send(freeRotation)
+    } catch (err) {
+        console.error(err)
+    }
+})
+
+app.get('/items', async (req, res) => {
+    try {
+        res.send(res.items)
     } catch (err) {
         console.error(err)
     }
