@@ -38,7 +38,7 @@ const getChampionsData = async version => {
             champsList.push([champions[champion]['name'], champions[champion]['id']])
         }
     
-        dataSetup(champsList, champs, champions)
+        dataSetup(version, champsList, champs, champions)
     
         await getSingleChampionData(version, champs)
     
@@ -48,7 +48,7 @@ const getChampionsData = async version => {
     }
 }
 
-const dataSetup = (champsList, champsDict, data) => {
+const dataSetup = (version, champsList, champsDict, data) => {
     champsList.sort()
     champsList.forEach(champ => {
         let current_champ = getCleanedName(champ[0])
@@ -58,7 +58,7 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].title = capitalize(data[champ_name].title)
         champsDict[current_champ].id = parseInt(data[champ_name].key)
         champsDict[current_champ].difficulty = data[champion].info.difficulty
-        champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/10.12.1/img/champion/${champ_name}.png`
+        champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champ_name}.png`
         champsDict[current_champ].lore = ''
         champsDict[current_champ].tags = data[champ_name].tags
         champsDict[current_champ].abilities = []
@@ -100,7 +100,7 @@ const getSingleChampionData = async (version, champsDict) => {
     try {
         for (champion in champsDict) {
             if (champsDict[champion].hasOwnProperty('name')){
-                const champ_name = champsDict[champion].name
+                const champ_name = champsDict[champion].nickname
                 const champ_data = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${champ_name}.json`)
                 const data = await champ_data.json()
                 const champ = data.data
@@ -152,6 +152,7 @@ const getAbilities = (version, champion, champsDict) => {
         const spell_id = spell.id
         const spell_name = spell.name
         const description = spell.description
+        const tooltip = cleanTooltip(spell, spell.tooltip.split(" "))
         const cooldown = spell.cooldown
         const cooldownString = spell.cooldownBurn
         const damage = spell.effect[1][0] == 0 ? "?" : spell.effect[1]
@@ -165,12 +166,13 @@ const getAbilities = (version, champion, champsDict) => {
             'costType': costType,
             'icon': icon,
             'description': description,
+            'tooltip': tooltip,
             'cooldownString': cooldownString,
             'cooldown': cooldown,
             'damageString': damageString,
             'damage': damage
         }
-        console.log(cleanTooltip(spell.tooltip))
+        // console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -179,9 +181,90 @@ const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
 
-const cleanTooltip = tooltip => {
-    cleaned = tooltip.replace(/[{}]/g, '')
-    return cleaned.slice(0,20)
+const cleanTooltip = (spell, tooltip) => {
+    let markers = []
+    for (let i = 0; i < tooltip.length; i++){
+        if(tooltip[i].includes('{')){
+            const marker = tooltip[i+1]
+            markers.push(marker)
+        }
+
+    }
+    const values = getMarkerValues(spell, markers)
+
+    if (values.length > 0){
+        for (let i = 0; i < values.length; i++){
+            const marker = markers[i]
+            const index = tooltip.indexOf(marker)
+            if (index > -1){
+                tooltip[index] = String(values[i])
+            }
+        }
+    }
+
+    for (let i = 0; i < tooltip.length; i++){
+        const current = tooltip[i]
+        if (current.includes('(')){
+            tooltip[i] = current.replace(/[^(+]/g, '')
+        } else if (current.includes(')')){
+            tooltip[i] = current.replace(/[^)]/g, '')
+        } else if (current.includes('<') || current.includes('>')){
+            let chars = current.split("")
+            let beginning = 0
+            let end = 0
+            chars.forEach(character => {
+                if (character == '<'){
+                    beginning = chars.indexOf(character)
+                } else if (character == '>'){
+                    end = chars.indexOf(character)
+                    chars.splice(beginning, end + 1)
+                    beginning = 0
+                    end = 0
+                } else if (end == chars.length){
+                    chars.splice(beginning, end - beginning + 1)
+                } else {
+                    end++
+                }
+
+            })
+            tooltip[i] = chars.join("")
+            // if (i == 0){
+            //     console.log(chars)
+            // }
+        }
+    }
+
+    return tooltip
+}
+
+const getMarkerValues = (spell, markers) => {
+    const values = []
+    for (let i = 0; i < markers.length; i++){
+        const currentMarker = markers[i]
+        if (currentMarker.length == 2){
+            const character = currentMarker[0]
+            const index = parseInt(currentMarker[1])
+            switch(character) {
+                case 'e':
+                    values.push(spell.effectBurn[index])
+                    break
+                case 'a':
+                case 'f':
+                    spell.vars.forEach(item => {
+                        if (item.key == currentMarker){
+                            values.push(item.coeff)
+                        }
+                    })
+                    break
+                default:
+                    break
+            }
+        } else {
+            values.push('?')
+        }
+    }
+
+    return values
 }
 
 const getRecommendedItems = async (champion, champsDict) => {
@@ -228,5 +311,6 @@ module.exports = {
     capitalize,
     getVersion,
     getChampionsData,
-    getChampionRotations
+    getChampionRotations,
+    cleanTooltip
 }

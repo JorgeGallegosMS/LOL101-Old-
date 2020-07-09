@@ -26,7 +26,7 @@ app.get('/dev', (req, res) => {
 
 // Displays all champions
 app.get('/champions', async (req, res) => {
-    try {
+    try { 
         res.send(res.champs)
     } catch (err){
         console.error(err)
