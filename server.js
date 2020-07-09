@@ -25,6 +25,13 @@ app.get('/dev', (req, res) => {
     })
 })
 
+app.get('/dev1', (req, res) => {
+    res.render('champion', {
+        style: 'champion.css',
+        champs: res.champs
+    })
+})
+
 // Displays all champions
 app.get('/champions', async (req, res) => {
     try {
