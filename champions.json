@@ -1,5 +1,5 @@
 {
-    "version": "10.14.1",
+    "version": "1014.1",
     "Aatrox": {
         "name": "Aatrox",
         "nickname": "Aatrox",
@@ -1106,34 +1106,6 @@
                 "costType": "Mana",
                 "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Pulverize.png",
                 "description": "Alistar smashes the ground, dealing damage to nearby enemies and tossing them into the air.",
-                "tooltip": [
-                    "Alistar",
-                    "smashes",
-                    "the",
-                    "ground,",
-                    "dealing",
-                    "{{",
-                    "60/105/150/195/240",
-                    "}}",
-                    "(+",
-                    "0.5",
-                    ")",
-                    "magic",
-                    "damage",
-                    "and",
-                    "tossing",
-                    "nearby",
-                    "enemy",
-                    "units",
-                    "into",
-                    "the",
-                    "air",
-                    "for",
-                    "{{",
-                    "1",
-                    "}}",
-                    "second."
-                ],
                 "cooldownString": "15/14/13/12/11",
                 "cooldown": [
                     15,
@@ -50630,11 +50602,7 @@
         "title": "The Machine Herald",
         "id": 112,
         "difficulty": 7,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/champion/Viktor.png",
         "lore": "The herald of a new age of technology, Viktor has devoted his life to the advancement of humankind. An idealist who seeks to lift the people of Zaun to a new level of understanding, he believes that only by embracing a glorious evolution of technology can humanity's full potential be realized. With a body augmented by steel and science, Viktor is zealous in his pursuit of this bright future.",
-        "tags": [
-            "Mage"
-        ],
         "abilities": [
             {
                 "id": "ViktorPowerTransfer",
@@ -56306,7 +56274,7 @@
                 "costType": "Mana",
                 "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/TimeWarp.png",
                 "description": "Zilean bends time around any unit, decreasing an enemy's Movement Speed or increasing an ally's Movement Speed for a short time.",
-                "tooltip": [
+             "tooltip": [
                     "Zilean",
                     "increases",
                     "an",
