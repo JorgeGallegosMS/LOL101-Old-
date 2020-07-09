@@ -5,7 +5,6 @@ const app = express()
 const exphbs = require('express-handlebars')
 const utils = require('./helpers/utils')
 const middleware = require('./middleware/middleware')
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
@@ -74,12 +73,19 @@ app.get("/rotation", async (req, res) => {
     }
 })
 
+app.get("/search-rank", async (req, res) => {
+    console.log(req.query.query)
+    const rank = await utils.getAccountInfo(req.query.query)
+    console.log({rank})
+    res.render('search_rank', {rank})
+})
+
 app.get('/items', async (req, res) => {
     try {
         res.send(res.items)
     } catch (err) {
         console.error(err)
     }
-})
+})  
 
 app.listen(3000, () => console.log(`Listening on port ${port}`));

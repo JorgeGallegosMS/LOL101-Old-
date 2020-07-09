@@ -14,7 +14,7 @@ const setAPIVersion = async (req, res, next) => {
 const setChampionsData = async (req, res, next) => {
     try {
         let champs = JSON.parse(fs.readFileSync('champions.json'))
-    
+        
             // Rewrites champions.json file if the Riot API version changes
             if (res.version != champs.version){
                 const data = await utils.getChampionsData(res.version)

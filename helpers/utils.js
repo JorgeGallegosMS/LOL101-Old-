@@ -3,8 +3,69 @@ const fetch = require('node-fetch')
 
 const key = process.env.RIOT_API_KEY
 
+
 const capitalize = word => {
     return word.charAt(0).toUpperCase() + word.slice(1)
+}
+
+const getAccountInfo = async query => {
+    let region = 'na'
+    // let query = 'AlaskaTryndamere'
+    const resOne = await fetch(`https://${region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${key}`)
+    const resOneData = await resOne.json()
+    // console.log(resOne)
+    const summonerID = resOneData.id
+    console.log(summonerID)
+    // console.log(resOneData)
+    const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
+    const resTwoData = await resTwo.json()
+    // console.log(resTwoData)
+    try {
+        if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
+
+            const summonerInfo = {
+                'lvl': resOneData.summonerLevel,
+                'profileIconID': resOneData.profileIconId,
+                'summonerName': resOneData.name,
+                'soloDuo': { 
+                    'rank': resTwoData[0].tier,
+                    'tier': resTwoData[0].rank,
+                    'lp': resTwoData[0].leaguePoints,
+                    'wins': resTwoData[0].wins,
+                    'losses': resTwoData[0].losses,
+                    'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
+                }
+            }
+            console.log(summonerInfo)
+            return summonerInfo
+        } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
+    
+            const summonerInfo = {
+                'lvl': resOneData.summonerLevel,
+                'profileIconID': resOneData.profileIconId,
+                'summonerName': resOneData.name,
+                'soloDuo': { 
+                    'rank': resTwoData[1].tier,
+                    'tier': resTwoData[1].rank,
+                    'lp': resTwoData[1].leaguePoints,
+                    'wins': resTwoData[1].wins,
+                    'losses': resTwoData[1].losses,
+                    'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
+                }
+            }
+            console.log(summonerInfo)
+            return summonerInfo
+        }
+        
+    } catch (error) {
+        const summonerInfo = {
+            'lvl': resOneData.summonerLevel,
+            'profileIconID': resOneData.profileIconId,
+            'summonerName': resOneData.name
+        }
+        console.log(summonerInfo)
+        return summonerInfo
+    }
 }
 
 const getVersion = async () => {
@@ -18,7 +79,6 @@ const getVersion = async () => {
         console.error(err)
     }
 }
-
 /**
  * Calls the Riot API and returns an object of champion names sorted alphabetically
  * @param version
@@ -30,6 +90,7 @@ const getChampionsData = async version => {
         const data = await response.json()
         const champions = data.data
         const champsList = []
+        const itemsDict = getItemsData(version)
         const champs = {
             "version": version
         }
@@ -40,7 +101,7 @@ const getChampionsData = async version => {
     
         dataSetup(champsList, champs, champions)
     
-        await getSingleChampionData(version, champs)
+        await getSingleChampionData(version, champs, itemsDict)
     
         return champs
     } catch (err) {
@@ -62,6 +123,7 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].lore = ''
         champsDict[current_champ].tags = data[champ_name].tags
         champsDict[current_champ].abilities = []
+        champsDict[current_champ].recommended = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
         champsDict[current_champ].tips.playingAs = []
@@ -96,8 +158,9 @@ const getChampionRotations = async champsDict => {
     }
 }
 
-const getSingleChampionData = async (version, champsDict) => {
+const getSingleChampionData = async (version, champsDict, itemsDict) => {
     try {
+        const itemDict = await getItemsData(version)
         for (champion in champsDict) {
             if (champsDict[champion].hasOwnProperty('name')){
                 const champ_name = champsDict[champion].nickname
@@ -105,7 +168,9 @@ const getSingleChampionData = async (version, champsDict) => {
                 const data = await champ_data.json()
                 const champ = data.data
                 const current_champ = champ[`${champ_name}`]
-                // getRecommendedItems(current_champ, champsDict)
+                // let query = 'AnchorageAlaska'
+                // getAccountInfo(query)
+                getRecommendedItems(current_champ, champsDict, itemDict)
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
@@ -184,13 +249,14 @@ const cleanTooltip = tooltip => {
     return cleaned.slice(0,20)
 }
 
-const getRecommendedItems = async (champion, champsDict) => {
+const getRecommendedItems = async (champion, champsDict, itemDict) => {
     // getItemInfo(champion)
     //Loop through all recommended sets, and check if mode is CLASSIC
 
     const name = getCleanedName(champion.name)
     test = champion.recommended
     const item_block = {}        
+    const recommended = []
 
     for (n = 0; n < test.length; n++) {
         if (test[n].mode == "CLASSIC") {
@@ -202,27 +268,34 @@ const getRecommendedItems = async (champion, champsDict) => {
                 // console.log(list)
                 for (j= 0; j < list.length; j++) {
                     const id = list[j].id
-                    list[j]["info"] = await getItemInfo(id)
+                    list[j]["info"] = itemDict[id]
                     // console.log(list.length)
 
                 }
                 // console.log(list)
 
             }
-            console.log(item_block)
+            // console.log(item_block)
+            // recommended.push(item_block)
+            champsDict[name].recommended.push(item_block)
+
+
+            
 
             // console.log(test.blocks.length)
 
                 }
             }
+    console.log(recommended)
+    return recommended
 }
 
-const getItemInfo = async itemId => {
-    const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
-    const data = await champ_data.json()
-    const list_of_items = data.data
-    return list_of_items[itemId]
-}
+// const getItemInfo = async itemId => {
+//     const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
+//     const data = await champ_data.json()
+//     const list_of_items = data.data
+//     return list_of_items[itemId]
+// }
 
 const getItemsData = async version => {
     try {
@@ -245,7 +318,7 @@ const getItemsData = async version => {
                 'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
             }
 
-            itemsDict[current.name] = singleItem
+            itemsDict[item] = singleItem
         }
 
         return itemsDict
@@ -259,5 +332,7 @@ module.exports = {
     getVersion,
     getChampionsData,
     getChampionRotations,
-    getItemsData
+    getAccountInfo,
+    getItemsData,
+    getRecommendedItems
 }
