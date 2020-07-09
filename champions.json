@@ -1,5 +1,5 @@
 {
-    "version": "10.13.1",
+    "version": "10.14.1",
     "Aatrox": {
         "name": "Aatrox",
         "nickname": "Aatrox",
@@ -17,7 +17,7 @@
                 "id": "AatroxQ",
                 "name": "The Darkin Blade",
                 "costType": "No Cost",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AatroxQ.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AatroxQ.png",
                 "description": "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect.",
                 "cooldownString": "14/12/10/8/6",
                 "cooldown": [
@@ -34,7 +34,7 @@
                 "id": "AatroxW",
                 "name": "Infernal Chains",
                 "costType": "No Cost",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AatroxW.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AatroxW.png",
                 "description": "Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large monsters have to leave the impact area quickly or they will be dragged to the center and take the damage again.",
                 "cooldownString": "26/23/20/17/14",
                 "cooldown": [
@@ -51,7 +51,7 @@
                 "id": "AatroxE",
                 "name": "Umbral Dash",
                 "costType": "No Cost",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AatroxE.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AatroxE.png",
                 "description": "Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a direction.",
                 "cooldownString": "9/8/7/6/5",
                 "cooldown": [
@@ -68,7 +68,7 @@
                 "id": "AatroxR",
                 "name": "World Ender",
                 "costType": "No Cost",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AatroxR.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AatroxR.png",
                 "description": "Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack damage, increased healing, and movement speed. If he gets a takedown, this effect is extended.",
                 "cooldownString": "120/100/80",
                 "cooldown": [
@@ -147,7 +147,7 @@
                 "id": "AhriOrbofDeception",
                 "name": "Orb of Deception",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AhriOrbofDeception.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AhriOrbofDeception.png",
                 "description": "Ahri sends out and pulls back her orb, dealing magic damage on the way out and true damage on the way back. After earning several spell hits, Ahri's next orb hits will restore her health.",
                 "cooldownString": "7",
                 "cooldown": [
@@ -170,7 +170,7 @@
                 "id": "AhriFoxFire",
                 "name": "Fox-Fire",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AhriFoxFire.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AhriFoxFire.png",
                 "description": "Ahri releases three fox-fires, that lock onto and attack nearby enemies.",
                 "cooldownString": "9/8/7/6/5",
                 "cooldown": [
@@ -193,7 +193,7 @@
                 "id": "AhriSeduce",
                 "name": "Charm",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AhriSeduce.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AhriSeduce.png",
                 "description": "Ahri blows a kiss that damages and charms an enemy it encounters, instantly stopping movement abilities and causing them to walk harmlessly towards her. The target temporarily takes increased damage from Ahri.",
                 "cooldownString": "12",
                 "cooldown": [
@@ -216,7 +216,7 @@
                 "id": "AhriTumble",
                 "name": "Spirit Rush",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AhriTumble.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AhriTumble.png",
                 "description": "Ahri dashes forward and fires essence bolts, damaging nearby enemies. Spirit Rush can be cast up to three times before going on cooldown.",
                 "cooldownString": "130/105/80",
                 "cooldown": [
@@ -318,7 +318,7 @@
                 "id": "AkaliQ",
                 "name": "Five Point Strike",
                 "costType": "Energy",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AkaliQ.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AkaliQ.png",
                 "description": "Akali throws out five kunai, dealing damage based on her bonus Attack Damage and Ability Power and slowing.",
                 "cooldownString": "1.5",
                 "cooldown": [
@@ -335,7 +335,7 @@
                 "id": "AkaliW",
                 "name": "Twilight Shroud",
                 "costType": "Energy",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AkaliW.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AkaliW.png",
                 "description": "Akali drops a cover of smoke and briefly gains Movement Speed. While inside the shroud, Akali becomes invisible and unable to be selected by enemy spells and attacks. Attacking or using abilities will briefly reveal her.  ",
                 "cooldownString": "20",
                 "cooldown": [
@@ -358,7 +358,7 @@
                 "id": "AkaliE",
                 "name": "Shuriken Flip",
                 "costType": "Energy",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AkaliE.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AkaliE.png",
                 "description": "Flip backward and fire a shuriken forward, dealing physical damage. The first enemy or smoke cloud hit is marked. Re-cast to dash to the marked target, dealing additional damage.",
                 "cooldownString": "16/14.5/13/11.5/10",
                 "cooldown": [
@@ -381,7 +381,7 @@
                 "id": "AkaliR",
                 "name": "Perfect Execution",
                 "costType": "No Cost",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AkaliR.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AkaliR.png",
                 "description": "Akali leaps in a direction, damaging enemies she strikes. Re-cast: Akali dashes in a direction, executing all enemies she strikes.",
                 "cooldownString": "100/80/60",
                 "cooldown": [
@@ -493,15 +493,15 @@
                 "id": "Pulverize",
                 "name": "Pulverize",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/Pulverize.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Pulverize.png",
                 "description": "Alistar smashes the ground, dealing damage to nearby enemies and tossing them into the air.",
-                "cooldownString": "17/16/15/14/13",
+                "cooldownString": "15/14/13/12/11",
                 "cooldown": [
-                    17,
-                    16,
                     15,
                     14,
-                    13
+                    13,
+                    12,
+                    11
                 ],
                 "damageString": "375",
                 "damage": [
@@ -516,7 +516,7 @@
                 "id": "Headbutt",
                 "name": "Headbutt",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/Headbutt.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Headbutt.png",
                 "description": "Alistar rams a target with his head, dealing damage and knocking the target back.",
                 "cooldownString": "14/13/12/11/10",
                 "cooldown": [
@@ -533,7 +533,7 @@
                 "id": "AlistarE",
                 "name": "Trample",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AlistarE.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AlistarE.png",
                 "description": "Alistar tramples nearby enemy units, ignoring unit collision and gaining stacks if he damages an enemy champion. At full stacks Alistar's next basic attack against an enemy champion deals additional magic damage and stuns them.",
                 "cooldownString": "12/11.5/11/10.5/10",
                 "cooldown": [
@@ -556,7 +556,7 @@
                 "id": "FerociousHowl",
                 "name": "Unbreakable Will",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/FerociousHowl.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/FerociousHowl.png",
                 "description": "Alistar lets out a wild roar, removing all crowd control effects on himself, and reducing incoming physical and magical damage for the duration.",
                 "cooldownString": "120/100/80",
                 "cooldown": [
@@ -670,7 +670,7 @@
                 "id": "BandageToss",
                 "name": "Bandage Toss",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/BandageToss.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/BandageToss.png",
                 "description": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them.",
                 "cooldownString": "10/9.5/9/8.5/8",
                 "cooldown": [
@@ -693,7 +693,7 @@
                 "id": "AuraofDespair",
                 "name": "Despair",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AuraofDespair.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AuraofDespair.png",
                 "description": "Overcome by anguish, nearby enemies lose a percentage of their maximum Health each second and have their <font color='#9b0f5f'>Curses</font> refreshed.",
                 "cooldownString": "1",
                 "cooldown": [
@@ -716,7 +716,7 @@
                 "id": "Tantrum",
                 "name": "Tantrum",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/Tantrum.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Tantrum.png",
                 "description": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds.",
                 "cooldownString": "10/9/8/7/6",
                 "cooldown": [
@@ -739,7 +739,7 @@
                 "id": "CurseoftheSadMummy",
                 "name": "Curse of the Sad Mummy",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/CurseoftheSadMummy.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/CurseoftheSadMummy.png",
                 "description": "Amumu entangles surrounding enemy units in bandages, applying his <font color='#9b0f5f'>Curse</font>, damaging them and rendering them unable to attack or move.",
                 "cooldownString": "150/125/100",
                 "cooldown": [
@@ -838,7 +838,7 @@
                 "id": "FlashFrost",
                 "name": "Flash Frost",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/FlashFrost.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/FlashFrost.png",
                 "description": "Anivia brings her wings together and summons a sphere of ice that flies towards her opponents, chilling and damaging anyone in its path. When the sphere explodes it does moderate damage in a radius, stunning anyone in the area.",
                 "cooldownString": "10/9.5/9/8.5/8",
                 "cooldown": [
@@ -861,7 +861,7 @@
                 "id": "Crystallize",
                 "name": "Crystallize",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/Crystallize.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Crystallize.png",
                 "description": "Anivia condenses the moisture in the air into an impassable wall of ice to block all movement. The wall only lasts a short duration before it melts.",
                 "cooldownString": "17",
                 "cooldown": [
@@ -884,7 +884,7 @@
                 "id": "Frostbite",
                 "name": "Frostbite",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/Frostbite.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Frostbite.png",
                 "description": "With a flap of her wings, Anivia blasts a freezing gust of wind at her target, dealing a low amount of damage. If the target was recently stunned by Flash Frost or damaged by a fully formed Glacial Storm, the damage they take is doubled.",
                 "cooldownString": "4",
                 "cooldown": [
@@ -907,7 +907,7 @@
                 "id": "GlacialStorm",
                 "name": "Glacial Storm",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/GlacialStorm.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/GlacialStorm.png",
                 "description": "Anivia summons a driving rain of ice and hail to damage her enemies and slow their advance.",
                 "cooldownString": "6",
                 "cooldown": [
@@ -995,7 +995,7 @@
                 "id": "AnnieQ",
                 "name": "Disintegrate",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AnnieQ.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AnnieQ.png",
                 "description": "Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target.",
                 "cooldownString": "4",
                 "cooldown": [
@@ -1012,7 +1012,7 @@
                 "id": "AnnieW",
                 "name": "Incinerate",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AnnieW.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AnnieW.png",
                 "description": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area.",
                 "cooldownString": "8",
                 "cooldown": [
@@ -1029,7 +1029,7 @@
                 "id": "AnnieE",
                 "name": "Molten Shield",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AnnieE.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AnnieE.png",
                 "description": "Grants Annie increased percentage Damage Reduction, a burst of Movement Speed, and damages enemies who attack her with basic attacks.",
                 "cooldownString": "14/13/12/11/10",
                 "cooldown": [
@@ -1046,7 +1046,7 @@
                 "id": "AnnieR",
                 "name": "Summon: Tibbers",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AnnieR.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AnnieR.png",
                 "description": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
                 "cooldownString": "120/100/80",
                 "cooldown": [
@@ -1154,7 +1154,7 @@
                 "id": "ApheliosQ_ClientTooltipWrapper",
                 "name": "Weapon Abilites",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/ApheliosQ_ClientTooltipWrapper.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/ApheliosQ_ClientTooltipWrapper.png",
                 "description": "Aphelios has 5 different activated abilities, based on his main-hand weapon:<br><br>Calibrum (Rifle): Long range shot that marks its target for a long-range follow-up attack.<br>Severum (Scythe Pistol): Run fast while attacking nearby enemies with both weapons.<br>Gravitum (Cannon): Root all enemies slowed by this weapon.<br>Infernum (Flamethrower): Blast enemies in a cone and attack them with your off-hand weapon.<br>Crescendum (Chakram): Deploy a sentry that shoots your off-hand weapon.<br>",
                 "cooldownString": "9",
                 "cooldown": [
@@ -1172,7 +1172,7 @@
                 "id": "ApheliosW",
                 "name": "Phase",
                 "costType": "No Cost",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/ApheliosW.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/ApheliosW.png",
                 "description": "Aphelios swaps his main-hand gun with his off-hand gun, replacing his basic attack and activated ability.",
                 "cooldownString": "0.8",
                 "cooldown": [
@@ -1190,7 +1190,7 @@
                 "id": "ApheliosE_ClientTooltipWrapper",
                 "name": "Weapon Queue System",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/ApheliosE_ClientTooltipWrapper.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/ApheliosE_ClientTooltipWrapper.png",
                 "description": "Aphelios has no third ability. This slot shows the next weapon Alune will give him. Weapon order begins fixed but may change over game time -- when a weapon is out of ammo it goes to the end of the order.",
                 "cooldownString": "0",
                 "cooldown": [
@@ -1208,7 +1208,7 @@
                 "id": "ApheliosR",
                 "name": "Moonlight Vigil",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/ApheliosR.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/ApheliosR.png",
                 "description": "Fire a concentrated blast of moonlight that explodes on enemy champions. Applies the unique effect of Aphelios' main-hand gun.",
                 "cooldownString": "120/110/100",
                 "cooldown": [
@@ -1258,7 +1258,7 @@
                 "id": "AsheQ",
                 "name": "Ranger's Focus",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AsheQ.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AsheQ.png",
                 "description": "Ashe builds up Focus by attacking. At maximum Focus, Ashe can cast Ranger's Focus to consume all stacks of Focus, temporarily increasing her Attack Speed and transforming her basic attack into a powerful flurry attack for the duration.",
                 "cooldownString": "0",
                 "cooldown": [
@@ -1281,7 +1281,7 @@
                 "id": "Volley",
                 "name": "Volley",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/Volley.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/Volley.png",
                 "description": "Ashe fires 9 arrows in a cone for increased damage. Also applies Frost Shot.",
                 "cooldownString": "14/11.5/9/6.5/4",
                 "cooldown": [
@@ -1304,7 +1304,7 @@
                 "id": "AsheSpiritOfTheHawk",
                 "name": "Hawkshot",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/AsheSpiritOfTheHawk.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/AsheSpiritOfTheHawk.png",
                 "description": "Ashe sends her Hawk Spirit on a scouting mission anywhere on the map.",
                 "cooldownString": "5",
                 "cooldown": [
@@ -1327,7 +1327,7 @@
                 "id": "EnchantedCrystalArrow",
                 "name": "Enchanted Crystal Arrow",
                 "costType": "Mana",
-                "icon": "http://ddragon.leagueoflegends.com/cdn/10.13.1/img/spell/EnchantedCrystalArrow.png",
+                "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/EnchantedCrystalArrow.png",
                 "description": "Ashe fires a missile of ice in a straight line. If the arrow collides with an enemy Champion, it deals damage and stuns the Champion, stunning for longer the farther arrow has traveled. In addition, surrounding enemy units take damage and are slowed.",
                 "cooldownString": "100/90/80",
                 "cooldown": [
