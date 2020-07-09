@@ -158,9 +158,6 @@ ul li a {
 }
 
 
-
-
-
 .container {
     width: 100%;
     animation-name: appear;
@@ -295,12 +292,15 @@ ul li a {
     display: inline-block;
     box-shadow: 0px 10px 20px -2px rgb(109, 107, 107);
     box-shadow: 0 0 0 4px #D3BD94;
+    transition: box-shadow 0.6s ease-in-out;
+    transition: all 600ms ease;
   
 }
 
 
 .champion-image:hover {
     border: 7px solid rgb(255, 255, 255);
+    box-shadow: 0 0 0 10px #D3BD94;
     box-sizing: border-box;
     animation-timing-function: ease-in-out;
     transition: all 400ms ease;
