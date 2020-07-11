@@ -1,7 +1,7 @@
 require('dotenv').config()
 const fetch = require('node-fetch')
 
-const key = process.env.RIOT_API_KEY
+const key = 'RGAPI-ade4f371-ff7b-40bc-8b3c-26d19ea3eade'
 
 
 const capitalize = word => {
@@ -15,7 +15,7 @@ const getAccountInfo = async query => {
     const resOneData = await resOne.json()
     // console.log(resOne)
     const summonerID = resOneData.id
-    console.log(summonerID)
+    // console.log(summonerID)
     // console.log(resOneData)
     const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
     const resTwoData = await resTwo.json()
@@ -286,7 +286,7 @@ const getRecommendedItems = async (champion, champsDict, itemDict) => {
 
                 }
             }
-    console.log(recommended)
+    // console.log(recommended)
     return recommended
 }
 
