@@ -1,7 +1,7 @@
 require('dotenv').config()
 const fetch = require('node-fetch')
 
-const key = 'RGAPI-ade4f371-ff7b-40bc-8b3c-26d19ea3eade'
+const key = process.env.RIOT_API_KEY
 
 
 const capitalize = word => {
