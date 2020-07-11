@@ -74,9 +74,9 @@ app.get("/rotation", async (req, res) => {
 })
 
 app.get("/search-rank", async (req, res) => {
-    console.log(req.query.query)
+    // console.log(req.query.query)
     const rank = await utils.getAccountInfo(req.query.query)
-    console.log({rank})
+    // console.log({rank})
     res.render('search_rank', {rank})
 })
 
