@@ -13,14 +13,18 @@ const setAPIVersion = async (req, res, next) => {
 
 const setChampionsData = async (req, res, next) => {
     try {
+        if (!fs.existsSync('champions.json')){
+            const fileData = {'version': "1"}
+            fs.writeFileSync('champions.json', JSON.stringify(fileData, null, 4))
+        }
         let champs = JSON.parse(fs.readFileSync('champions.json'))
         
-            // Rewrites champions.json file if the Riot API version changes
-            if (res.version != champs.version){
-                const data = await utils.getChampionsData(res.version)
-                fs.writeFileSync('./champions.json', JSON.stringify(data, null, 4))
-                champs = JSON.parse(fs.readFileSync('champions.json'))
-            }
+        // Rewrites champions.json file if the Riot API version changes
+        if (res.version != champs.version){
+            const data = await utils.getChampionsData(res.version)
+            fs.writeFileSync('champions.json', JSON.stringify(data, null, 4))
+            champs = JSON.parse(fs.readFileSync('champions.json'))
+        }
     
         res.champs = champs
         next()
@@ -31,14 +35,18 @@ const setChampionsData = async (req, res, next) => {
 
 const setItemsData = async (req, res, next) => {
     try {
+        if (!fs.existsSync('items.json')){
+            const fileData = {'version': ""}
+            fs.writeFileSync('items.json', JSON.stringify(fileData, null, 4))
+        }
         let items = JSON.parse(fs.readFileSync('items.json'))
     
-            // Rewrites champions.json file if the Riot API version changes
-            if (res.version != items.version){
-                const data = await utils.getItemsData(res.version)
-                fs.writeFileSync('./items.json', JSON.stringify(data, null, 4))
-                items = JSON.parse(fs.readFileSync('items.json'))
-            }
+        // Rewrites champions.json file if the Riot API version changes
+        if (res.version != items.version){
+            const data = await utils.getItemsData(res.version)
+            fs.writeFileSync('items.json', JSON.stringify(data, null, 4))
+            items = JSON.parse(fs.readFileSync('items.json'))
+        }
     
         res.items = items
         next()
