@@ -14,7 +14,7 @@ const setAPIVersion = async (req, res, next) => {
 const setChampionsData = async (req, res, next) => {
     try {
         if (!fs.existsSync('champions.json')){
-            const fileData = {'version': "1"}
+            const fileData = {version: "1"}
             fs.writeFileSync('champions.json', JSON.stringify(fileData, null, 4))
         }
         let champs = JSON.parse(fs.readFileSync('champions.json'))
