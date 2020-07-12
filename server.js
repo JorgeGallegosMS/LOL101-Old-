@@ -69,7 +69,10 @@ app.get("/rotation", async (req, res) => {
         //         }
         //     }
         // })
-        res.render('rotation', {freeRotation: rotation})
+        res.render('rotation', {
+            style: 'rotation.css',
+            freeRotation: rotation
+        })
         console.log(rotation)
     } catch (err) {
         console.error(err)

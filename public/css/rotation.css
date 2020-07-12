@@ -167,6 +167,7 @@ ul li a {
     display: flex;
 
 
+
     
 }
 
@@ -208,16 +209,16 @@ ul li a {
 }
 img {
     width: 250px;
-    height: 296px;
+    height: 290px;
     border-radius: .3rem;
     border: 1px solid #D0A85D;
-    top: 50px;
-    left: 50px;
     display: block;
     object-fit: cover;
-
-    object-position: 0 0;
+    object-position: 70% 50%;
+    overflow: hidden;
+    
 }
+
 
 h2 {
     font-size: 50px;
@@ -234,6 +235,8 @@ h2 {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
     justify-items: center;
+    overflow: hidden;
+    overflow: hidden;
     
 
 }
@@ -255,6 +258,7 @@ img:hover {
     opacity: 0.80;
     animation-timing-function: ease-in-out;
     transition: all 400ms ease;
+    transform: scale(1.5);
 }
 
 
