@@ -310,6 +310,10 @@ ul li a {
     transition: all 400ms ease;
 }
 
+.border {
+    border: 7px solid rgb(255, 255, 255);
+}
+
 
 
 

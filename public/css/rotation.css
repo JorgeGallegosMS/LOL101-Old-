@@ -211,6 +211,8 @@ img {
     height: 300px;
     border-radius: .3rem;
     border: 1px solid #D0A85D;
+
+   
 }
 
 h2 {
@@ -228,20 +230,33 @@ h2 {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
     justify-items: center;
+
 }
 
 a > h1 {
     color: white;
-    opacity: 0;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0px 0px 10px 0px;
 }
 
-img:hover {
+
+
+
+
+.border {
+    border: 3px solid #D0A85D;
+    margin: auto;
+}
+
+/* img:hover {
 
     box-shadow: 0 0 0 10px #D3BD94;
     box-sizing: border-box;
     animation-timing-function: ease-in-out;
     transition: all 400ms ease;
-}
+} */
 
 
 @keyframes appear1 {

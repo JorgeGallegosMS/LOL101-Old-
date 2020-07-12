@@ -15,7 +15,7 @@
        <div data-aos="fade-down"><h2>Current Champion Rotation</h2></div>
     </div>
     </div>
-
+    <div class="border">
     <div class="champ-grid">
 {{#each freeRotation}}
     <a href="http://localhost:3000/champions/{{this.champ_name}}">
@@ -23,7 +23,7 @@
         <img src="{{ this.loading_art }}">
     </a>
 {{/each}}
-
+</div>
  <div>
 {{!-- {{#each freeRotation}}
     {{#if @first }}
