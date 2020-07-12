@@ -264,11 +264,11 @@ ul li a {
 }
 
 .champs {
-    padding: 10px;
+    padding: 20px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
     justify-items: center;
 }
 
@@ -310,6 +310,7 @@ ul li a {
     box-sizing: border-box;
     animation-timing-function: ease-in-out;
     transition: all 400ms ease;
+    opacity: 0.75;
 }
 
 .border {
