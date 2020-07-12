@@ -44,7 +44,9 @@ app.get('/champions', async (req, res) => {
 app.get("/champions/:name", (req, res) => {
   try {
     const name = utils.capitalize(req.params.name);
-    res.send(res.champs[name]);
+    // res.send(res.champs[name]);
+    console.log(res.champs[name])
+    res.render('example', res.champs[name])
   } catch (err) {
     console.error(err);
   }

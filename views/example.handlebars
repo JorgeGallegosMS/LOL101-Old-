@@ -1,0 +1,57 @@
+{{!-- Name --}}
+<h1>{{ this.name }}</h1>
+{{!-- Title --}}
+<h2>Title: {{ this.title }}</h1>
+{{!-- Difficulty Number --}}
+<h1>Difficulty: {{ this.difficulty }}</h1>
+{{!-- Icon --}}
+<img src="{{ this.icon }}">
+{{!-- Lore --}}
+<h3>Lore: {{ this.lore }}</h1>
+{{!-- Tags --}}
+{{#each tags }}
+    <h3>Class: {{ this }}</h3>
+{{/each}}
+{{!-- Tips --}}
+{{#each tips.playingAs }}
+    <h3>Playing As: {{ this }}</h3>
+{{/each}}
+{{#each tips.playingAgainst }}
+    <h3>Playing Against: {{ this }}</h3>
+{{/each}}
+{{!-- Abilities --}}
+{{#each abilities }}
+    <h3>ID: {{ id }}</h3>
+    <h3>Name: {{ name }}</h3>
+    <h3>Cost Type: {{ costType }}</h3>
+    <img src="{{ icon }}">
+    <h3>Description: {{ description }}</h3>
+    <h3>Cooldown Per Level String: {{ cooldownString }}</h3>
+    <h3>Cooldown Array: {{ cooldown }}</h3>
+    <h3>Damage Per Level String: {{ damageString }}</h3>
+    <h3>Damage Array: {{ damage }}</h3>
+    <h3>---------------------</h3>
+{{/each}}
+{{!-- Recommended Items --}}
+{{#each recommended.[0] }}
+    <h3>Block name: {{ this.type }}</h3>
+    {{#if this.jg_exists}}
+        <h3>HES A JUNGLER KEKW</h3>
+    {{else}}
+        <h3>RITO SAYS JG IS TROLL</h3>
+    {{/if}}
+    {{#each this.items }}
+        <h3>Item name: {{ info.name }}</h3>
+        <h3>Item description: {{ info.description }}</h3>
+        <h3>Mini tip: {{ info.text }}</h3>
+        <h3>Total cost: {{ info.totalGold }}</h3>
+        <img src="{{ info.icon }}">
+    {{/each}}
+{{/each}}
+
+{{!-- Skin names SplashArts LoadingScreen --}}
+{{#each skins }}
+    <h3>{{ skin_name }}</h3>
+    <img src="{{ splash_url }}">
+    <img src="{{ loadingScreen_url   }}">
+{{/each}}
