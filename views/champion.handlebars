@@ -26,4 +26,22 @@
     </div>
     </div>
     </div>
-   
+   <h1>{{ this.name }}</h1>
+<h2>Title: {{ this.title }}</h1>
+<h1>Difficulty: {{ this.difficulty }}</h1>
+<img src="{{ this.icon }}">
+<h3>Lore: {{ this.lore }}</h1>
+{{#each tags }}
+    <h3>Class: {{ this }}</h3>
+{{/each}}
+{{#each tips.playingAs }}
+    <h3>Playing As: {{ this }}</h3>
+{{/each}}
+{{#each tips.playingAgainst }}
+    <h3>Playing Against: {{ this }}</h3>
+{{/each}}
+{{#each skins }}
+    <h3>{{ skin_name }}</h3>
+    <img src="{{ splash_url }}">
+    <img src="{{ loadingScreen_url   }}">
+{{/each}}

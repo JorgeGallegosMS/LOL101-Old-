@@ -264,10 +264,12 @@ ul li a {
 }
 
 .champs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     padding: 10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
 }
 
 .champion {
