@@ -17,10 +17,12 @@
     </div>
     <div class="border">
     <div class="champ-grid">
+  
 {{#each freeRotation}}
-    <a href="http://localhost:3000/champions/{{this.champ_name}}">
     <h1>{{this.champ_name}}</h1>
-    <img src="{{ this.splash_art }}">
+    <a href="http://localhost:3000/champions/{{this.champ_name}}">
+        <img src="{{ this.splash_art }}">
+
     </a>
 {{/each}}
 </div>

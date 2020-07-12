@@ -1,2 +1,7 @@
 .env
 node_modules/
+.DS_Store
+
+# JSON Data Files
+champions.json
+items.json

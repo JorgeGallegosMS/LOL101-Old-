@@ -5,7 +5,6 @@ const app = express()
 const exphbs = require('express-handlebars')
 const utils = require('./helpers/utils')
 const middleware = require('./middleware/middleware')
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
@@ -45,7 +44,9 @@ app.get('/champions', async (req, res) => {
 app.get("/champions/:name", (req, res) => {
   try {
     const name = utils.capitalize(req.params.name);
-    res.send(res.champs[name]);
+    // res.send(res.champs[name]);
+    console.log(res.champs[name])
+    res.render('example', res.champs[name])
   } catch (err) {
     console.error(err);
   }
@@ -68,14 +69,18 @@ app.get("/rotation", async (req, res) => {
         //         }
         //     }
         // })
-        res.render('rotation', {
-            style: 'rotation.css',
-            freeRotation: rotation 
-        })
+        res.render('rotation', {freeRotation: rotation})
         console.log(rotation)
     } catch (err) {
         console.error(err)
     }
+})
+
+app.get("/search-rank", async (req, res) => {
+    console.log(req.query.query)
+    const rank = await utils.getAccountInfo(req.query.query)
+    console.log({rank})
+    res.render('search_rank', {rank})
 })
 
 app.get('/items', async (req, res) => {
@@ -84,6 +89,6 @@ app.get('/items', async (req, res) => {
     } catch (err) {
         console.error(err)
     }
-})
+})  
 
 app.listen(3000, () => console.log(`Listening on port ${port}`));
