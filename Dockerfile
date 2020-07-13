@@ -1,6 +1,8 @@
 # Get the base Node image
 FROM node:10
 
+RUN apt update && apt install -y vim
+
 # Create app directory
 WORKDIR /app
 

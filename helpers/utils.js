@@ -140,7 +140,7 @@ const getChampionRotations = async champsDict => {
         // console.log(freeRotationNewPlayers)
         // console.log(data)
         for (champion in champsDict) {
-            const champ_name = champsDict[champion].name
+            const champ_name = champsDict[champion].nickname
             const champ_id = champsDict[champion].id
             if (freeRotation.includes(champ_id)) {
                 const freeRotationChamp = {
@@ -250,18 +250,28 @@ const cleanSpellTooltip = (spell, tooltip) => {
     // Create getMarkers function
     let markers = []
     for (let i = 0; i < tooltip.length; i++){
-        if(tooltip[i].includes('{')){
-            const marker = tooltip[i+1]
-            markers.push(marker)
-        } else if (tooltip[i].length == 2 && Number(tooltip[i]) != NaN){
-            continue
-        }
+        if (isNaN(Number(tooltip[i][0])) && !isNaN(Number(tooltip[i][1]))){
+            let marker = tooltip[i]
+            if (marker.length != 2){
+                marker = marker.substring(0,2)
+                tooltip[i] = marker
+            }
 
+            markers.push(marker)
+        } else {
+            if (i > 0){
+                let marker = tooltip[i]
+                const previous = tooltip[i-1]
+                if (previous.includes('{')){
+                    markers.push(marker)
+                }
+            }
+        }
     }
     
     const values = getMarkerValues(spell, markers)
 
-    if (spell.id == 'Tantrum'){
+    if (spell.id == 'TahmKenchW'){
         console.log(spell.id)
         console.log(markers)
         console.log(values)
@@ -269,7 +279,7 @@ const cleanSpellTooltip = (spell, tooltip) => {
     
     fillMarkerValues(tooltip, markers, values)
     
-    const cleanedTooltip = cleanToolTip(tooltip).join(" ").replace(/[{}]/g, '').replace(/\s\s+/g, ' ').replace(/[_]/g, '').replace(/\s%/g, '')
+    const cleanedTooltip = cleanToolTip(tooltip).join(" ").replace(/[{}]/g, '').replace(/\s\s+/g, ' ').replace(/[_]/g, '').replace(/\s%/g, '').replace(/\s[s]\s/, 's ')
 
     return cleanedTooltip;
 }
@@ -277,11 +287,10 @@ const cleanSpellTooltip = (spell, tooltip) => {
 const cleanToolTip = tooltip => {
     for (let i = 0; i < tooltip.length; i++){
         let current = tooltip[i]
-        if (current.includes('(')){
-            tooltip[i] = current.replace(/[^(+]/g, '')
-        } else if (current.includes(')')){
-            tooltip[i] = current.replace(/[^)]/g, '')
-        } else if (current.includes('<') || current.includes('>')){
+        if (current.includes('a2')){
+            console.log(tooltip[i-1])
+        }
+        if (current.includes('<') || current.includes('>')){
             while (current.includes('<') || current.includes('>')){
                 let openingIndex = current.indexOf('<')
                 let closingIndex = current.indexOf('>')
@@ -306,13 +315,14 @@ const cleanToolTip = tooltip => {
                     break
                 }
             }
-        // TODO: Remove all class tags from tooltip
+        } else if (current.includes('(')){
+            tooltip[i] = current.replace(/[^(+]/g, '')
+        } else if (current.includes(')')){
+            tooltip[i] = current.replace(/[^)]/g, '')
         } else if (current.includes('class')){
             index = tooltip.indexOf(current)
             if (index > -1){
-                console.log(`Current: ${current}`)
-                console.log(`From tooltip: ${tooltip[index]}`)
-                deleted = tooltip.splice(index, 1)
+                tooltip.splice(index, 1)
             }
         }
         tooltip[i] = current
@@ -325,9 +335,6 @@ const getMarkerValues = (spell, markers) => {
     for (let i = 0; i < markers.length; i++){
         const currentMarker = markers[i]
         if (currentMarker.length == 2){
-            if (spell.id == 'Tantrum'){
-                console.log(currentMarker)
-            }
             const character = currentMarker[0]
             const index = parseInt(currentMarker[1])
             
@@ -338,13 +345,20 @@ const getMarkerValues = (spell, markers) => {
                 case 'a':
                 case 'f':
                     if (spell.vars.length > 0){
+                        let found = false
+                        let value
                         spell.vars.forEach(item => {
                             if (item.key == currentMarker){
-                                values.push(String(item.coeff))
-                            } else {
-                                values.push('?')
+                                found = true
+                                value = item.coeff
                             }
                         })
+                        if (found){
+                            values.push(String(value))
+                            found = false
+                        } else {
+                            values.push('?')
+                        }
                     } else {
                         values.push('?')
                     }
@@ -414,13 +428,6 @@ const getRecommendedItems = async (champion, champsDict, itemDict) => {
     return recommended
 }
 
-// const getItemInfo = async itemId => {
-//     const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
-//     const data = await champ_data.json()
-//     const list_of_items = data.data
-//     return list_of_items[itemId]
-// }
-
 const getItemsData = async version => {
     try {
         const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/item.json`)
@@ -436,7 +443,7 @@ const getItemsData = async version => {
             const singleItem = {
                 'name': current.name,
                 'id': `${item}`,
-                'description': cleanToolTip(current.description),
+                'description': current.description,
                 'text': current.plaintext,
                 'totalGold': current.gold.total,
                 'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
@@ -456,8 +463,6 @@ module.exports = {
     getVersion,
     getChampionsData,
     getChampionRotations,
-    cleanSpellTooltip,
     getAccountInfo,
     getItemsData,
-    getRecommendedItems
 }

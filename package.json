@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "container": "docker run -it -p 3000:3000 riot_api",
-    "docker_build": "docker build -t riot_api . && docker run -it -p 3000:3000 riot_api",
-    "docker_terminal": "docker exec -ti strange_chatterjee /bin/bash",
+    "container": "docker run --name riot -it -p 3000:3000 riot_api",
+    "docker_build": "docker build -t riot_api . && docker run --name riot -it -p 3000:3000 riot_api",
+    "docker_terminal": "docker exec -ti riot /bin/bash",
     "delete_images": "docker rmi -f $(docker images -q)",
     "delete_containers": "docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
   },
