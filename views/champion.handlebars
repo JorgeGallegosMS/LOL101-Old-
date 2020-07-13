@@ -3,7 +3,7 @@
     <div class="navbar">
         <a href="/" class="header-brand">LeagueOL101</a>
         <ul>
-     <li><a href="/dev">Back</a><img src="./static/back.png"></li>
+     <li><a href="/champions">Back</a><img src="/static/back.png"></li>
         </ul>
     </div>
     </nav>
@@ -11,7 +11,7 @@
 
     <div class="container">
     <div class="champion-title">
-        <h1>Champion Title + Class Icon</h1>
+        <h1>{{ champion.name }}</h1>
     </div>
     <div class="section-container">
     <div class="item-container">
@@ -21,9 +21,39 @@
         <div class="abilities"></div>
         <div class="counters"></div>
     </div>
-    <div class="splash-art"></div>
-    <div class="skins"></div>
+    <div class="splash-art"> 
+        
+        <div class="splash">
+            
+     {{#each champion.skins }}
+        {{#if @first}}
+   {{!-- <h3>{{ skin_name }}</h3> --}}
+    <img src="{{ splash_url }}">
+    {{/if}}
+    {{/each}}
+    
+    </div>
+    <div class="name-tag">
+        <h1>{{ champion.title }}</h1>
+            </div>
+    </div>  
+    {{!-- <div class="skins"></div> --}}
+   
     </div>
     </div>
     </div>
    
+
+<h1>Difficulty: {{ champion.difficulty }}</h1>
+{{!-- <img src="{{ champion.icon }}"> --}}
+<h3>Lore: {{ champion.lore }}</h1>
+{{#each champion.tags }}
+    <h3>Class: {{ this }}</h3>
+{{/each}}
+{{#each champion.tips.playingAs }}
+    <h3>Playing As: {{ this }}</h3>
+{{/each}}
+{{#each champion.tips.playingAgainst }}
+    <h3>Playing Against: {{ this }}</h3>
+{{/each}}
+
