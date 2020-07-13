@@ -208,8 +208,8 @@ ul li a {
     background-color: transparent;
 }
 img {
-    width: 250px;
-    height: 290px;
+    width: 200px;
+    height: 250px;
     border-radius: .3rem;
     border: 1px solid #D0A85D;
     display: block;
@@ -258,7 +258,7 @@ img:hover {
     opacity: 0.80;
     animation-timing-function: ease-in-out;
     transition: all 400ms ease;
-    transform: scale(1.5);
+   
 }
 
 

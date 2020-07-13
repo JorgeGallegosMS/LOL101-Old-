@@ -194,7 +194,7 @@ h1 {
 }
 .section-container {
     display: grid;
-    grid-gap: 100px;
+    grid-gap: 50px;
     grid-template-areas: "showcase showcase top-box-a";
     padding-top: 50px;
     justify-items: center;
@@ -222,12 +222,62 @@ h1 {
 
 .splash-art {
     grid-area: 1 / col4-start / last-line / 6;
-    width: 350px;
-    height: 600px;
     background-color:  #3D494E;
     position: relative;
-    margin-right: 50px;
-    align-items: center;
+    margin-right: 100px;
+    overflow: hidden;
+    display: inline-block;
+    outline: 1px solid #D0A85D;
+    outline-offset: 15px;
+}
+
+.splash img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    object-position: 78% 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform .5s ease;
+
+}
+
+.splash > h1 {
+    position: absolute;
+    text-align: center;
+
+
+    
+}
+
+.splash img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 2px -2px white;
+    animation-timing-function: ease-in-out;
+    transition: all 400ms ease;
+
+    
+}
+
+.name-tag {
+    background-color: #3C484D;
+    height: 70px;
+    width: 500px;
+    position: relative;
+    z-index: 999;
+    padding-top: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-left: 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.champion-title > h1 {
+    padding-left: 100px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 
