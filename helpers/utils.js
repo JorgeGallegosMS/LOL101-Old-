@@ -13,13 +13,9 @@ const getAccountInfo = async query => {
     // let query = 'AlaskaTryndamere'
     const resOne = await fetch(`https://${region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${key}`)
     const resOneData = await resOne.json()
-    // console.log(resOne)
     const summonerID = resOneData.id
-    // console.log(summonerID)
-    // console.log(resOneData)
     const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
     const resTwoData = await resTwo.json()
-    // console.log(resTwoData)
     try {
         if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
 
@@ -36,7 +32,6 @@ const getAccountInfo = async query => {
                     'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
                 }
             }
-            // console.log(summonerInfo)
             return summonerInfo
         } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
     
@@ -53,7 +48,6 @@ const getAccountInfo = async query => {
                     'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
                 }
             }
-            // console.log(summonerInfo)
             return summonerInfo
         }
         
@@ -63,7 +57,6 @@ const getAccountInfo = async query => {
             'profileIconID': resOneData.profileIconId,
             'summonerName': resOneData.name
         }
-        // console.log(summonerInfo)
         return summonerInfo
     }
 }
@@ -137,8 +130,6 @@ const getChampionRotations = async champsDict => {
         const freeRotation = data['freeChampionIds']
         const freeRotationNewPlayers = data['freeChampionIdsForNewPlayers']
         let champion_rotation = []
-        // console.log(freeRotationNewPlayers)
-        // console.log(data)
         for (champion in champsDict) {
             const champ_name = champsDict[champion].nickname
             const champ_id = champsDict[champion].id
@@ -151,10 +142,9 @@ const getChampionRotations = async champsDict => {
                 champion_rotation.push(freeRotationChamp)
             }
         }
-        // console.log(champion_rotation)
         return champion_rotation
     } catch (err) {
-        console.log(err)
+        console.error(err)
     }
 }
 
@@ -237,7 +227,6 @@ const getAbilities = (version, champion, champsDict) => {
             'damageString': damageString,
             'damage': damage
         }
-        // console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -247,39 +236,13 @@ const getCleanedName = name => {
 }
 
 const cleanSpellTooltip = (spell, tooltip) => {
-    // Create getMarkers function
-    let markers = []
-    for (let i = 0; i < tooltip.length; i++){
-        if (isNaN(Number(tooltip[i][0])) && !isNaN(Number(tooltip[i][1]))){
-            let marker = tooltip[i]
-            if (marker.length != 2){
-                marker = marker.substring(0,2)
-                tooltip[i] = marker
-            }
-
-            markers.push(marker)
-        } else {
-            if (i > 0){
-                let marker = tooltip[i]
-                const previous = tooltip[i-1]
-                if (previous.includes('{')){
-                    markers.push(marker)
-                }
-            }
-        }
-    }
+    const markers = getMarkers(tooltip)
     
     const values = getMarkerValues(spell, markers)
-
-    if (spell.id == 'TahmKenchW'){
-        console.log(spell.id)
-        console.log(markers)
-        console.log(values)
-    }
     
     fillMarkerValues(tooltip, markers, values)
     
-    const cleanedTooltip = cleanToolTip(tooltip).join(" ").replace(/[{}]/g, '').replace(/\s\s+/g, ' ').replace(/[_]/g, '').replace(/\s%/g, '').replace(/\s[s]\s/, 's ')
+    const cleanedTooltip = cleanToolTip(tooltip)
 
     return cleanedTooltip;
 }
@@ -287,9 +250,6 @@ const cleanSpellTooltip = (spell, tooltip) => {
 const cleanToolTip = tooltip => {
     for (let i = 0; i < tooltip.length; i++){
         let current = tooltip[i]
-        if (current.includes('a2')){
-            console.log(tooltip[i-1])
-        }
         if (current.includes('<') || current.includes('>')){
             while (current.includes('<') || current.includes('>')){
                 let openingIndex = current.indexOf('<')
@@ -327,7 +287,32 @@ const cleanToolTip = tooltip => {
         }
         tooltip[i] = current
     }
-    return tooltip
+    return tooltip.join(" ").replace(/[{}]/g, '').replace(/\s\s+/g, ' ').replace(/[_]/g, '').replace(/\s%/g, '').replace(/\s[s]\s/g, 's ')
+}
+
+const getMarkers = tooltip => {
+    let markers = []
+    for (let i = 0; i < tooltip.length; i++){
+        if (isNaN(Number(tooltip[i][0])) && !isNaN(Number(tooltip[i][1]))){
+            let marker = tooltip[i]
+            if (marker.length != 2){
+                marker = marker.substring(0,2)
+                tooltip[i] = marker
+            }
+
+            markers.push(marker)
+        } else {
+            if (i > 0){
+                let marker = tooltip[i]
+                const previous = tooltip[i-1]
+                if (previous.includes('{')){
+                    markers.push(marker)
+                }
+            }
+        }
+    }
+
+    return markers
 }
 
 const getMarkerValues = (spell, markers) => {
@@ -402,29 +387,19 @@ const getRecommendedItems = async (champion, champsDict, itemDict) => {
                     'items': test[n].blocks[i].items,
                 }
                 let list = item_block[test[n].blocks[i].type].items
-                // console.log(list)
                 for (j= 0; j < list.length; j++) {
                     const id = list[j].id
                     // itemDict[id].description = cleanTooltip()
                     list[j]["info"] = itemDict[id]
-                    // console.log(list.length)
 
                 }
-                // console.log(list)
 
             }
-            // console.log(item_block)
             // recommended.push(item_block)
             champsDict[name].recommended.push(item_block)
 
-
-            
-
-            // console.log(test.blocks.length)
-
                 }
             }
-    // console.log(recommended)
     return recommended
 }
 
