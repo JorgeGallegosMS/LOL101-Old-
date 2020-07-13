@@ -229,6 +229,7 @@ h1 {
     display: inline-block;
     outline: 1px solid #D0A85D;
     outline-offset: 15px;
+    transition: all 400ms ease;
 }
 
 .splash img {
@@ -239,6 +240,7 @@ h1 {
     overflow: hidden;
     position: relative;
     transition: transform .5s ease;
+    transition: all 400ms ease;
 
 }
 
