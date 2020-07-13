@@ -236,7 +236,7 @@ h1 {
     width: 600px;
     height: 600px;
     object-fit: cover;
-    object-position: 78% 50%;
+    object-position: 83% 50%;
     overflow: hidden;
     position: relative;
     transition: transform .5s ease;

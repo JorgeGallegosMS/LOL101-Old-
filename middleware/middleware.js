@@ -36,7 +36,7 @@ const setChampionsData = async (req, res, next) => {
 const setItemsData = async (req, res, next) => {
     try {
         if (!fs.existsSync('items.json')){
-            const fileData = {'version': ""}
+            const fileData = {'version': "1"}
             fs.writeFileSync('items.json', JSON.stringify(fileData, null, 4))
         }
         let items = JSON.parse(fs.readFileSync('items.json'))

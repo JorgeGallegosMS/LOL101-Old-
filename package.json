@@ -1,13 +1,15 @@
 {
   "name": "riot_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website for League of Legends",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "container": "docker run -it -p 3000:3000 riot_api",
-    "docker_build": "docker build -t riot_api . && docker run -it -p 3000:3000 riot_api",
-    "delete_all": "docker rmi -f $(docker images -q)"
+    "container": "docker run --name riot -it -p 3000:3000 riot_api",
+    "docker_build": "docker build -t riot_api . && docker run --name riot -it -p 3000:3000 riot_api",
+    "docker_terminal": "docker exec -ti riot /bin/bash",
+    "delete_images": "docker rmi -f $(docker images -q)",
+    "delete_containers": "docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
   },
   "keywords": [],
   "author": "Jorge Gallegos",
@@ -20,5 +22,9 @@
   "devDependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JorgeGallegosMS/LOL101"
   }
 }

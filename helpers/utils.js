@@ -13,13 +13,9 @@ const getAccountInfo = async query => {
     // let query = 'AlaskaTryndamere'
     const resOne = await fetch(`https://${region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${key}`)
     const resOneData = await resOne.json()
-    // console.log(resOne)
     const summonerID = resOneData.id
-    // console.log(summonerID)
-    // console.log(resOneData)
     const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
     const resTwoData = await resTwo.json()
-    // console.log(resTwoData)
     try {
         if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
 
@@ -36,7 +32,6 @@ const getAccountInfo = async query => {
                     'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
                 }
             }
-            console.log(summonerInfo)
             return summonerInfo
         } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
     
@@ -53,7 +48,6 @@ const getAccountInfo = async query => {
                     'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
                 }
             }
-            console.log(summonerInfo)
             return summonerInfo
         }
         
@@ -63,7 +57,6 @@ const getAccountInfo = async query => {
             'profileIconID': resOneData.profileIconId,
             'summonerName': resOneData.name
         }
-        console.log(summonerInfo)
         return summonerInfo
     }
 }
@@ -99,7 +92,7 @@ const getChampionsData = async version => {
             champsList.push([champions[champion]['name'], champions[champion]['id']])
         }
     
-        dataSetup(champsList, champs, champions)
+        dataSetup(version, champsList, champs, champions)
     
         await getSingleChampionData(version, champs, itemsDict)
     
@@ -109,7 +102,7 @@ const getChampionsData = async version => {
     }
 }
 
-const dataSetup = (champsList, champsDict, data) => {
+const dataSetup = (version, champsList, champsDict, data) => {
     champsList.sort()
     champsList.forEach(champ => {
         let current_champ = getCleanedName(champ[0])
@@ -119,7 +112,7 @@ const dataSetup = (champsList, champsDict, data) => {
         champsDict[current_champ].title = capitalize(data[champ_name].title)
         champsDict[current_champ].id = parseInt(data[champ_name].key)
         champsDict[current_champ].difficulty = data[champion].info.difficulty
-        champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/10.12.1/img/champion/${champ_name}.png`
+        champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champ_name}.png`
         champsDict[current_champ].lore = ''
         champsDict[current_champ].tags = data[champ_name].tags
         champsDict[current_champ].abilities = []
@@ -137,10 +130,8 @@ const getChampionRotations = async champsDict => {
         const freeRotation = data['freeChampionIds']
         const freeRotationNewPlayers = data['freeChampionIdsForNewPlayers']
         let champion_rotation = []
-        // console.log(freeRotationNewPlayers)
-        // console.log(data)
         for (champion in champsDict) {
-            const champ_name = champsDict[champion].name
+            const champ_name = champsDict[champion].nickname
             const champ_id = champsDict[champion].id
             if (freeRotation.includes(champ_id)) {
                 const freeRotationChamp = {
@@ -152,10 +143,9 @@ const getChampionRotations = async champsDict => {
                 champion_rotation.push(freeRotationChamp)
             }
         }
-        // console.log(champion_rotation)
         return champion_rotation
     } catch (err) {
-        console.log(err)
+        console.error(err)
     }
 }
 
@@ -218,6 +208,7 @@ const getAbilities = (version, champion, champsDict) => {
         const spell_id = spell.id
         const spell_name = spell.name
         const description = spell.description
+        const tooltip = cleanSpellTooltip(spell, spell.tooltip.split(" "))
         const cooldown = spell.cooldown
         const cooldownString = spell.cooldownBurn
         const damage = spell.effect[1][0] == 0 ? "?" : spell.effect[1]
@@ -231,12 +222,12 @@ const getAbilities = (version, champion, champsDict) => {
             'costType': costType,
             'icon': icon,
             'description': description,
+            'tooltip': tooltip,
             'cooldownString': cooldownString,
             'cooldown': cooldown,
             'damageString': damageString,
             'damage': damage
         }
-        // console.log(cleanTooltip(spell.tooltip))
         champsDict[name].abilities.push(data)
     })
 }
@@ -245,9 +236,140 @@ const getCleanedName = name => {
     return capitalize(name.replace(/[^a-z0-9]/gi, '').toLowerCase())
 }
 
-const cleanTooltip = tooltip => {
-    cleaned = tooltip.replace(/[{}]/g, '')
-    return cleaned.slice(0,20)
+const cleanSpellTooltip = (spell, tooltip) => {
+    const markers = getMarkers(tooltip)
+    
+    const values = getMarkerValues(spell, markers)
+    
+    fillMarkerValues(tooltip, markers, values)
+    
+    const cleanedTooltip = cleanToolTip(tooltip)
+
+    return cleanedTooltip;
+}
+
+const cleanToolTip = tooltip => {
+    for (let i = 0; i < tooltip.length; i++){
+        let current = tooltip[i]
+        if (current.includes('<') || current.includes('>')){
+            while (current.includes('<') || current.includes('>')){
+                let openingIndex = current.indexOf('<')
+                let closingIndex = current.indexOf('>')
+                
+                const chars = current.split("")
+                
+                if (closingIndex > -1 && openingIndex > -1){
+                    if(openingIndex > closingIndex){
+                        chars.splice(0, closingIndex + 1)
+                        current = chars.join("")
+                    } else {
+                        chars.splice(openingIndex, closingIndex - openingIndex + 1)
+                        current = chars.join("")
+                    }
+                } else if (openingIndex > -1){
+                    chars.splice(openingIndex, current.length - openingIndex + 1)
+                    current = chars.join("")
+                } else if (closingIndex > -1) {
+                    chars.splice(0, closingIndex + 1)
+                    current = chars.join("")
+                } else {
+                    break
+                }
+            }
+        } else if (current.includes('(')){
+            tooltip[i] = current.replace(/[^(+]/g, '')
+        } else if (current.includes(')')){
+            tooltip[i] = current.replace(/[^)]/g, '')
+        } else if (current.includes('class')){
+            index = tooltip.indexOf(current)
+            if (index > -1){
+                tooltip.splice(index, 1)
+            }
+        }
+        tooltip[i] = current
+    }
+    return tooltip.join(" ").replace(/[{}]/g, '').replace(/\s\s+/g, ' ').replace(/[_]/g, '').replace(/\s%/g, '').replace(/\s[s]\s/g, 's ')
+}
+
+const getMarkers = tooltip => {
+    let markers = []
+    for (let i = 0; i < tooltip.length; i++){
+        if (isNaN(Number(tooltip[i][0])) && !isNaN(Number(tooltip[i][1]))){
+            let marker = tooltip[i]
+            if (marker.length != 2){
+                marker = marker.substring(0,2)
+                tooltip[i] = marker
+            }
+
+            markers.push(marker)
+        } else {
+            if (i > 0){
+                let marker = tooltip[i]
+                const previous = tooltip[i-1]
+                if (previous.includes('{')){
+                    markers.push(marker)
+                }
+            }
+        }
+    }
+
+    return markers
+}
+
+const getMarkerValues = (spell, markers) => {
+    const values = []
+    for (let i = 0; i < markers.length; i++){
+        const currentMarker = markers[i]
+        if (currentMarker.length == 2){
+            const character = currentMarker[0]
+            const index = parseInt(currentMarker[1])
+            
+            switch(character) {
+                case 'e':
+                    values.push(String(spell.effectBurn[index]))
+                    break
+                case 'a':
+                case 'f':
+                    if (spell.vars.length > 0){
+                        let found = false
+                        let value
+                        spell.vars.forEach(item => {
+                            if (item.key == currentMarker){
+                                found = true
+                                value = item.coeff
+                            }
+                        })
+                        if (found){
+                            values.push(String(value))
+                            found = false
+                        } else {
+                            values.push('?')
+                        }
+                    } else {
+                        values.push('?')
+                    }
+                    break
+                default:
+                    break
+            }
+        } else {
+            values.push('?')
+        }
+    }
+
+    return values
+}
+
+const fillMarkerValues = (tooltip, markers, values) => {
+    if (values.length > 0){
+        for (let i = 0; i < values.length; i++){
+            const marker = markers[i]
+            const index = tooltip.indexOf(marker)
+            if (index > -1){
+                tooltip[index] = String(values[i])
+            }
+        }
+    }
 }
 
 const getRecommendedItems = async (champion, champsDict, itemDict) => {
@@ -277,37 +399,21 @@ const getRecommendedItems = async (champion, champsDict, itemDict) => {
                 }
 
                 let list = item_block[test[n].blocks[i].type].items
-                // console.log(list)
                 for (j= 0; j < list.length; j++) {
                     const id = list[j].id
+                    // itemDict[id].description = cleanTooltip()
                     list[j]["info"] = itemDict[id]
-                    // console.log(list.length)
 
                 }
-                // console.log(list)
 
             }
-            // console.log(item_block)
             // recommended.push(item_block)
             champsDict[name].recommended.push(item_block)
 
-
-            
-
-            // console.log(test.blocks.length)
-
                 }
             }
-    // console.log(recommended)
     return recommended
 }
-
-// const getItemInfo = async itemId => {
-//     const champ_data = await fetch('http://ddragon.leagueoflegends.com/cdn/10.13.1/data/en_US/item.json')
-//     const data = await champ_data.json()
-//     const list_of_items = data.data
-//     return list_of_items[itemId]
-// }
 
 const getItemsData = async version => {
     try {
@@ -346,5 +452,4 @@ module.exports = {
     getChampionRotations,
     getAccountInfo,
     getItemsData,
-    getRecommendedItems
 }
