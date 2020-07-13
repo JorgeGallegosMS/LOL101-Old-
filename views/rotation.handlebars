@@ -1,8 +1,20 @@
-{{#each this }}
-    <h1>{{ this.name }}</h1>
-{{#each this.skins as |item| }}
+{{#each freeRotation}}
+    <h1>{{this.champ_name}}</h1>
+    <a href="http://localhost:3000/champions/{{this.champ_name}}">
+        <img src="{{ this.loading_art }}">
+        <img src="{{ this.splash_art }}">
+
+    </a>
+{{/each}}
+
+{{!-- {{#each freeRotation}}
     {{#if @first }}
-            <img src="{{ item.loadingScreen_url }}">
+    {{else}}
+        {{this.name}}
+        {{#each this.skins as |item| }}
+            {{#if @first }}
+                <img src="{{ item.loadingScreen_url }}">
+            {{/if}}
+        {{/each}}
     {{/if}}
-{{/each}}
-{{/each}}
+{{/each}} --}}

@@ -44,7 +44,9 @@ app.get('/champions', async (req, res) => {
 app.get("/champions/:name", (req, res) => {
   try {
     const name = utils.capitalize(req.params.name);
-    res.send(res.champs[name]);
+    // res.send(res.champs[name]);
+    console.log(res.champs[name])
+    res.render('example', res.champs[name])
   } catch (err) {
     console.error(err);
   }
@@ -52,22 +54,23 @@ app.get("/champions/:name", (req, res) => {
 
 app.get("/rotation", async (req, res) => {
     try {
-        const freeRotation = {
-            "type": "Free Rotation"
-        }
+        // const freeRotation = {
+        //     "type": "Free Rotation"
+        // }
     
         const rotation = await utils.getChampionRotations(res.champs)
     
-        rotation.forEach(champion => {
-            for (champ in res.champs) {
-                if (res.champs[champ].hasOwnProperty('id')){
-                    if (champion.champ_id == res.champs[champ].id){
-                        freeRotation[champ] = res.champs[champ]
-                    }
-                }
-            }
-        })
-        res.send(freeRotation)
+        // rotation.forEach(champion => {
+        //     for (champ in res.champs) {
+        //         if (res.champs[champ].hasOwnProperty('id')){
+        //             if (champion.champ_id == res.champs[champ].id){
+        //                 freeRotation[champ] = res.champs[champ]
+        //             }
+        //         }
+        //     }
+        // })
+        res.render('rotation', {freeRotation: rotation})
+        console.log(rotation)
     } catch (err) {
         console.error(err)
     }

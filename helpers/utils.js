@@ -137,6 +137,7 @@ const getChampionRotations = async champsDict => {
                 const freeRotationChamp = {
                     'champ_id': champ_id,
                     'champ_name': champ_name,
+                    'splash_art': `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ_name}_0.jpg`,
                     'loading_art': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ_name}_0.jpg`
                 }
                 champion_rotation.push(freeRotationChamp)
@@ -383,9 +384,20 @@ const getRecommendedItems = async (champion, champsDict, itemDict) => {
     for (n = 0; n < test.length; n++) {
         if (test[n].mode == "CLASSIC") {
             for (i = 0; i < test[n].blocks.length; i++) {
-                item_block[test[n].blocks[i].type] = {
-                    'items': test[n].blocks[i].items,
+                if (test[n].blocks.length > 6) {
+                    item_block[test[n].blocks[i].type] = {
+                        'items': test[n].blocks[i].items,
+                        'type': test[n].blocks[i].type,
+                        'jg_exists': true
+                    }
+                } else {
+                    item_block[test[n].blocks[i].type] = {
+                        'items': test[n].blocks[i].items,
+                        'type': test[n].blocks[i].type,
+                        'jg_exists': undefined
+                    }
                 }
+
                 let list = item_block[test[n].blocks[i].type].items
                 for (j= 0; j < list.length; j++) {
                     const id = list[j].id
