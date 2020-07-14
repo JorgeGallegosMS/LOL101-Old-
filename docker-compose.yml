@@ -2,7 +2,7 @@ version: '3'
 services:
     app:
         volumes:
-            - ${PWD}:~/dev/projects/LOL101
+            - $PWD:/app
         container_name: riot
         restart: always
         build: .
