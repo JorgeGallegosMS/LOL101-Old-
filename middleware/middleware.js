@@ -38,13 +38,13 @@ const setItemsData = async (req, res, next) => {
         if (!fs.existsSync('items.json')){
             const data = await utils.getItemsData(res.version)
             fs.writeFileSync('items.json', JSON.stringify(data, null, 4))
-            items = JSON.parse(fs.readFileSync('items.json'))
+            items = JSON.parse(fs.readFileSync('items.json', {encoding: 'utf-8'}))
         } else {
             items = JSON.parse(fs.readFileSync('items.json'))
             if (res.version != items.version){
                 const data = await utils.getItemsData(res.version)
                 fs.writeFileSync('items.json', JSON.stringify(data, null, 4))
-                items = JSON.parse(fs.readFileSync('items.json'))
+                items = JSON.parse(fs.readFileSync('items.json', {encoding: 'utf-8'}))
             }
         }
     
