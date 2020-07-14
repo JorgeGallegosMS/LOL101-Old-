@@ -1,4 +1,4 @@
-div class="container">
+<div class="container">
     <nav>
     <div class="navbar">
         <a href="/" class="header-brand">LeagueOL101</a>
@@ -13,39 +13,61 @@ div class="container">
     <div class="champion-title">
         <h1>{{ champion.name }}</h1>
     </div>
+    </div>
+    <div class="container1">
     <div class="section-container">
     <div class="ability-container">
     <div class="abilities">
         {{#each champion.abilities }}
+        <div class="tooltip">
         <img src="{{ icon }}">
+         <div class="top">
+        <h2>{{ name }}</h2>
+        <h3>Cooldown Per Level: {{ cooldownString }}</h3>
+        <p><strong>Description:</strong> {{ description }}</p>
+        <i></i>
+        </div>
+        </div>
         {{/each}}
     </div>
     </div>
     <div class="a-b-container">
     <div class="tabContainer">
     <div class="buttonContainer">
-        <button onclick="showPanel(0,'#3C484D')">Tips</button>
+        <button onclick="showPanel(0,'#3C484D')">Info</button>
         <button onclick="showPanel(1, '#3C484D')">Lore</button>
         <button onclick="showPanel(2,'#3C484D')">Items</button>
     </div>
     <div class="tabPanel">
-        <h2>Difficulty: {{ champion.difficulty }}</h2>
+    <div class="dif">
+    <h3>Difficulty: {{ champion.difficulty }}</h3>
     {{#each champion.tags }}
-    <h3>Class: {{ this }}</h3>
+    <h4>Class: {{ this }}</h4>
     {{/each}}
+    </div>
+    <div class="play-as">
+    <h3><strong>Playing As:</strong></h3>
     {{#each champion.tips.playingAs }}
-    <h3>Playing As: {{ this }}</h3>
+     <p>{{ this }}</p>
     {{/each}}
+    </div>
+    <div class="play-as">
+    <h3><strong>Playing Against:</strong></h3>
     {{#each champion.tips.playingAgainst }}
-    <h3>Playing Against: {{ this }}</h3>
-    {{/each}}</div>
-    <div class="tabPanel"><h3>{{ champion.lore }}</h3></div>
+    <p>{{ this }}</p>
+    {{/each}}
+    </div>
+    </div>
+    <div class="tabPanel">
+    <div class="lore">
+    <h3>{{ champion.lore }}</h3>
+    </div>
+    </div>
     <div class="tabPanel">{{#each champion.recommended.[0] }}
-    <h3>Block name: {{ this.type }}</h3>
+
     {{#if this.jg_exists}}
-        <h3>HES A JUNGLER KEKW</h3>
+
     {{else}}
-        <h3>RITO SAYS JG IS TROLL</h3>
     {{/if}}
     {{#each this.items }}
         <h3>Item name: {{ info.name }}</h3>
@@ -55,13 +77,10 @@ div class="container">
         <img src="{{ info.icon }}">
     {{/each}}
 {{/each}}</div>
-</div>
-       
+</div>  
     </div>
     <div class="splash-art"> 
-        
         <div class="splash">
-            
      {{#each champion.skins }}
         {{#if @first}}
    {{!-- <h3>{{ skin_name }}</h3> --}}
@@ -69,19 +88,32 @@ div class="container">
     {{/if}}
     {{/each}}
     
-    </div>
     <div class="name-tag">
         <h1>{{ champion.title }}</h1>
             </div>
+            </div>
     </div>  
+        
+    </div>
+    </div>
+    {{!-- <div id="owl-demo" class="owl-carousel">
+    {{#each champion.skins }}
+    {{#if @first}}
+    {{ else }}
+    <img src="{{ loadingScreen_url   }}">
 
+    </div>
+    </div>
+    {{/if}}
+    {{/each}} --}}
+    
+    </div>
+    </div>
    
     </div>
-    </div>
-    </div>
+ 
    
 {{!--- note: Maybe put it in carousel format. }}
-
 {{!-- <img src="{{ champion.icon }}"> --}}
 {{!-- --}}
 
@@ -112,7 +144,6 @@ div class="container">
 <script>
 var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
 var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
-
 function showPanel(panelIndex,colorCode) {
     tabButtons.forEach(function(node){
         node.style.backgroundColor="";
@@ -127,6 +158,28 @@ function showPanel(panelIndex,colorCode) {
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
 showPanel(0,'#3C484D');
+
+
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+    jsonPath : 'json/customData.json',
+    jsonSuccess : customDataSuccess
+  });
+ 
+  function customDataSuccess(data){
+    var content = "";
+    for(var i in data["champion.skins"]){
+       
+       var img = data["champion.skins"][i].img;
+       var alt = data["champion.skins"][i].alt;
+ 
+       content += "<img src=\"" +img+ "\" alt=\"" +alt+ "\">"
+    }
+    $("#owl-demo").html(content);
+  }
+ 
+});
 </script>
 
 
