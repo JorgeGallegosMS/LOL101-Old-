@@ -208,13 +208,13 @@ ul li a {
     background-color: transparent;
 }
 img {
-    width: 200px;
+    width: 230px;
     height: 250px;
     border-radius: .3rem;
     border: 1px solid #D0A85D;
     display: block;
     object-fit: cover;
-    object-position: 70% 50%;
+    object-position: 83% 50%;
     overflow: hidden;
     
 }

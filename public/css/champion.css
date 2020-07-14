@@ -115,6 +115,13 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 
+/* .container1 {
+    width: 100%;
+    animation-name: appear;
+    animation-duration: 1.5s;
+    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+} */
+
 
 .navbar {
     margin: 30px auto;
@@ -187,11 +194,75 @@ ul li a {
 .header-brand:hover,.header-brand.active {color: white;}
 .header-brand:hover::before, .header-brand.active::before {width: 100%;}
 
+
+/* ---- FONT ---- */
+
 h1 {
     color: white;
     font-size: 40px;
     padding-left: 20px;
 }
+
+
+.dif h3 {
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 400; 
+    line-height: 32px; 
+    margin: 0 0 10px; 
+    text-align: center;
+    
+}
+
+.dif h4 {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    text-align: center;
+    margin: 0 0 20px; 
+    padding-left: -10px
+}
+
+.play-as h3 {
+    font-size: 23px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    text-align: center;
+    margin: 0 0 20px; 
+    padding-left: -10px
+}
+.play-as h4 {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    text-align: center;
+    margin: 0 0 20px; 
+    padding-left: -10px
+}
+
+.play-as p {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    text-align: center;
+    margin: 0 0 20px; 
+    padding-left: -10px
+}
+
+.lore h3 {
+
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    text-align: center;
+    margin: 25 25 35px; 
+    padding-left: -10px
+
+}
+
+
+/* ---- CONTAINERS ---- */
+
 .section-container {
     display: grid;
     grid-gap: 50px;
@@ -201,12 +272,30 @@ h1 {
 
 }
 
-.item-container {
-    width: 460px;
+.ability-container {
+    width: 500px;
     height: 100px;
     background-color:  #3D494E;
     position: relative;
-    margin-left: 30px;
+    justify-content: center;
+    outline: 2px solid #D0A85D;
+    outline-offset: 15px;
+    
+}
+
+.abilities {
+    padding: 20px 20px 20px 20px;
+    display: inline-block;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 25px;
+    animation-name: appear;
+    animation-duration: 2s;
+    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+
+
+    
 }
 
 .a-b-container {
@@ -217,8 +306,22 @@ h1 {
     grid-row-start: 2;
     grid-row-end: span 2;
     margin-left: 30px;
+    outline: 1px solid #D0A85D;
+    outline-offset: 15px;
+    border-radius: 30px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, white 100px, transparent 100px), linear-gradient(to bottom, white 50px, transparent 50px), linear-gradient(to right,white 50px, transparent 50px), linear-gradient(to bottom,white 50px, transparent 50px);
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
+    background-position: 0px 0px, right -50px, 200px bottom, 0px 200px;
+    animation: border 5s linear infinite;
+    transition: 500ms;
+    
 
 }
+
+
 
 .splash-art {
     grid-area: 1 / col4-start / last-line / 6;
@@ -244,22 +347,45 @@ h1 {
 
 }
 
-.splash > h1 {
-    position: absolute;
-    text-align: center;
 
-
-    
-}
 
 .splash img:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 2px -2px white;
     animation-timing-function: ease-in-out;
-    transition: all 400ms ease;
+    transition: all 400ms ease;   
+}
 
+.name-tag h1 {
+    transition: all 400ms ease;  
+}
+
+.splash img:hover ~ .name-tag h1 {
+    padding-right: 50px;
+    transition: all 400ms ease;  
+}
+
+
+/* .skin-container {
+    width: 500px;
+    height: 100px;
+    background-color: #3C484D;
+    grid-area: 1 / col4-start / last-line / 6;
     
 }
+
+.skin-block {
+ clip-path: inset(10px 50px 50px 50px);   
+
+} */
+
+/* .skin-block > img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 70% 20%;
+    overflow: hidden;
+} */
 
 .name-tag {
     background-color: #3C484D;
@@ -282,4 +408,242 @@ h1 {
     text-transform: uppercase;
 }
 
+.tabContainer{
+    width: 100%;
+    height: 580px;
+    overflow: scroll;
+    transition: 500ms;
+    border-radius: 20px;
+    
+    
+}
+.tabContainer .buttonContainer{
+    height: 15%;
 
+}
+
+.tabContainer .buttonContainer button{
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #eee;
+    letter-spacing: 2px;
+
+}
+.tabContainer .buttonContainer button:hover{
+    background-color: #d7d4d4;
+    transition: 500ms;
+}
+.tabContainer .tabPanel{
+    height: 85%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding-top: 105px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+    display: none;
+    transition: 500ms;
+}
+
+.tabPanel {
+    letter-spacing: 1px;
+    margin: 20px 20px 20px 20px;
+    animation-name: appear;
+    animation-duration: 1.4s;
+    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+.tabPanel img {
+    border-radius: 20%;
+}
+
+.abilities img {
+    border: 1px solid white;
+
+}
+
+.tooltip {
+    display:inline-block;
+    position:relative;
+    text-align:left;
+    animation-name: appear;
+    animation-duration: 1.4s;
+ 
+}
+
+
+.tooltip .top {
+    min-width:200px; 
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -100%);
+    padding:10px 20px;
+    color:#444444;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+   
+  
+
+}
+
+.tooltip:hover .top {
+    display:block;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+.tooltip .top i {
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+
+}
+
+.tooltip  .top i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background-color: #EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+
+
+.tooltip2 {
+    display:inline-block;
+    position:relative;
+    text-align:left;
+    animation-name: appear;
+    animation-duration: 1.4s;
+ 
+}
+
+
+.tooltip2 .top2 {
+    min-width:200px; 
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -100%);
+    padding:10px 20px;
+    color:#444444;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+   
+  
+
+}
+
+.tooltip2:hover .top2 {
+    display:block;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+.tooltip2 .top2 i {
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+
+}
+
+.tooltip2  .top2 i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background-color: #EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+ .dif {
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+ }
+
+ .play-as {
+     border-bottom: 1px solid white;
+     margin-bottom: 40px;
+    padding: 30px 30px 30px 30px;
+
+ }
+
+ .items {
+    padding: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    border: 1px solid  #D0A85D;
+ }
+
+@keyframes appear {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes border {
+    20% {
+      background-position: 150px 0px, right -50px, 600px bottom, 0px 600px;
+    }
+    25% {
+      background-position: 600px 0px, right 0px, 600px bottom, 0px 600px;
+    }
+    45% {
+      background-position: 600px 0px, right 150px, 600px bottom, 0px 600px;
+    }
+    50% {
+      background-position: 600px 0px, right 200px, 150px bottom, 0px 600px;
+    }
+    70% {
+      background-position: 600px 0px, right 600px, 0px bottom, 0px 600px;
+    }
+    75% {
+      background-position: 600px 0px, right 600px, -50px bottom, 0px 150px;
+    }
+    95% {
+      background-position: 600px 0px, right 600px, -50px bottom, 0px 0px;
+    }
+    95.1% {
+      background-position: -50px 0px, right 600px, -50px bottom, 0px 0px;
+    }
+    100% {
+      background-position: 0px 0px, right 600px, -50px bottom, 0px -50px;
+    }
+  }

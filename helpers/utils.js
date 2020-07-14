@@ -111,7 +111,7 @@ const dataSetup = (version, champsList, champsDict, data) => {
         champsDict[current_champ].nickname = champ_name
         champsDict[current_champ].title = capitalize(data[champ_name].title)
         champsDict[current_champ].id = parseInt(data[champ_name].key)
-        champsDict[current_champ].difficulty = data[champion].info.difficulty
+        champsDict[current_champ].difficulty = data[champ_name].info.difficulty
         champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champ_name}.png`
         champsDict[current_champ].lore = ''
         champsDict[current_champ].tags = data[champ_name].tags
