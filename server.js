@@ -1,5 +1,5 @@
 require('dotenv').config()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
@@ -17,25 +17,40 @@ app.get("/", (req, res) => {
   res.redirect("/champions");
 });
 
-app.get('/champions', (req, res) => {
+app.get('/dev', (req, res) => {
     res.render('index', {
         style: 'home.css',
         champs: res.champs
     })
 })
 
-
-// Displays a single champion
-app.get("/champions/:name", (req, res) => {
-    const name = utils.capitalize(req.params.name);
-    // res.send(res.champs[name]);
-    console.log(res.champs[name])
+app.get('/dev1', (req, res) => {
     res.render('champion', {
         style: 'champion.css',
-        "champion": res.champs[name]
+        champs: res.champs
     })
 })
 
+// Displays all champions
+app.get('/champions', async (req, res) => {
+    try { 
+        res.send(res.champs)
+    } catch (err){
+        console.error(err)
+    }
+})
+
+// Displays a single champion
+app.get("/champions/:name", (req, res) => {
+  try {
+    const name = utils.capitalize(req.params.name);
+    // res.send(res.champs[name]);
+    console.log(res.champs[name])
+    res.render('example', res.champs[name])
+  } catch (err) {
+    console.error(err);
+  }
+});
 
 app.get("/rotation", async (req, res) => {
     try {
@@ -54,10 +69,7 @@ app.get("/rotation", async (req, res) => {
         //         }
         //     }
         // })
-        res.render('rotation', {
-            style: 'rotation.css',
-            freeRotation: rotation
-        })
+        res.render('rotation', {freeRotation: rotation})
         console.log(rotation)
     } catch (err) {
         console.error(err)
@@ -79,4 +91,4 @@ app.get('/items', async (req, res) => {
     }
 })  
 
-app.listen(3000, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
