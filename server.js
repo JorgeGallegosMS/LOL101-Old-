@@ -29,13 +29,24 @@ app.get('/champions', (req, res) => {
 app.get("/champions/:name", (req, res) => {
     const name = utils.capitalize(req.params.name);
     // res.send(res.champs[name]);
+<<<<<<< HEAD
     console.log(res.champs[name])
+=======
+    // console.log(res.champs[name])
+>>>>>>> 902e93a143bfa261fe96157514c7b25bc7e1cd3c
     res.render('champion', {
         style: 'champion.css',
         "champion": res.champs[name]
     })
+<<<<<<< HEAD
 })
 
+=======
+  } catch (err) {
+    console.error(err);
+  }
+});
+>>>>>>> 902e93a143bfa261fe96157514c7b25bc7e1cd3c
 
 app.get("/rotation", async (req, res) => {
     try {
@@ -58,7 +69,11 @@ app.get("/rotation", async (req, res) => {
             style: 'rotation.css',
             freeRotation: rotation
         })
+<<<<<<< HEAD
         console.log(rotation)
+=======
+        // console.log(rotation)
+>>>>>>> 902e93a143bfa261fe96157514c7b25bc7e1cd3c
     } catch (err) {
         console.error(err)
     }
