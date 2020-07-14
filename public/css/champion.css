@@ -603,6 +603,16 @@ h1 {
 
  }
 
+ .items {
+    padding: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    border: 1px solid  #D0A85D;
+ }
+
 @keyframes appear {
     0% { opacity: 0 }
     100% { opacity: 1 }

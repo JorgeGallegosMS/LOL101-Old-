@@ -63,20 +63,25 @@
     <h3>{{ champion.lore }}</h3>
     </div>
     </div>
-    <div class="tabPanel">{{#each champion.recommended.[0] }}
-
+    <div class="tabPanel">
+    <div class="items">
+    {{#each champion.recommended.[0] }}
     {{#if this.jg_exists}}
-
     {{else}}
     {{/if}}
     {{#each this.items }}
-        <h3>Item name: {{ info.name }}</h3>
-        {{!-- <h3>Item description: {{ info.description }}</h3> --}}
-        {{!-- <h3>Mini tip: {{ info.text }}</h3>
-        <h3>Total cost: {{ info.totalGold }}</h3> --}}
+         <div class="tooltip2">
         <img src="{{ info.icon }}">
+        <div class="top2">
+        <h3>Item name: {{ info.name }}</h3>
+        <h3>Item description: {{ info.description }}</h3>
+        <h3>Mini tip: {{ info.text }}</h3>
+        <h3>Total cost: {{ info.totalGold }}</h3> 
+        </div>
+        </div>
     {{/each}}
 {{/each}}</div>
+</div>
 </div>  
     </div>
     <div class="splash-art"> 
@@ -111,28 +116,7 @@
     </div>
    
     </div>
- 
-   
-{{!--- note: Maybe put it in carousel format. }}
-{{!-- <img src="{{ champion.icon }}"> --}}
-{{!-- --}}
 
-
-
-
-{{!-- Abilities --}}
-{{!-- {{#each champion.abilities }}
-    <h3>ID: {{ id }}</h3>
-    <h3>Name: {{ name }}</h3>
-    <h3>Cost Type: {{ costType }}</h3>
-    <img src="{{ icon }}">
-    <h3>Description: {{ description }}</h3>
-    <h3>Cooldown Per Level String: {{ cooldownString }}</h3>
-    <h3>Cooldown Array: {{ cooldown }}</h3>
-    <h3>Damage Per Level String: {{ damageString }}</h3>
-    <h3>Damage Array: {{ damage }}</h3>
-    <h3>---------------------</h3>
-{{/each}} --}}
 
 {{!-- Skin names SplashArts LoadingScreen
 {{#each champion.skins }}
