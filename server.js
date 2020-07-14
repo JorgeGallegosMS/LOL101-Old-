@@ -45,8 +45,11 @@ app.get("/champions/:name", (req, res) => {
   try {
     const name = utils.capitalize(req.params.name);
     // res.send(res.champs[name]);
-    console.log(res.champs[name])
-    res.render('example', res.champs[name])
+    // console.log(res.champs[name])
+    res.render('champion', {
+        style: 'champion.css',
+        "champion": res.champs[name]
+    })
   } catch (err) {
     console.error(err);
   }
@@ -69,8 +72,11 @@ app.get("/rotation", async (req, res) => {
         //         }
         //     }
         // })
-        res.render('rotation', {freeRotation: rotation})
-        console.log(rotation)
+        res.render('rotation', {
+            style: 'rotation.css',
+            freeRotation: rotation
+        })
+        // console.log(rotation)
     } catch (err) {
         console.error(err)
     }
