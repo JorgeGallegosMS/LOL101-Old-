@@ -49,12 +49,16 @@
     <h3><strong>Playing As:</strong></h3>
     {{#each champion.tips.playingAs }}
      <p>{{ this }}</p>
+     {{ else }}
+     <p> This champion currently has no tips for playing as!</p>
     {{/each}}
     </div>
     <div class="play-as">
     <h3><strong>Playing Against:</strong></h3>
     {{#each champion.tips.playingAgainst }}
     <p>{{ this }}</p>
+    {{ else }}
+     <p> This champion currently has no tips for playing against!</p>
     {{/each}}
     </div>
     </div>

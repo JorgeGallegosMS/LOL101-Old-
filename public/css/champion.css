@@ -139,7 +139,7 @@ body {
 
 
 li img {
-    height: 25px; 
+    height: 25px;
 
 }
 ul li {
@@ -161,6 +161,8 @@ ul li a {
     padding: 0 15px;
     color: white;
     padding: 10px 20px;
+    font-size: 20px;
+    display: inline-block;
 
    
 }
@@ -338,6 +340,7 @@ h1 {
 .splash img {
     width: 600px;
     height: 600px;
+    background: cover;
     object-fit: cover;
     object-position: 83% 50%;
     overflow: hidden;
@@ -373,10 +376,8 @@ h1 {
     grid-area: 1 / col4-start / last-line / 6;
     
 }
-
 .skin-block {
  clip-path: inset(10px 50px 50px 50px);   
-
 } */
 
 /* .skin-block > img {
@@ -467,6 +468,8 @@ h1 {
 
 .abilities img {
     border: 1px solid white;
+    max-height: 70x;
+    max-width: 70px;
 
 }
 
@@ -612,6 +615,79 @@ h1 {
     justify-items: center;
     border: 1px solid  #D0A85D;
  }
+
+
+ /* ---- SCREENS ---- */
+
+/* @media only screen and (min-width: 1564px) and ( max-width: 1600px ) {
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -10%;
+        padding-left: 10%;
+     
+    
+}
+} */
+
+@media only screen and (min-width: 1529px){
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 60%px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: 15vh;
+    
+}
+
+.splash-art {
+    max-width: 100vh;
+    grid-area: 1 / col4-start / last-line / 6;
+    background-color:  #3D494E;
+    position: relative;
+    margin-right: 100px;
+    overflow: hidden;
+    display: inline-block;
+    outline: 1px solid #D0A85D;
+    outline-offset: 15px;
+    transition: all 400ms ease;
+    margin-left: 10%
+}
+
+.splash img {
+    max-width: 100vh;
+    max-height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    min-width: 100vh;
+    object-position: 83% 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform .5s ease;
+    transition: all 400ms ease;
+
+}
+
+}
+
 
 @keyframes appear {
     0% { opacity: 0 }
