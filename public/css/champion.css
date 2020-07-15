@@ -115,12 +115,12 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 
-/* .container1 {
+.container1 {
     width: 100%;
     animation-name: appear;
     animation-duration: 1.5s;
     transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-} */
+}
 
 
 .navbar {
@@ -263,6 +263,10 @@ h1 {
 
 /* ---- CONTAINERS ---- */
 
+.container {
+    width: 100%;
+}
+
 .section-container {
     display: grid;
     grid-gap: 50px;
@@ -324,6 +328,7 @@ h1 {
 
 
 .splash-art {
+    max-width: 70%;
     grid-area: 1 / col4-start / last-line / 6;
     background-color:  #3D494E;
     position: relative;
@@ -336,7 +341,7 @@ h1 {
 }
 
 .splash img {
-    width: 600px;
+    max-width: 100%;
     height: 600px;
     object-fit: cover;
     object-position: 83% 50%;
@@ -357,6 +362,7 @@ h1 {
 }
 
 .name-tag h1 {
+    max-width: 100%;
     transition: all 400ms ease;  
 }
 
@@ -396,7 +402,8 @@ h1 {
     padding-top: 10px;
     text-align: center;
     letter-spacing: 2px;
-    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
     display: inline-block;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -407,6 +414,355 @@ h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
 }
+
+/* ---- SCREENS ---- */
+
+@media only screen and (min-width: 1564px) and ( max-width: 1600px ) {
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -10%;
+        padding-left: 10%;
+     
+    
+}
+}
+
+@media only screen and (min-width: 1689px) and ( max-width: 1773x ) {
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        margin-left: 40%;
+    
+}
+}
+
+
+
+@media only screen and (min-width: 1603px) and ( max-width: 1687px ) {
+
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -7%;
+        padding-left: 10%;
+    }
+
+}
+@media only screen and (min-width: 1463px) and ( max-width: 1500px ) {
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -7%;
+    }
+    .splash-art {
+        max-width: 70%;
+        grid-area: 1 / col4-start / last-line / 6;
+        background-color:  #3D494E;
+        position: relative;
+        margin-right: 100px;
+        overflow: hidden;
+        display: inline-block;
+        outline: 1px solid #D0A85D;
+        outline-offset: 15px;
+        transition: all 400ms ease;
+    }
+    
+    .splash img {
+        max-width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: 90% 50%;
+        overflow: hidden;
+        position: relative;
+        transition: transform .5s ease;
+        transition: all 400ms ease;
+    
+    }
+}
+
+@media only screen and (min-width: 1355px) and ( max-width: 1462px ) {
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -20%;
+
+    }
+
+    .name-tag h1 {
+        max-width: 100%;
+        transition: all 400ms ease; 
+
+        font-size: 2vw;
+    }
+}
+
+
+@media only screen and (min-width: 800px) and ( max-width: 1283px ) {
+
+    .splash-art {
+        min-width: 70%;
+        grid-area: 1 / col4-start / last-line / 6;
+        background-color:  #3D494E;
+        position: relative;
+        margin-right: 100px;
+        overflow: hidden;
+        display: inline-block;
+        outline: 1px solid #D0A85D;
+        outline-offset: 15px;
+        transition: all 400ms ease;
+    }
+    .splash img {
+        min-width: 30%;
+        min-height: 30%;
+        object-fit: cover;
+        object-position: 83% 50%;
+        overflow: hidden;
+        position: relative;
+        transition: transform .5s ease;
+        transition: all 400ms ease;
+    
+    }
+
+
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -28%;
+    }
+
+    .name-tag h1 {
+        max-width: 100%;
+        transition: all 400ms ease; 
+
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1400px) and ( max-width: 1460px ) {
+     .splash-art {
+        grid-area: 1 / col4-start / last-line / 6;
+        background-color:  #3D494E;
+        position: relative;
+        margin-right: 100px;
+        overflow: hidden;
+        display: inline-block;
+        outline: 1px solid #D0A85D;
+        outline-offset: 15px;
+        transition: all 400ms ease;
+    }
+    .splash img {
+        width: 700px;
+        height: 600px;
+        object-fit: cover;
+        object-position: 75% 100%;
+        overflow: hidden;
+        position: relative;
+        transition: transform .5s ease;
+        transition: all 400ms ease;
+    
+    }
+
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -12%;
+
+    }
+
+    .name-tag h1 {
+        max-width: 100%;
+        transition: all 400ms ease; 
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1403px) and ( max-width: 1416px ) {
+
+    .name-tag {
+        background-color: #3C484D;
+        height: 70px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-right: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-left: -15%;
+
+    }
+
+    .name-tag h1 {
+        max-width: 100%;
+        transition: all 400ms ease; 
+        font-size: 2vw;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1807px) {
+    .name-tag {
+    background-color: #3C484D;
+    height: 70px;
+    min-width: 7;
+    position: relative;
+    z-index: 999;
+    padding-top: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-left: 10%;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.champion-title > h1 {
+    padding-left: 100px;
+    letter-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+}
+}
+
+@media only screen and (min-width: 1800px) {
+.splash img {
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+    .splash-art {
+        max-width: 50%;
+        grid-area: 1 / col4-start / last-line / 6;
+        background-color:  #3D494E;
+        position: relative;
+        margin-right: 100px;
+        overflow: hidden;
+        display: inline-block;
+        outline: 1px solid #D0A85D;
+        outline-offset: 15px;
+        transition: all 400ms ease;
+    }
+
+    .name-tag {
+        background-color: #3C484D;
+        height: 80px;
+        max-width: 50%;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        left: 18%;
+        padding-bottom: 40px;
+    }
+    
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+    .name-tag {
+        background-color: #3C484D;
+        height: 80px;
+        max-width: 50%;
+        position: relative;
+        z-index: 999;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        left: 12%;
+        padding-bottom: 40px;
+    }
+}
+
+/* ---- END OF SCREENS ---- */
+
+/* ---- TABS ---- */
+
 
 .tabContainer{
     width: 100%;
@@ -465,10 +821,15 @@ h1 {
     border-radius: 20%;
 }
 
+/* ---- END OF TABS ---- */
+
+
 .abilities img {
     border: 1px solid white;
 
 }
+
+/* ---- TOOLTIP ---- */
 
 .tooltip {
     display:inline-block;
@@ -590,6 +951,9 @@ h1 {
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 
+/* ---- END OF TOOLTIP ---- */
+
+/* ---- INFO/LORE/ITEMS ---- */
  .dif {
     border-bottom: 1px solid white;
     margin-bottom: 20px;
@@ -612,6 +976,12 @@ h1 {
     justify-items: center;
     border: 1px solid  #D0A85D;
  }
+
+ /* ---- END OF INFO/LORE/ITEMS ---- */
+
+
+/* ---- ANIMATIONS ---- */
+
 
 @keyframes appear {
     0% { opacity: 0 }
