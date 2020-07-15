@@ -477,19 +477,19 @@ h1 {
     display:inline-block;
     position:relative;
     text-align:left;
-    animation-name: appear;
-    animation-duration: 1.4s;
- 
+   
 }
 
 
 .tooltip .top {
-    min-width:200px; 
-    top:-20px;
-    left:50%;
-    transform:translate(-50%, -100%);
+    min-width:200px;
+    max-width:400px;
+    top:50%;
+    left:100%;
+    margin-left:20px;
+    transform:translate(0, -50%);
     padding:10px 20px;
-    color:#444444;
+    color: #444444;
     background-color:#EEEEEE;
     font-weight:normal;
     font-size:13px;
@@ -498,37 +498,33 @@ h1 {
     z-index:99999999;
     box-sizing:border-box;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
-    display:none;
-   
-  
-
+    visibility:hidden; opacity:0; transition:opacity 0.8s;
 }
 
 .tooltip:hover .top {
-    display:block;
-    animation-name: appear;
-    animation-duration: 0.5s;
-    transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    visibility:visible; opacity:1;
 }
+
+
 
 .tooltip .top i {
     position:absolute;
-    top:100%;
-    left:50%;
-    margin-left:-12px;
-    width:24px;
-    height:12px;
+    top:50%;
+    right:100%;
+    margin-top:-12px;
+    width:12px;
+    height:24px;
     overflow:hidden;
-
 }
-
-.tooltip  .top i::after {
+.tooltip .top i::after {
     content:'';
     position:absolute;
     width:12px;
     height:12px;
-    transform:translate(-50%,-50%) rotate(45deg);
-    background-color: #EEEEEE;
+    left:0;
+    top:50%;
+    transform:translate(50%,-50%) rotate(-45deg);
+    background-color:#EEEEEE;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 
