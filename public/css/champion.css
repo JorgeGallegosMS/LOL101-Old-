@@ -139,7 +139,7 @@ body {
 
 
 li img {
-    height: 25px; 
+    height: 25px;
 
 }
 ul li {
@@ -161,6 +161,8 @@ ul li a {
     padding: 0 15px;
     color: white;
     padding: 10px 20px;
+    font-size: 20px;
+    display: inline-block;
 
    
 }
@@ -466,6 +468,8 @@ h1 {
 
 .abilities img {
     border: 1px solid white;
+    max-height: 70x;
+    max-width: 70px;
 
 }
 
@@ -683,229 +687,6 @@ h1 {
 }
 
 }
-
-
-/* 
-@media only screen and (min-width: 1603px) and ( max-width: 1687px ) {
-
-    .name-tag {
-        background-color: #3C484D;
-        height: 70px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
-        padding-top: 10px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-right: auto;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        margin-left: -7%;
-        padding-left: 10%;
-    }
-
-}
-@media only screen and (min-width: 1463px) and ( max-width: 1500px ) {
-    .name-tag {
-        background-color: #3C484D;
-        height: 70px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
-        padding-top: 10px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-right: auto;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        margin-left: -7%;
-    }
-    .splash-art {
-        max-width: 70%;
-        grid-area: 1 / col4-start / last-line / 6;
-        background-color:  #3D494E;
-        position: relative;
-        margin-right: 100px;
-        overflow: hidden;
-        display: inline-block;
-        outline: 1px solid #D0A85D;
-        outline-offset: 15px;
-        transition: all 400ms ease;
-    }
-    
-    .splash img {
-        max-width: 100%;
-        height: 500px;
-        object-fit: cover;
-        object-position: 90% 50%;
-        overflow: hidden;
-        position: relative;
-        transition: transform .5s ease;
-        transition: all 400ms ease;
-    
-    }
-}
-
-@media only screen and (min-width: 1355px) and ( max-width: 1462px ) {
-    .name-tag {
-        background-color: #3C484D;
-        height: 70px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
-        padding-top: 10px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-right: auto;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        margin-left: -20%;
-
-    }
-
-    .name-tag h1 {
-        max-width: 100%;
-        transition: all 400ms ease; 
-
-        font-size: 2vw;
-    }
-}
-
-
-@media only screen and (min-width: 800px) and ( max-width: 1283px ) {
-
-    .splash-art {
-        min-width: 70%;
-        grid-area: 1 / col4-start / last-line / 6;
-        background-color:  #3D494E;
-        position: relative;
-        margin-right: 100px;
-        overflow: hidden;
-        display: inline-block;
-        outline: 1px solid #D0A85D;
-        outline-offset: 15px;
-        transition: all 400ms ease;
-    }
-    .splash img {
-        min-width: 30%;
-        min-height: 30%;
-        object-fit: cover;
-        object-position: 83% 50%;
-        overflow: hidden;
-        position: relative;
-        transition: transform .5s ease;
-        transition: all 400ms ease;
-    
-    }
-
-
-    .name-tag {
-        background-color: #3C484D;
-        height: 70px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
-        padding-top: 10px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-right: auto;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        margin-left: -28%;
-    }
-
-    .name-tag h1 {
-        max-width: 100%;
-        transition: all 400ms ease; 
-
-        font-size: 2vw;
-    }
-}
-
-@media only screen and (min-width: 1400px) and ( max-width: 1460px ) {
-     .splash-art {
-        grid-area: 1 / col4-start / last-line / 6;
-        background-color:  #3D494E;
-        position: relative;
-        margin-right: 100px;
-        overflow: hidden;
-        display: inline-block;
-        outline: 1px solid #D0A85D;
-        outline-offset: 15px;
-        transition: all 400ms ease;
-    }
-    .splash img {
-        width: 700px;
-        height: 600px;
-        object-fit: cover;
-        object-position: 75% 100%;
-        overflow: hidden;
-        position: relative;
-        transition: transform .5s ease;
-        transition: all 400ms ease;
-    
-    }
-
-    .name-tag {
-        background-color: #3C484D;
-        height: 70px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
-        padding-top: 10px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-right: auto;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        margin-left: -12%;
-
-    }
-
-    .name-tag h1 {
-        max-width: 100%;
-        transition: all 400ms ease; 
-        font-size: 2vw;
-    }
-}
-
-@media only screen and (min-width: 1403px) and ( max-width: 1416px ) {
-
-    .name-tag {
-        background-color: #3C484D;
-        height: 70px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
-        padding-top: 10px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-right: auto;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        margin-left: -15%;
-
-    }
-
-    .name-tag h1 {
-        max-width: 100%;
-        transition: all 400ms ease; 
-        font-size: 2vw;
-    }
-
-}
-
-
-
-
-
- */
 
 
 @keyframes appear {
