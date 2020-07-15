@@ -1,11 +1,78 @@
-<form method="GET" >
-    <input type="text" placeholder="Search.." name="query">
-    <input type="submit" /> 
-</form>
-{{ rank.lvl }}
-{{ rank.summonerName }}
-{{ rank.soloDuo.rank }}
-{{ rank.soloDuo.tier }}
-{{ rank.soloDuo.lp }}
-{{ rank.soloDuo.winrate }}
+<style>
+    body {
+        background-color: #3C484D;
+    }
+    .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+
+    .searchTerm {
+        width: 100%;
+        border: 3px solid #D0A85D;
+        border-right: none;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #D0A85D;
+    }
+
+    .searchTerm:focus{
+        color: #D0A85D;   
+    }
+
+    .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid #D0A85D;
+        background: #D0A85D;
+        text-align: center;
+        color: #3C484D;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change!*/
+    .wrap{
+        width: 15%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    form {
+        width: 500px;
+        height: 36px;
+        display: contents;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #D0A85D;
+    }
+</style>
+
+<div class="wrap">
+   <div class="search">
+        <form method="GET" >
+            <input type="text" class="searchTerm" placeholder="Summoner name..." name="query">
+            <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+   </div>
+</div>
+<h1>Summoner name: {{ rank.summonerName }}</h1>
+
+<h3>Level: {{ rank.lvl }}</h3>
+<h3>Rank: {{ rank.soloDuo.rank }}</h3>
+<h3>Tier: {{ rank.soloDuo.tier }}</h3>
+<h3>Current LP: {{ rank.soloDuo.lp }}</h3>
+<h3>Winrate: {{ rank.soloDuo.winrate }}</h3>
+<h3>Wins: {{ rank.soloDuo.wins }}</h3>
+<h3>Losses: {{ rank.soloDuo.losses }}</h3>
+
+
+
 
