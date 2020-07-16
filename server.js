@@ -13,6 +13,7 @@ app.use(middleware.setAPIVersion);
 app.use(middleware.setChampionsData);
 app.use(middleware.setItemsData);
 app.use(middleware.setSpellsData);
+app.use(middleware.setRunesData);
 
 
 app.get("/", (req, res) => {
@@ -101,6 +102,14 @@ app.get("/spells", async (req, res) => {
 app.get('/items', async (req, res) => {
     try {
         res.send(res.items)
+    } catch (err) {
+        console.error(err)
+    }
+})  
+
+app.get('/runes', async (req, res) => {
+    try {
+        res.send(res.runes)
     } catch (err) {
         console.error(err)
     }

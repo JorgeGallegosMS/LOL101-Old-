@@ -76,9 +76,32 @@ const setSpellsData = async (req, res, next) => {
     }
 }
 
+const setRunesData = async (req, res, next) => {
+    try {
+        if (!fs.existsSync('runes.json')){
+            const data = await utils.getRunesData(res.version)
+            fs.writeFileSync('runes.json', JSON.stringify(data, null, 4))
+            runes = JSON.parse(fs.readFileSync('runes.json', {encoding: 'utf-8'}))
+        } else {
+            runes = JSON.parse(fs.readFileSync('runes.json'))
+            if (res.version != runes.version){
+                const data = await utils.getRunesData(res.version)
+                fs.writeFileSync('runes.json', JSON.stringify(data, null, 4))
+                runes = JSON.parse(fs.readFileSync('runes.json', {encoding: 'utf-8'}))
+            }
+        }
+    
+        res.runes = runes
+        next()
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 module.exports = {
     setAPIVersion,
     setChampionsData,
     setItemsData,
     setSpellsData,
+    setRunesData,
 }
