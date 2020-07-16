@@ -56,4 +56,26 @@ describe('Route Testing', () => {
                 done();
             })  
     });
+
+    // Test Case 5
+    it('Should render search-rank and return 200 response.', (done) => {
+        chai.request(app)
+            .get('/search-rank')
+            .end((err, res) => {
+                if (err) done(err);
+                expect(res).to.have.status(200);
+                done();
+            })  
+    });
+
+    // Test Case 6
+    it('Should render items and return 200 response.', (done) => {
+        chai.request(app)
+            .get('/items')
+            .end((err, res) => {
+                if (err) done(err);
+                expect(res).to.have.status(200);
+                done();
+            })  
+    });
 });
