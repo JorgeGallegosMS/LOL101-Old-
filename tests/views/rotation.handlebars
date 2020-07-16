@@ -1,0 +1,39 @@
+<header>
+    <div class="container">
+        <nav>
+    <div class="navbar">
+        <a href="/" class="header-brand">LeagueOL101</a>
+        <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Resources</a></li>
+        <li><a href="/">Masteries</a></li>
+        <li><a href="/rotation">Champion Rotation</a></li>
+        </ul>
+    </div>
+    </nav>
+    <div class="hero-title">
+       <div data-aos="fade-down"><h2>Current Champion Rotation</h2></div>
+    </div>
+    </div>
+    <div class="border">
+    <div class="champ-grid">
+{{#each freeRotation}}
+    <a href="/champions/{{this.champ_name}}">
+     <h1>{{this.champ_name}}</h1>
+       {{!-- <img src="{{ this.loading_art }}"> --}}
+       <img src="{{ this.splash_art }}">
+    </a>
+{{/each}}
+</div>
+ <div>
+{{!-- {{#each freeRotation}}
+    {{#if @first }}
+    {{else}}
+        {{this.name}}
+        {{#each this.skins as |item| }}
+            {{#if @first }}
+                <img src="{{ item.loadingScreen_url }}">
+            {{/if}}
+        {{/each}}
+    {{/if}}
+{{/each}} --}}
