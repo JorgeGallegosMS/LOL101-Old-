@@ -161,6 +161,7 @@ const getSingleChampionData = async (version, champsDict, itemsDict) => {
                 const current_champ = champ[`${champ_name}`]
                 // let query = 'AnchorageAlaska'
                 // getAccountInfo(query)
+                // stripItemDescription("beh")
                 getRecommendedItems(current_champ, champsDict, itemDict)
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
@@ -204,6 +205,13 @@ const getTips = (champion, champsDict) => {
 
 const getAbilities = (version, champion, champsDict) => {
     const name = getCleanedName(champion.name)
+    const key4Icon = champion.passive.image.full
+    const passive = {
+        "name": champion.passive.name,
+        "description": champion.passive.description,
+        "icon": `http://ddragon.leagueoflegends.com/cdn/${version}/img/passive/${key4Icon}`
+    }
+    champsDict[name].abilities.push(passive)
     champion.spells.forEach(spell => {
         const spell_id = spell.id
         const spell_name = spell.name
@@ -430,7 +438,7 @@ const getItemsData = async version => {
             const singleItem = {
                 'name': current.name,
                 'id': `${item}`,
-                'description': current.description,
+                    'description': stripItemDescription(stripItemDescription(current.description)),
                 'text': current.plaintext,
                 'totalGold': current.gold.total,
                 'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
@@ -444,7 +452,11 @@ const getItemsData = async version => {
         console.error(err)
     }
 }
-
+const stripItemDescription = (description) => {
+    let res = description.replace(/<br\s*\/?>/mg,"\n");
+    let result = res.replace(/<\/?[a-z]+>/g, "")
+    return result
+}
 module.exports = {
     capitalize,
     getVersion,
