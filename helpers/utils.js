@@ -181,7 +181,8 @@ const getSkins = (champion, champsDict) => {
         const current_skin =  {
             'skin_name': skin.name,
             'splash_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`,
-            'loadingScreen_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_${skin.num}.jpg`
+            'loadingScreen_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_${skin.num}.jpg`,
+            'icon': `http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.id}_${skin.num}.jpg`
         }
 
         champsDict[name].skins.push(current_skin)
@@ -483,6 +484,51 @@ const getSummonerSpellData = async version => {
         console.error(err)
     }
 }
+const getRunesData = async version => {
+    try {
+        const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/runesReforged.json`)
+        const data = await response.json()
+        const runes = data
+        const runesDict = {
+            'version': version
+        }
+        const single_key_stone_rune = []
+        const rune_key_stone = []
+        for (rune in runes){
+            const current = runes[rune]
+            for (rune_set_index in runes[rune].slots) {
+                let rune_tree = []
+                for (single_rune_index in runes[rune].slots[rune_set_index].runes){
+                    const single_rune_object = runes[rune].slots[rune_set_index].runes[single_rune_index]
+                    const single_rune = {
+                        "name": single_rune_object.name,
+                        'icon': `https://ddragon.leagueoflegends.com/cdn/img/${single_rune_object.icon}`,
+                        "id": single_rune_object.id,
+                        "shortDes": single_rune_object.shortDesc,
+                        "longDes": single_rune_object.longDesc
+                    }
+                    rune_tree.push(single_rune)
+                }
+                const rune_list = {
+                    'runes': rune_tree
+                }
+                single_key_stone_rune.push(rune_list)
+                const object2 = {
+                    'name': current.name,
+                    'icon': `https://ddragon.leagueoflegends.com/cdn/img/${current.icon}`,
+                    'id': current.id,
+                    'rune_row': single_key_stone_rune
+                }
+                rune_key_stone.push(object2)
+            }
+            runesDict[rune] = rune_key_stone
+        }
+
+        return runesDict
+    } catch (err) {
+        console.error(err)
+    }
+}
 
 const stripItemDescription = description => {
     let res = description.replace(/<br\s*\/?>/mg,"\n")
@@ -498,4 +544,5 @@ module.exports = {
     getAccountInfo,
     getItemsData,
     getSummonerSpellData,
+    getRunesData,
 }
