@@ -54,9 +54,31 @@ const setItemsData = async (req, res, next) => {
         console.error(err)
     }
 }
+const setSpellsData = async (req, res, next) => {
+    try {
+        if (!fs.existsSync('spells.json')){
+            const data = await utils.getSummonerSpellData(res.version)
+            fs.writeFileSync('spells.json', JSON.stringify(data, null, 4))
+            spells = JSON.parse(fs.readFileSync('spells.json', {encoding: 'utf-8'}))
+        } else {
+            spells = JSON.parse(fs.readFileSync('spells.json'))
+            if (res.version != spells.version){
+                const data = await utils.getSummonerSpellData(res.version)
+                fs.writeFileSync('spells.json', JSON.stringify(data, null, 4))
+                spells = JSON.parse(fs.readFileSync('spells.json', {encoding: 'utf-8'}))
+            }
+        }
+    
+        res.spells = spells
+        next()
+    } catch (err) {
+        console.error(err)
+    }
+}
 
 module.exports = {
     setAPIVersion,
     setChampionsData,
-    setItemsData
+    setItemsData,
+    setSpellsData,
 }
