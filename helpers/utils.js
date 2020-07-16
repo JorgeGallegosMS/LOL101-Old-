@@ -438,7 +438,7 @@ const getItemsData = async version => {
             const singleItem = {
                 'name': current.name,
                 'id': `${item}`,
-                    'description': stripItemDescription(stripItemDescription(current.description)),
+                'description': stripItemDescription(current.description),
                 'text': current.plaintext,
                 'totalGold': current.gold.total,
                 'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
@@ -452,11 +452,13 @@ const getItemsData = async version => {
         console.error(err)
     }
 }
-const stripItemDescription = (description) => {
-    let res = description.replace(/<br\s*\/?>/mg,"\n");
+
+const stripItemDescription = description => {
+    let res = description.replace(/<br\s*\/?>/mg,"\n")
     let result = res.replace(/<\/?[a-z]+>/g, "")
     return result
 }
+
 module.exports = {
     capitalize,
     getVersion,

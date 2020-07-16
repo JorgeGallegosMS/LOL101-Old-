@@ -1,0 +1,52 @@
+<header>
+    <div class="container">
+        <nav>
+    <div class="navbar">
+        <a href="/" class="header-brand">LeagueOL101</a>
+        <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Resources</a></li>
+        <li><a href="/">Masteries</a></li>
+        <li><a href="/rotation">Champion Rotation</a></li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <section class="hero">
+        <div class="frame"></div>
+        <div class="logo"><img src="./static/logo1.png" alt="Logo"></div>
+        <div class="container">
+        </div>
+    </div>
+    </header>
+    <div class="champions">
+        <div class="container">
+            <div class="title">
+                <div data-aos="fade-right"><div class="rectangle">
+                <h3>Choose Your <text>Legend</text></h3>
+                </div></div>
+                <div class="container">
+                    <div class="champs">
+                       
+        {{#each champs}}
+        {{#if @first}}
+        {{ else }}
+        <div class="champion {{ @key }}">
+            <a class="champion-link" href="/champions/{{ @key }}">
+                <p class="champion-name">{{ this.name }}</p>
+                <div id="a"><img class="champion-image" src="{{ this.icon }}" alt="">
+                 
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+            </a>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
+            </div>
+    </div>
+    </div>
+   
