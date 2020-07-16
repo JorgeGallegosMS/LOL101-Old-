@@ -43,7 +43,7 @@ app.get('/dev1', (req, res) => {
 // Displays a single champion
 app.get("/champions/:name", (req, res) => {
   try {
-    const name = utils.capitalize(req.params.name);
+    const name = utils.capitalize(req.params.name.toLowerCase());
     // res.send(res.champs[name]);
     // console.log(res.champs[name])
     res.render('champion', {
