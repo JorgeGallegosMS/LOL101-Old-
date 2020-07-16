@@ -19,15 +19,26 @@
     <div class="ability-container">
     <div class="abilities">
         {{#each champion.abilities }}
-        <div class="tooltip">
-        <img src="{{ icon }}">
-         <div class="top">
-        <h2>{{ name }}</h2>
-        <h3>Cooldown Per Level: {{ cooldownString }}</h3>
-        <p><strong>Description:</strong> {{ tooltip }}</p>
-        <i></i>
-        </div>
-        </div>
+            {{#if @first}}
+                <div class="tooltip">
+                <img src="{{ icon }}">
+                <div class="top">
+                <h2>{{ name }}</h2>
+                <p><strong>Description:</strong> {{ description }}</p>
+                <i></i>
+                </div>
+                </div>
+            {{else}}
+                <div class="tooltip">
+                <img src="{{ icon }}">
+                <div class="top">
+                <h2>{{ name }}</h2>
+                <h3>Cooldown Per Level: {{ cooldownString }}</h3>
+                <p><strong>Description:</strong> {{ tooltip }}</p>
+                <i></i>
+                </div>
+                </div>
+            {{/if}}
         {{/each}}
     </div>
     </div>
