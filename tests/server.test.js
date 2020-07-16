@@ -23,4 +23,15 @@ describe('Route Testing', () => {
                 done();
             })
     });
+
+    // Test Case 2
+    it('Should render champions1 and return 200 response.', (done) => {
+        chai.request(app)
+            .get('/champions1')
+            .end((err, res) => {
+                if (err) done(err);
+                expect(res).to.have.status(200);
+                done();
+            })
+    });
 });
