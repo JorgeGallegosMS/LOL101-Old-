@@ -78,4 +78,15 @@ describe('Route Testing', () => {
                 done();
             })  
     });
+
+    // Test Case 7
+    it('Should render specific champion page and return 200 response.', (done) => {
+        chai.request(app)
+            .get('/champions/:name')
+            .end((err, res) => {
+                if (err) done(err);
+                expect(res).to.have.status(200);
+                done();
+            })  
+    });
 });
