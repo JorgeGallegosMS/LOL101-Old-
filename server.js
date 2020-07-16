@@ -12,6 +12,8 @@ app.use(express.static("public"));
 app.use(middleware.setAPIVersion);
 app.use(middleware.setChampionsData);
 app.use(middleware.setItemsData);
+app.use(middleware.setSpellsData);
+
 
 app.get("/", (req, res) => {
   res.redirect("/champions1");
@@ -85,9 +87,16 @@ app.get("/rotation", async (req, res) => {
 app.get("/search-rank", async (req, res) => {
     // console.log(req.query.query)
     const rank = await utils.getAccountInfo(req.query.query)
-    // console.log({rank})
+    console.log({rank})
     res.render('search_rank', {rank})
 })
+app.get("/spells", async (req, res) => {
+    try {
+        res.send(res.spells)
+    } catch (err) {
+        console.error(err)
+    }
+})  
 
 app.get('/items', async (req, res) => {
     try {

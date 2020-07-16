@@ -21,7 +21,7 @@ const getAccountInfo = async query => {
 
             const summonerInfo = {
                 'lvl': resOneData.summonerLevel,
-                'profileIconID': resOneData.profileIconId,
+                'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
                 'summonerName': resOneData.name,
                 'soloDuo': { 
                     'rank': resTwoData[0].tier,
@@ -37,7 +37,7 @@ const getAccountInfo = async query => {
     
             const summonerInfo = {
                 'lvl': resOneData.summonerLevel,
-                'profileIconID': resOneData.profileIconId,
+                'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
                 'summonerName': resOneData.name,
                 'soloDuo': { 
                     'rank': resTwoData[1].tier,
@@ -54,7 +54,7 @@ const getAccountInfo = async query => {
     } catch (error) {
         const summonerInfo = {
             'lvl': resOneData.summonerLevel,
-            'profileIconID': resOneData.profileIconId,
+            'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
             'summonerName': resOneData.name
         }
         return summonerInfo
@@ -84,6 +84,7 @@ const getChampionsData = async version => {
         const champions = data.data
         const champsList = []
         const itemsDict = getItemsData(version)
+        const spellsDict = getSummonerSpellData(version)
         const champs = {
             "version": version
         }
@@ -452,6 +453,36 @@ const getItemsData = async version => {
         console.error(err)
     }
 }
+const getSummonerSpellData = async version => {
+    try {
+        const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/summoner.json`)
+        const data = await response.json()
+        const spells = data.data
+
+        const spellsDict = {
+            'version': version
+        }
+
+        for (spell in spells){
+            const current = spells[spell]
+            const singleSpell = {
+                'name': current.name,
+                'id': `${spell}`,
+                'description': current.description,
+                'tooltip': current.tooltip,
+                'cooldown': current.cooldown,
+                'unlock-level': current.summonerLevel,
+                'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${current.image.full}`
+            }
+
+            spellsDict[spell] = singleSpell
+        }
+
+        return spellsDict
+    } catch (err) {
+        console.error(err)
+    }
+}
 
 const stripItemDescription = description => {
     let res = description.replace(/<br\s*\/?>/mg,"\n")
@@ -466,4 +497,5 @@ module.exports = {
     getChampionRotations,
     getAccountInfo,
     getItemsData,
+    getSummonerSpellData,
 }

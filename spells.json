@@ -1,0 +1,157 @@
+{
+    "version": "10.14.1",
+    "SummonerBarrier": {
+        "name": "Barrier",
+        "id": "SummonerBarrier",
+        "description": "Shields your champion from 115-455 damage (depending on champion level) for 2 seconds.",
+        "tooltip": "Temporarily shields {{ f1 }} damage from your champion for 2 seconds.",
+        "cooldown": [
+            180
+        ],
+        "unlock-level": 4,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerBarrier.png"
+    },
+    "SummonerBoost": {
+        "name": "Cleanse",
+        "id": "SummonerBoost",
+        "description": "Removes all disables (excluding suppression and airborne) and summoner spell debuffs affecting your champion and lowers the duration of incoming disables by 65% for 3 seconds.",
+        "tooltip": "Removes all disables (excluding suppression and airborne) and summoner spell debuffs affecting your champion and reduces the duration of disables by 65% for the next {{ f1 }} seconds.",
+        "cooldown": [
+            210
+        ],
+        "unlock-level": 9,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerBoost.png"
+    },
+    "SummonerDot": {
+        "name": "Ignite",
+        "id": "SummonerDot",
+        "description": "Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds, grants you vision of the target, and reduces healing effects on them for the duration.",
+        "tooltip": "Ignite deals <span class=\"colorFEFCFF\">{{ f1 }}</span> true damage to target enemy champion over 5 seconds, grants you vision of the target and applies Grievous Wounds for the duration.<br /><br /><rules>(Grievous Wounds reduces healing effects by 40%. This vision does not reveal stealthed enemies.)</rules>",
+        "cooldown": [
+            180
+        ],
+        "unlock-level": 9,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerDot.png"
+    },
+    "SummonerExhaust": {
+        "name": "Exhaust",
+        "id": "SummonerExhaust",
+        "description": "Exhausts target enemy champion, reducing their Movement Speed by 30%, and their damage dealt by 40% for 3 seconds.",
+        "tooltip": "Exhausts target enemy champion, reducing their Movement Speed by {{ f3 }}%, and their damage dealt by {{ f2 }}% for 3 seconds.",
+        "cooldown": [
+            210
+        ],
+        "unlock-level": 4,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerExhaust.png"
+    },
+    "SummonerFlash": {
+        "name": "Flash",
+        "id": "SummonerFlash",
+        "description": "Teleports your champion a short distance toward your cursor's location.",
+        "tooltip": "Teleports your champion a short distance toward your cursor's location.",
+        "cooldown": [
+            300
+        ],
+        "unlock-level": 7,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerFlash.png"
+    },
+    "SummonerHaste": {
+        "name": "Ghost",
+        "id": "SummonerHaste",
+        "description": "For 10 seconds, your champion can move through units and gains 24 - 48% Movement Speed (depending on champion level). Ghost extends its duration on takedown.",
+        "tooltip": "For {{ duration }} seconds, your champion can move through units and gains {{ movespeedmod }} Movement Speed.<br /><br />Ghost extends its duration by {{ takedownextension }} seconds on takedown.",
+        "cooldown": [
+            210
+        ],
+        "unlock-level": 1,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerHaste.png"
+    },
+    "SummonerHeal": {
+        "name": "Heal",
+        "id": "SummonerHeal",
+        "description": "Restores 90-345 Health (depending on champion level) and grants 30% Movement Speed for 1 second to you and target allied champion. This healing is halved for units recently affected by Summoner Heal.",
+        "tooltip": "Restores {{ f1 }} Health and grants 30% Movement Speed for 1 second to your champion and target allied champion. This healing is halved for units recently affected by Summoner Heal.<br /><br /><span class=\"colorFFFF00\">If this spell cannot find a target, it will cast on the most wounded allied champion in range.</span>",
+        "cooldown": [
+            240
+        ],
+        "unlock-level": 1,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerHeal.png"
+    },
+    "SummonerMana": {
+        "name": "Clarity",
+        "id": "SummonerMana",
+        "description": "Restores 50% of your champion's maximum Mana. Also restores allies for 25% of their maximum Mana.",
+        "tooltip": "Restores {{ f1 }}% maximum Mana to your Champion and {{ f2 }}% to nearby allies.",
+        "cooldown": [
+            240
+        ],
+        "unlock-level": 6,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerMana.png"
+    },
+    "SummonerPoroRecall": {
+        "name": "To the King!",
+        "id": "SummonerPoroRecall",
+        "description": "Quickly travel to the Poro King's side.",
+        "tooltip": "<span class=\"colorFFE076\">Passive:</span> Hitting an enemy champion with a Poro gives your team a Poro Mark. Upon reaching 10 Poro Marks, your team summons the Poro King to fight alongside them. While the Poro King is active, no Poro Marks can be scored by either team.<br /><br /><span class=\"colorFFE076\">Active:</span> Quickly dash to King Poro's side. Can only be cast while the Poro King is summoned for your team. <br /><br /><i><span class=\"colorFDD017\">''Poros tug the heartstrings. The rest of you just comes along for the ride.''</span></i></mainText>",
+        "cooldown": [
+            10
+        ],
+        "unlock-level": 1,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerPoroRecall.png"
+    },
+    "SummonerPoroThrow": {
+        "name": "Poro Toss",
+        "id": "SummonerPoroThrow",
+        "description": "Toss a Poro at your enemies. If it hits, you can quickly travel to your target as a follow up.",
+        "tooltip": "Toss a Poro a long distance, dealing {{ f2 }} true damage to the first enemy unit hit, granting <span class=\"coloree91d7\">True Sight</span> of the target.<br /><br />This ability can be recast for 3 seconds if it hits an enemy to dash to the target hit, dealing {{ f2 }} more true damage and reducing the cooldown of the next Poro Toss by {{ e4 }} seconds.<br /><br />Poros are not blocked by spell shields or wind walls because they are animals, not spells!<br /><br /><i><span class=\"colorFDD017\">''Poros are a model for Runeterran aerodynamics.''</span></i></mainText>",
+        "cooldown": [
+            20
+        ],
+        "unlock-level": 1,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerPoroThrow.png"
+    },
+    "SummonerSmite": {
+        "name": "Smite",
+        "id": "SummonerSmite",
+        "description": "Deals 390-1000 true damage (depending on champion level) to target epic, large, or medium monster or enemy minion. Restores Health based on your maximum life when used against monsters.",
+        "tooltip": "Deals <span class=\"colorFEFCFF\">{{ f1 }}</span> true damage to target epic, large, or medium monster or enemy minion.  Against monsters, additionally restores <span class=\"colorFFFFFF\">{{ f6 }}</span> <span class=\"colorFF6666\">(+{{ f7 }})</span> Health.<br /><br />Smite regains a charge every {{ ammorechargetime }} seconds, up to a maximum of 2 charges.",
+        "cooldown": [
+            15
+        ],
+        "unlock-level": 9,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerSmite.png"
+    },
+    "SummonerSnowURFSnowball_Mark": {
+        "name": "Mark",
+        "id": "SummonerSnowURFSnowball_Mark",
+        "description": "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up.",
+        "tooltip": "Throw a snowball a long distance, dealing {{ f1 }} true damage to the first enemy unit hit and granting <span class=\"coloree91d7\">True Sight</span> of the target. If it hits an enemy, this ability can be recast for {{ e3 }} seconds to Dash to the tagged unit, dealing an additional {{ f1 }} true damage. Dashing to the target will reduce the cooldown of Mark by {{ e4 }}%.<br /><br /><span class=\"colorFFFF00\">Mark projectiles are not stopped by spell shields or projectile mitigation.</span>",
+        "cooldown": [
+            80
+        ],
+        "unlock-level": 6,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerSnowURFSnowball_Mark.png"
+    },
+    "SummonerSnowball": {
+        "name": "Mark",
+        "id": "SummonerSnowball",
+        "description": "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up.",
+        "tooltip": "Throw a snowball a long distance, dealing {{ f1 }} true damage to the first enemy unit hit and granting <span class=\"coloree91d7\">True Sight</span> of the target. If it hits an enemy, this ability can be recast for {{ e3 }} seconds to Dash to the tagged unit, dealing an additional {{ f1 }} true damage. Dashing to the target will reduce the cooldown of Mark by {{ e4 }}%.<br /><br /><span class=\"colorFFFF00\">Mark projectiles are not stopped by spell shields or projectile mitigation.</span>",
+        "cooldown": [
+            80
+        ],
+        "unlock-level": 6,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerSnowball.png"
+    },
+    "SummonerTeleport": {
+        "name": "Teleport",
+        "id": "SummonerTeleport",
+        "description": "After channeling for 4 seconds, teleports your champion to target allied structure, minion, or ward and grants a Movement Speed boost. The cooldown of Teleport scales from 420-240 seconds depending on champion level.",
+        "tooltip": "After channeling for {{ channelduration }} seconds, your champion teleports to target allied structure, minion, or ward and grants a {{ movespeedbuff }} Movement Speed boost for {{ msduration }} seconds.",
+        "cooldown": [
+            0
+        ],
+        "unlock-level": 7,
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerTeleport.png"
+    }
+}
