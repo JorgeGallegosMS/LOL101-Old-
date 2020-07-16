@@ -319,6 +319,7 @@ h1 {
     background-position: 0px 0px, right -50px, 200px bottom, 0px 200px;
     animation: border 5s linear infinite;
     transition: 500ms;
+    overflow: hidden;
     
 
 }
