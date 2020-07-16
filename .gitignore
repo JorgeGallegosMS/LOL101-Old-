@@ -3,7 +3,7 @@ node_modules/
 .DS_Store
 
 # JSON Data Files
-champions.json
-items.json
+# champions.json
+# items.json
 
 Illustration2.png
