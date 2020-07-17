@@ -24,6 +24,7 @@ const getAccountInfo = async (query) => {
         const summonerInfo = {
             'lvl': resOneData.summonerLevel,
             'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+            'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
             'summonerName': resOneData.name,
             'soloDuo': { 
                 'rank': resTwoData[1].tier,
@@ -48,6 +49,7 @@ const getAccountInfo = async (query) => {
             const summonerInfo = {
                 'lvl': resOneData.summonerLevel,
                 'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+                'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
                 'summonerName': resOneData.name,
                 'flex': {
                     'rank': resTwoData[0].tier,
@@ -64,6 +66,7 @@ const getAccountInfo = async (query) => {
                 const summonerInfo = {
                     'lvl': resOneData.summonerLevel,
                     'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+                    'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
                     'summonerName': resOneData.name,
                     'soloDuo': { 
                         'rank': resTwoData[0].tier,
@@ -79,6 +82,7 @@ const getAccountInfo = async (query) => {
                 const summonerInfo = {
                     'lvl': resOneData.summonerLevel,
                     'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+                    'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
                     'summonerName': resOneData.name
                 }
                 return summonerInfo
@@ -560,6 +564,73 @@ const stripItemDescription = description => {
     let res = description.replace(/<br\s*\/?>/mg,"\n")
     let result = res.replace(/<\/?[a-z]+>/g, "")
     return result
+}
+const decideBorderLevel = level1 => {
+    const level = parseInt(level1)
+    if ((level == 1) || (level < 30)) {
+        return '001'
+    }
+    if ((level >= 30) && (level < 50)) {
+        return '030'
+    }
+    if ((level >= 50) && (level < 75)) {
+        return '050'
+    }
+    if ((level >= 75) && (level < 100)) {
+        return '075'
+    }
+    if ((level >= 100) && (level < 125)) {
+        return 100
+    }
+    if ((level >= 125) && (level < 150)) {
+        return 125
+    }
+    if ((level >= 150) && (level < 175)) {
+        return 150
+    }
+    if ((level >= 175) && (level < 200)) {
+        return 175
+    }
+    if ((level >= 200) && (level < 225)) {
+        return 200
+    }
+    if ((level >= 225) && (level < 250)) {
+        return 225
+    }
+    if ((level >= 250) && (level < 275)) {
+        return 250
+    }
+    if ((level >= 275) && (level < 300)) {
+        return 275
+    }
+    if ((level >= 300) && (level < 325)) {
+        return 300
+    }
+    if ((level >= 325) && (level < 350)) {
+        return 325
+    }
+    if ((level >= 350) && (level < 375)) {
+        return 350
+    }
+    if ((level >= 375) && (level < 400)) {
+        return 375
+    }
+    if ((level >= 400) && (level < 425)) {
+        return 400
+    }
+    if ((level >= 425) && (level < 450)) {
+        return 425
+    }
+    if ((level >= 450) && (level < 475)) {
+        return 450
+    }
+    if ((level >= 475) && (level < 500)) {
+        return 475
+    }
+    if (level >= 500) {
+        return 500
+    }
+    return undefined
 }
 
 module.exports = {

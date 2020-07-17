@@ -91,6 +91,7 @@ app.get("/search-rank", async (req, res) => {
     // if (!errors.isEmpty()) {
     //     res.render('search_rank', {rank})
     // }
+    console.log(rank)
     res.render('search_rank', {rank})
 })
 app.get("/spells", async (req, res) => {
