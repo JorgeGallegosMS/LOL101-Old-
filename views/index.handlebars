@@ -1,3 +1,4 @@
+
 <header>
     <div class="container">
         <nav>
@@ -11,6 +12,7 @@
         </ul>
     </div>
     </nav>
+
     </div>
     <section class="hero">
         <div class="frame"></div>
@@ -24,29 +26,62 @@
             <div class="title">
                 <div data-aos="fade-right"><div class="rectangle">
                 <h3>Choose Your <text>Legend</text></h3>
-                </div></div>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
                 <div class="container">
                     <div class="champs">
-                       
+
+        <ul id="myUL">
         {{#each champs}}
-        {{#if @first}}
-        {{ else }}
-        <div class="champion {{ @key }}">
-            <a class="champion-link" href="/champions/{{ @key }}">
-                <p class="champion-name">{{ this.name }}</p>
-                <div id="a"><img class="champion-image" src="{{ this.icon }}" alt="">
-                 
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
-            </a>
-        </div>
-        {{/if}}
+            {{#if @first}}
+            {{ else }}
+                    <li><div class="champion {{ @key }}" id="1">
+                        <a class="champion-link" href="/champions/{{ @key }}" id="2">
+                            <p class="champion-name">{{ this.name }}</p>
+                            <div id="a"><img class="champion-image" src="{{ this.icon }}" id="3">
+                            </div>
+                        </a>
+                    </div></li>
+            {{/if}}
         {{/each}}
+        </ul>
+
     </div>
-</div>
-            </div>
     </div>
     </div>
+    </div>
+    </div>
+
    
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+        console.log(li)
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("p")[0];
+            die1 = document.getElementById("1");
+            die2 = document.getElementById("2");
+            die3 = document.getElementById("3");
+
+
+
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                die1.style.display = "";
+                die2.style.display = "";
+                die3.style.display = "";
+
+            } else {
+                li[i].style.display = "none";
+
+            }
+        }
+    }
+</script>
