@@ -8,22 +8,48 @@ const capitalize = word => {
     return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
-const getAccountInfo = async query => {
+const getAccountInfo = async (query) => {
     let region = 'na'
-    // let query = 'AlaskaTryndamere'
+    // console.log(region)
+    // console.log(query)
+    if (region == undefined) {
+        region = 'na'
+    }
     const resOne = await fetch(`https://${region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=${key}`)
     const resOneData = await resOne.json()
     const summonerID = resOneData.id
     const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
     const resTwoData = await resTwo.json()
     try {
-        if (resTwoData[0].queueType == 'RANKED_SOLO_5x5') {
-
+        const summonerInfo = {
+            'lvl': resOneData.summonerLevel,
+            'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+            'summonerName': resOneData.name,
+            'soloDuo': { 
+                'rank': resTwoData[1].tier,
+                'tier': resTwoData[1].rank,
+                'lp': resTwoData[1].leaguePoints,
+                'wins': resTwoData[1].wins,
+                'losses': resTwoData[1].losses,
+                'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
+            },
+            'flex': {
+                'rank': resTwoData[0].tier,
+                'tier': resTwoData[0].rank,
+                'lp': resTwoData[0].leaguePoints,
+                'wins': resTwoData[0].wins,
+                'losses': resTwoData[0].losses,
+                'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses)),
+            }
+        }
+        return summonerInfo
+    } catch (error) {
+        try {
             const summonerInfo = {
                 'lvl': resOneData.summonerLevel,
                 'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
                 'summonerName': resOneData.name,
-                'soloDuo': { 
+                'flex': {
                     'rank': resTwoData[0].tier,
                     'tier': resTwoData[0].rank,
                     'lp': resTwoData[0].leaguePoints,
@@ -33,31 +59,31 @@ const getAccountInfo = async query => {
                 }
             }
             return summonerInfo
-        } else if (resTwoData[1].queueType == 'RANKED_SOLO_5x5') {
-    
-            const summonerInfo = {
-                'lvl': resOneData.summonerLevel,
-                'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
-                'summonerName': resOneData.name,
-                'soloDuo': { 
-                    'rank': resTwoData[1].tier,
-                    'tier': resTwoData[1].rank,
-                    'lp': resTwoData[1].leaguePoints,
-                    'wins': resTwoData[1].wins,
-                    'losses': resTwoData[1].losses,
-                    'winrate': (resTwoData[1].wins / (resTwoData[1].wins + resTwoData[1].losses))
+        } catch (error) {
+            try {
+                const summonerInfo = {
+                    'lvl': resOneData.summonerLevel,
+                    'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+                    'summonerName': resOneData.name,
+                    'soloDuo': { 
+                        'rank': resTwoData[0].tier,
+                        'tier': resTwoData[0].rank,
+                        'lp': resTwoData[0].leaguePoints,
+                        'wins': resTwoData[0].wins,
+                        'losses': resTwoData[0].losses,
+                        'winrate': (resTwoData[0].wins / (resTwoData[0].wins + resTwoData[0].losses))
+                    }
                 }
+                return summonerInfo
+            } catch (error) {
+                const summonerInfo = {
+                    'lvl': resOneData.summonerLevel,
+                    'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
+                    'summonerName': resOneData.name
+                }
+                return summonerInfo
             }
-            return summonerInfo
         }
-        
-    } catch (error) {
-        const summonerInfo = {
-            'lvl': resOneData.summonerLevel,
-            'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
-            'summonerName': resOneData.name
-        }
-        return summonerInfo
     }
 }
 
