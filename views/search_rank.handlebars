@@ -57,22 +57,47 @@
    <div class="search">
         <form method="GET" >
             <input type="text" class="searchTerm" placeholder="Summoner name..." name="query">
+            {{!-- <select name="region">
+                <option name='NA' value='na'</option>
+                <option name='EUW' value='euw'</option>
+                <option name='KR' value='kr'</option>
+                <option name='OCE' value='oce'</option>
+                <option name='JP' value='jp'</option>
+                <option name='LAS' value='las'</option>
+                <option name='RU' value='ru'</option>
+                <option name='TR' value='tr'</option>
+                <option name='LAN' value='lan'</option>
+                <option name='BR' value='br'</option>
+            </select> --}}
             <button type="submit" class="searchButton">
                 <i class="fa fa-search"></i>
             </button>
         </form>
    </div>
 </div>
+
 <h1>Summoner name: {{ rank.summonerName }}</h1>
 <img src="{{rank.icon}}">
+<img src="{{rank.levelBorder}}">
 <h3>Level: {{ rank.lvl }}</h3>
+{{#if rank.soloDuo.tier}}
+<h3>Solo Duo</h3>
 <h3>Rank: {{ rank.soloDuo.rank }}</h3>
 <h3>Tier: {{ rank.soloDuo.tier }}</h3>
 <h3>Current LP: {{ rank.soloDuo.lp }}</h3>
 <h3>Winrate: {{ rank.soloDuo.winrate }}</h3>
 <h3>Wins: {{ rank.soloDuo.wins }}</h3>
 <h3>Losses: {{ rank.soloDuo.losses }}</h3>
-
+{{/if}}
+{{#if rank.flex.tier}}
+<h3>Ranked Flex</h3>
+<h3>Rank: {{ rank.flex.rank }}</h3>
+<h3>Tier: {{ rank.flex.tier }}</h3>
+<h3>Current LP: {{ rank.flex.lp }}</h3>
+<h3>Winrate: {{ rank.flex.winrate }}</h3>
+<h3>Wins: {{ rank.flex.wins }}</h3>
+<h3>Losses: {{ rank.flex.losses }}</h3>
+{{/if}}
 
 
 
