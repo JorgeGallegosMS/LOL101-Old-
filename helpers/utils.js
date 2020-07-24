@@ -28,10 +28,10 @@ const getAccountInfo = async (query, champsDict) => {
     const champion_mastery = []
     let rawdata = fs.readFileSync('ids.json');
     let ids = JSON.parse(rawdata);
-    // console.log(resThreeData)
+    console.log(resThreeData)
     // console.log(champIDs)
     for (id in champIDs) {
-        const id_info = [ids[champIDs[id]].name, ids[champIDs[id]].icon, `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${resThreeData[id]["championLevel"]}.png`, resThreeData[id]["championPoints"]]
+        const id_info = [ids[champIDs[id]].name, ids[champIDs[id]].icon, `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${resThreeData[id]["championLevel"]}.png`, resThreeData[id]["championPoints"], resThreeData[id]["chestGranted"]]
         // champion_mastery.push([ids[champIDs[id]].name, ids[champIDs[id]].icon], `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${resThreeData[id]["championLevel"]}.png`, resThreeData[id]["championPoints"])
         champion_mastery.push(id_info)
     }
@@ -68,6 +68,7 @@ const getAccountInfo = async (query, champsDict) => {
                 'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
                 'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
                 'summonerName': resOneData.name,
+                'mastery': champion_mastery,
                 'flex': {
                     'rank': resTwoData[0].tier,
                     'tier': resTwoData[0].rank,
@@ -85,6 +86,7 @@ const getAccountInfo = async (query, champsDict) => {
                     'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
                     'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
                     'summonerName': resOneData.name,
+                    'mastery': champion_mastery,
                     'soloDuo': { 
                         'rank': resTwoData[0].tier,
                         'tier': resTwoData[0].rank,
@@ -100,7 +102,8 @@ const getAccountInfo = async (query, champsDict) => {
                     'lvl': resOneData.summonerLevel,
                     'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
                     'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
-                    'summonerName': resOneData.name
+                    'summonerName': resOneData.name,
+                    'mastery': champion_mastery
                 }
                 return summonerInfo
             }

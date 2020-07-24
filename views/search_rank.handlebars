@@ -77,15 +77,30 @@
 </div>
 
 <h1>Summoner name: {{ rank.summonerName }}</h1>
-<img src="{{rank.icon}}">
-<img src="{{rank.levelBorder}}">
-<h3>Level: {{ rank.lvl }}</h3>
+<div class="parent">
+    <img src="{{rank.icon}}" class="image1" width="108" height="108">
+    <img src="{{rank.levelBorder}}" class="image2">
+    <h3 class="level">{{ rank.lvl }} </h3>
+</div>
 <h1>Champion Masteries:</h1>
 {{#each rank.mastery}}
+
+{{#if this.[4]}}
+<h3>{{ this.[0] }}</h3>
+<div class="champion_icon">
+<img class="c_icon"src="{{ this.[1] }}">
+<img src="{{ this.[2] }}">
+<img src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-uikit/global/default/images/icon-chest-acquired.png">
+<img class="chest_border"src="https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-uikit/global/default/images/icon-chest-acquired-frame.png"
+</div>
+<h3>Points: {{ this.[3] }}</h3>
+{{else}}
 <h3>{{ this.[0] }}</h3>
 <img src="{{ this.[1] }}">
 <img src="{{ this.[2] }}">
 <h3>Points: {{ this.[3] }}</h3>
+{{/if}}
+
 {{/each}}
 {{#if rank.soloDuo.tier}}
 <h3>Solo Duo</h3>

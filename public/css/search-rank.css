@@ -1,0 +1,54 @@
+/* .Icon {
+    width: 256px;
+    height: 256px;
+}
+.ProfileIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+.parent {
+    width: 256px;
+    height: 256;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.image1 {
+    position: relative;
+    top: 73px;
+    left: 75px;
+}
+.image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px green solid;
+}
+.level {
+    position: relative;
+    top: 52px;
+    left: 115px;
+    color: white;
+}
+.champion_icon {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.c_icon {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 130px;
+}
+.chest_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 1px green solid; */
+}

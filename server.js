@@ -94,7 +94,7 @@ app.get("/search-rank", async (req, res) => {
     //     res.render('search_rank', {rank})
     // }
     console.log(rank)
-    res.render('search_rank', {rank})
+    res.render('search_rank', { style: 'search-rank.css', rank: rank})
 })
 app.get("/spells", async (req, res) => {
     try {
