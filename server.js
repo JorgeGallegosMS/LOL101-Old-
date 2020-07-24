@@ -14,6 +14,8 @@ app.use(middleware.setChampionsData);
 app.use(middleware.setItemsData);
 app.use(middleware.setSpellsData);
 app.use(middleware.setRunesData);
+app.use(middleware.setChampIDs);
+
 
 
 app.get("/", (req, res) => {

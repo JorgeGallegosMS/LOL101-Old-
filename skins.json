@@ -1,0 +1,6059 @@
+{
+    "Aatrox":[
+       [
+          [
+             "default",
+             "975",
+             "12-Jun-2013"
+          ],
+          [
+             "Justicar Aatrox",
+             "975",
+             "12-Jun-2013"
+          ],
+          [
+             "Mecha Aatrox",
+             "1350",
+             "23-Jul-2014"
+          ],
+          [
+             "Sea Hunter Aatrox",
+             "750",
+             "22-Jul-2015"
+          ],
+          [
+             "Blood Moon Aatrox",
+             "1350",
+             "10-Jan-2019"
+          ],
+          [
+             "Blood Moon Aatrox Prestige Edition",
+             "Special pricing",
+             "10-Jan-2019"
+          ]
+       ]
+    ],
+    "Ahri":[
+       [
+          [
+             "default",
+             "880",
+             "14-Dec-2011"
+          ],
+          [
+             "Dynasty Ahri",
+             "975",
+             "14-Dec-2011"
+          ],
+          [
+             "Midnight Ahri",
+             "750",
+             "14-Dec-2011"
+          ],
+          [
+             "Foxfire Ahri",
+             "975",
+             "11-Jul-2012"
+          ],
+          [
+             "Popstar Ahri",
+             "975",
+             "25-Nov-2013"
+          ],
+          [
+             "Academy Ahri",
+             "750",
+             "26-Aug-2015"
+          ],
+          [
+             "Arcade Ahri",
+             "1350",
+             "24-Aug-2016"
+          ],
+          [
+             "Star Guardian Ahri",
+             "1820",
+             "06-Sep-2017"
+          ],
+          [
+             "K/DA Ahri",
+             "1350",
+             "03-Nov-2018"
+          ],
+          [
+             "Elderwood Ahri",
+             "1350",
+             "29-Aug-2019"
+          ],
+          [
+             "Challenger Ahri",
+             "975",
+             "15-Jan-2015"
+          ],
+          [
+             "K/DA Ahri Prestige Edition",
+             "Special pricing",
+             "07-Mar-2019"
+          ]
+       ]
+    ],
+    "Akali":[
+       [
+          [
+             "default",
+             "790",
+             "11-May-2010"
+          ],
+          [
+             "Nurse Akali",
+             "975",
+             "04-Jan-2011"
+          ],
+          [
+             "Blood Moon Akali",
+             "975",
+             "07-Jun-2011"
+          ],
+          [
+             "Silverfang Akali",
+             "975",
+             "29-Nov-2011"
+          ],
+          [
+             "Headhunter Akali",
+             "1350",
+             "23-Mar-2015"
+          ],
+          [
+             "Sashimi Akali",
+             "750",
+             "07-Sep-2016"
+          ],
+          [
+             "K/DA Akali",
+             "1350",
+             "03-Nov-2018"
+          ],
+          [
+             "PROJECT: Akali",
+             "1350",
+             "01-Aug-2019"
+          ],
+          [
+             "True Damage Akali",
+             "1350",
+             "10-Nov-2019"
+          ],
+          [
+             "Stinger Akali",
+             "520",
+             "11-May-2010"
+          ],
+          [
+             "Infernal Akali",
+             "520",
+             "11-May-2010"
+          ],
+          [
+             "All-star Akali",
+             "975",
+             "24-Jun-2010"
+          ]
+       ]
+    ],
+    "Alistar":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Golden Alistar",
+             "390",
+             "13-Jan-2010"
+          ],
+          [
+             "Infernal Alistar",
+             "975",
+             "13-Jul-2012"
+          ],
+          [
+             "Marauder Alistar",
+             "750",
+             "30-Sep-2015"
+          ],
+          [
+             "Moo Cow Alistar",
+             "975",
+             "29-Mar-2017"
+          ],
+          [
+             "Blackfrost Alistar",
+             "1350",
+             "05-Mar-2020"
+          ],
+          [
+             "Matador Alistar",
+             "975",
+             "11-May-2010"
+          ],
+          [
+             "Longhorn Alistar",
+             "520",
+             "16-Feb-2011"
+          ],
+          [
+             "Sweeper Alistar",
+             "750",
+             "18-Jun-2014"
+          ],
+          [
+             "SKT T1 Alistar",
+             "975",
+             "17-Aug-2016"
+          ],
+          [
+             "Conqueror Alistar",
+             "975",
+             "30-Apr-2019"
+          ],
+          [
+             "Black Alistar",
+             "Special pricing",
+             "13-Jun-2009"
+          ],
+          [
+             "Unchained Alistar",
+             "Special pricing",
+             "22-Sep-2011"
+          ]
+       ]
+    ],
+    "Amumu":[
+       [
+          [
+             "default",
+             "260",
+             "25-Jun-2009"
+          ],
+          [
+             "Emumu",
+             "520",
+             "01-Aug-2010"
+          ],
+          [
+             "Little Knight Amumu",
+             "750",
+             "18-Jul-2011"
+          ],
+          [
+             "Sad Robot Amumu",
+             "1350",
+             "28-May-2012"
+          ],
+          [
+             "Surprise Party Amumu",
+             "1350",
+             "31-Mar-2015"
+          ],
+          [
+             "Infernal Amumu",
+             "1350",
+             "16-Oct-2018"
+          ],
+          [
+             "Pharaoh Amumu",
+             "520",
+             "02-Feb-2010"
+          ],
+          [
+             "Vancouver Amumu",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Re-Gifted Amumu",
+             "520",
+             "14-Dec-2010"
+          ],
+          [
+             "Almost-Prom King Amumu",
+             "520",
+             "07-Feb-2011"
+          ],
+          [
+             "Hextech Amumu",
+             "Special pricing",
+             "26-Sep-2019"
+          ]
+       ]
+    ],
+    "Anivia":[
+       [
+          [
+             "default",
+             "790",
+             "09-Jul-2009"
+          ],
+          [
+             "Bird of Prey Anivia",
+             "520",
+             "02-May-2010"
+          ],
+          [
+             "Blackfrost Anivia",
+             "1820",
+             "29-Apr-2013"
+          ],
+          [
+             "Prehistoric Anivia",
+             "750",
+             "14-Jun-2015"
+          ],
+          [
+             "Festival Queen Anivia",
+             "975",
+             "23-Feb-2017"
+          ],
+          [
+             "Papercraft Anivia",
+             "1350",
+             "21-Feb-2019"
+          ],
+          [
+             "Team Spirit Anivia",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Noxus Hunter Anivia",
+             "520",
+             "24-Aug-2010"
+          ]
+       ]
+    ],
+    "Annie":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Frostfire Annie",
+             "975",
+             "24-May-2011"
+          ],
+          [
+             "Reverse Annie",
+             "975",
+             "06-Sep-2011"
+          ],
+          [
+             "Panda Annie",
+             "975",
+             "08-Feb-2013"
+          ],
+          [
+             "Super Galaxy Annie",
+             "1350",
+             "16-Oct-2017"
+          ],
+          [
+             "Red Riding Annie",
+             "520",
+             "27-Apr-2010"
+          ],
+          [
+             "Annie in Wonderland",
+             "1820",
+             "16-Aug-2010"
+          ],
+          [
+             "Prom Queen Annie",
+             "520",
+             "07-Feb-2011"
+          ],
+          [
+             "FrankenTibbers Annie",
+             "975",
+             "19-Oct-2011"
+          ],
+          [
+             "Sweetheart Annie",
+             "750",
+             "13-Feb-2015"
+          ],
+          [
+             "Goth Annie",
+             "Special pricing",
+             "27-Oct-2009"
+          ],
+          [
+             "Hextech Annie",
+             "Special pricing",
+             "15-Mar-2016"
+          ]
+       ]
+    ],
+    "Ashe":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Sherwood Forest Ashe",
+             "520",
+             "08-Apr-2010"
+          ],
+          [
+             "Woad Ashe",
+             "520",
+             "18-Jul-2010"
+          ],
+          [
+             "Amethyst Ashe",
+             "975",
+             "15-Nov-2011"
+          ],
+          [
+             "Marauder Ashe",
+             "750",
+             "17-Feb-2015"
+          ],
+          [
+             "PROJECT: Ashe",
+             "1820",
+             "01-Aug-2016"
+          ],
+          [
+             "Cosmic Queen Ashe",
+             "1350",
+             "21-Aug-2018"
+          ],
+          [
+             "High Noon Ashe",
+             "1820",
+             "10-Oct-2019"
+          ],
+          [
+             "Freljord Ashe",
+             "520",
+             "20-Nov-2009"
+          ],
+          [
+             "Queen Ashe",
+             "975",
+             "21-Sep-2010"
+          ],
+          [
+             "Heartseeker Ashe",
+             "975",
+             "14-Feb-2014"
+          ]
+       ]
+    ],
+    "Azir":[
+       [
+          [
+             "default",
+             "975",
+             "15-Sep-2014"
+          ],
+          [
+             "Galactic Azir",
+             "975",
+             "15-Sep-2014"
+          ],
+          [
+             "Gravelord Azir",
+             "1350",
+             "01-Dec-2015"
+          ],
+          [
+             "SKT T1 Azir",
+             "975",
+             "17-Aug-2016"
+          ]
+       ]
+    ],
+    "Blitzcrank":[
+       [
+          [
+             "default",
+             "790",
+             "01-Sep-2009"
+          ],
+          [
+             "Boom Boom Blitzcrank",
+             "520",
+             "29-Aug-2010"
+          ],
+          [
+             "Piltover Customs Blitzcrank",
+             "1350",
+             "07-Mar-2011"
+          ],
+          [
+             "iBlitzcrank",
+             "1350",
+             "01-Mar-2013"
+          ],
+          [
+             "Battle Boss Blitzcrank",
+             "1350",
+             "19-Aug-2015"
+          ],
+          [
+             "Lancer Rogue Blitzcrank",
+             "1350",
+             "16-Nov-2017"
+          ],
+          [
+             "Lancer Paragon Blitzcrank",
+             "1350",
+             "16-Nov-2017"
+          ],
+          [
+             "Goalkeeper Blitzcrank",
+             "520",
+             "24-Jun-2010"
+          ],
+          [
+             "Definitely Not Blitzcrank",
+             "975",
+             "19-Oct-2011"
+          ],
+          [
+             "Riot Blitzcrank",
+             "975",
+             "21-Oct-2013"
+          ],
+          [
+             "Witch's Brew Blitzcrank",
+             "1350",
+             "24-Oct-2019"
+          ],
+          [
+             "Rusty Blitzcrank",
+             "520",
+             "20-Nov-2009"
+          ]
+       ]
+    ],
+    "Brand":[
+       [
+          [
+             "default",
+             "880",
+             "12-Apr-2011"
+          ],
+          [
+             "Apocalyptic Brand",
+             "750",
+             "12-Apr-2011"
+          ],
+          [
+             "Cryocore Brand",
+             "975",
+             "05-Oct-2011"
+          ],
+          [
+             "Spirit Fire Brand",
+             "1350",
+             "21-Oct-2015"
+          ],
+          [
+             "Battle Boss Brand",
+             "1350",
+             "08-Aug-2017"
+          ],
+          [
+             "Arclight Brand",
+             "1350",
+             "07-Mar-2019"
+          ],
+          [
+             "Vandal Brand",
+             "520",
+             "12-Apr-2011"
+          ]
+       ]
+    ],
+    "Braum":[
+       [
+          [
+             "default",
+             "975",
+             "11-May-2014"
+          ],
+          [
+             "Dragonslayer Braum",
+             "975",
+             "11-May-2014"
+          ],
+          [
+             "El Tigre Braum",
+             "1350",
+             "21-Jan-2015"
+          ],
+          [
+             "Braum Lionheart",
+             "750",
+             "07-Dec-2015"
+          ],
+          [
+             "Crime City Braum",
+             "1350",
+             "23-Aug-2018"
+          ],
+          [
+             "Sugar Rush Braum",
+             "1350",
+             "17-Dec-2019"
+          ]
+       ]
+    ],
+    "Caitlyn":[
+       [
+          [
+             "default",
+             "880",
+             "04-Jan-2011"
+          ],
+          [
+             "Resistance Caitlyn",
+             "520",
+             "04-Jan-2011"
+          ],
+          [
+             "Arctic Warfare Caitlyn",
+             "750",
+             "29-Dec-2011"
+          ],
+          [
+             "Officer Caitlyn",
+             "975",
+             "05-Oct-2011"
+          ],
+          [
+             "Headhunter Caitlyn",
+             "975",
+             "03-Sep-2014"
+          ],
+          [
+             "Pulsefire Caitlyn",
+             "1820",
+             "24-May-2017"
+          ],
+          [
+             "Pool Party Caitlyn",
+             "1350",
+             "02-Aug-2018"
+          ],
+          [
+             "Arcade Caitlyn",
+             "1350",
+             "28-Jun-2019"
+          ],
+          [
+             "Sheriff Caitlyn",
+             "520",
+             "04-Jan-2011"
+          ],
+          [
+             "Safari Caitlyn",
+             "975",
+             "10-May-2011"
+          ],
+          [
+             "Lunar Wraith Caitlyn",
+             "1350",
+             "27-Jan-2016"
+          ]
+       ]
+    ],
+    "Cassiopeia":[
+       [
+          [
+             "default",
+             "880",
+             "14-Dec-2010"
+          ],
+          [
+             "Desperada Cassiopeia",
+             "520",
+             "14-Dec-2010"
+          ],
+          [
+             "Siren Cassiopeia",
+             "520",
+             "14-Dec-2010"
+          ],
+          [
+             "Mythic Cassiopeia",
+             "975",
+             "18-Jul-2012"
+          ],
+          [
+             "Jade Fang Cassiopeia",
+             "975",
+             "08-Feb-2013"
+          ],
+          [
+             "Eternum Cassiopeia",
+             "1350",
+             "20-Sep-2017"
+          ]
+       ]
+    ],
+    "Cho'Gath":[
+       [
+          [
+             "default",
+             "585",
+             "25-Jun-2009"
+          ],
+          [
+             "Gentleman Cho'Gath",
+             "1820",
+             "11-May-2010"
+          ],
+          [
+             "Jurassic Cho'Gath",
+             "975",
+             "01-Nov-2011"
+          ],
+          [
+             "Battlecast Prime Cho'Gath",
+             "1820",
+             "03-Aug-2012"
+          ],
+          [
+             "Prehistoric Cho'Gath",
+             "750",
+             "14-Jun-2015"
+          ],
+          [
+             "Nightmare Cho'Gath",
+             "520",
+             "20-Nov-2009"
+          ],
+          [
+             "Loch Ness Cho'Gath",
+             "520",
+             "01-Mar-2011"
+          ]
+       ]
+    ],
+    "Corki":[
+       [
+          [
+             "default",
+             "790",
+             "18-Sep-2009"
+          ],
+          [
+             "Urfrider Corki",
+             "975",
+             "04-Apr-2011"
+          ],
+          [
+             "Dragonwing Corki",
+             "975",
+             "08-Feb-2013"
+          ],
+          [
+             "Arcade Corki",
+             "1350",
+             "24-Aug-2016"
+          ],
+          [
+             "Corgi Corki",
+             "1350",
+             "27-Mar-2019"
+          ],
+          [
+             "Ice Toboggan Corki",
+             "1820",
+             "12-Feb-2010"
+          ],
+          [
+             "Red Baron Corki",
+             "1820",
+             "24-Mar-2010"
+          ],
+          [
+             "Hot Rod Corki",
+             "520",
+             "27-Jul-2010"
+          ],
+          [
+             "Fnatic Corki",
+             "750",
+             "24-Sep-2014"
+          ]
+       ]
+    ],
+    "Darius":[
+       [
+          [
+             "default",
+             "880",
+             "22-May-2012"
+          ],
+          [
+             "Lord Darius",
+             "975",
+             "22-May-2012"
+          ],
+          [
+             "Bioforge Darius",
+             "975",
+             "13-Nov-2012"
+          ],
+          [
+             "Woad King Darius",
+             "975",
+             "16-Jun-2013"
+          ],
+          [
+             "Dunkmaster Darius",
+             "1820",
+             "12-Oct-2014"
+          ],
+          [
+             "Academy Darius",
+             "750",
+             "26-Aug-2015"
+          ],
+          [
+             "God-King Darius",
+             "1820",
+             "27-Jun-2018"
+          ],
+          [
+             "High Noon Darius",
+             "1350",
+             "10-Oct-2019"
+          ]
+       ]
+    ],
+    "Diana":[
+       [
+          [
+             "default",
+             "880",
+             "07-Aug-2012"
+          ],
+          [
+             "Dark Valkyrie Diana",
+             "975",
+             "07-Aug-2012"
+          ],
+          [
+             "Lunar Goddess Diana",
+             "975",
+             "28-Jan-2014"
+          ],
+          [
+             "Infernal Diana",
+             "1350",
+             "20-Apr-2016"
+          ],
+          [
+             "Blood Moon Diana",
+             "1350",
+             "09-Feb-2017"
+          ],
+          [
+             "Dark Waters Diana",
+             "1350",
+             "31-May-2018"
+          ]
+       ]
+    ],
+    "Dr. Mundo":[
+       [
+          [
+             "default",
+             "260",
+             "01-Sep-2009"
+          ],
+          [
+             "Corporate Mundo",
+             "1820",
+             "12-Sep-2010"
+          ],
+          [
+             "Rageborn Mundo",
+             "975",
+             "27-Jul-2012"
+          ],
+          [
+             "Pool Party Mundo",
+             "975",
+             "25-Jun-2015"
+          ],
+          [
+             "El Macho Mundo",
+             "1350",
+             "01-Jun-2016"
+          ],
+          [
+             "Toxic Dr. Mundo",
+             "520",
+             "17-Dec-2009"
+          ],
+          [
+             "Mr. Mundoverse",
+             "520",
+             "24-Mar-2010"
+          ],
+          [
+             "Mundo Mundo",
+             "975",
+             "19-Oct-2010"
+          ],
+          [
+             "Executioner Mundo",
+             "520",
+             "17-Jun-2011"
+          ],
+          [
+             "TPA Mundo",
+             "750",
+             "23-May-2013"
+          ]
+       ]
+    ],
+    "Draven":[
+       [
+          [
+             "default",
+             "880",
+             "05-Jun-2012"
+          ],
+          [
+             "Soul Reaver Draven",
+             "1350",
+             "05-Jun-2012"
+          ],
+          [
+             "Gladiator Draven",
+             "975",
+             "25-Mar-2013"
+          ],
+          [
+             "Primetime Draven",
+             "975",
+             "20-Jun-2014"
+          ],
+          [
+             "Pool Party Draven",
+             "975",
+             "25-Jun-2015"
+          ],
+          [
+             "Beast Hunter Draven",
+             "750",
+             "04-Feb-2016"
+          ],
+          [
+             "Mecha Kingdoms Draven",
+             "1350",
+             "15-Jan-2020"
+          ],
+          [
+             "Draven Draven",
+             "500",
+             "31-Mar-2016"
+          ]
+       ]
+    ],
+    "Elise":[
+       [
+          [
+             "default",
+             "880",
+             "26-Oct-2012"
+          ],
+          [
+             "Death Blossom Elise",
+             "975",
+             "26-Oct-2012"
+          ],
+          [
+             "Blood Moon Elise",
+             "975",
+             "08-Jan-2015"
+          ],
+          [
+             "Super Galaxy Elise",
+             "1350",
+             "16-Oct-2017"
+          ],
+          [
+             "SKT T1 Elise",
+             "975",
+             "17-Aug-2016"
+          ]
+       ]
+    ],
+    "Evelynn":[
+       [
+          [
+             "default",
+             "585",
+             "30-Apr-2009"
+          ],
+          [
+             "Shadow Evelynn",
+             "520",
+             "20-Nov-2009"
+          ],
+          [
+             "Tango Evelynn",
+             "520",
+             "05-Oct-2010"
+          ],
+          [
+             "Safecracker Evelynn",
+             "750",
+             "28-Nov-2014"
+          ],
+          [
+             "Blood Moon Evelynn",
+             "975",
+             "08-May-2018"
+          ],
+          [
+             "K/DA Evelynn",
+             "1350",
+             "03-Nov-2018"
+          ],
+          [
+             "Sugar Rush Evelynn",
+             "1350",
+             "17-Dec-2019"
+          ],
+          [
+             "Masquerade Evelynn",
+             "520",
+             "17-May-2010"
+          ]
+       ]
+    ],
+    "Ezreal":[
+       [
+          [
+             "default",
+             "880",
+             "16-Mar-2010"
+          ],
+          [
+             "Frosted Ezreal",
+             "520",
+             "18-Jul-2010"
+          ],
+          [
+             "Pulsefire Ezreal",
+             "3250",
+             "29-Jun-2012"
+          ],
+          [
+             "Debonair Ezreal",
+             "750",
+             "05-Aug-2014"
+          ],
+          [
+             "Ace of Spades Ezreal",
+             "750",
+             "20-May-2015"
+          ],
+          [
+             "Arcade Ezreal",
+             "1350",
+             "24-Aug-2016"
+          ],
+          [
+             "Star Guardian Ezreal",
+             "1350",
+             "06-Sep-2017"
+          ],
+          [
+             "Pajama Guardian Ezreal",
+             "1350",
+             "21-Nov-2018"
+          ],
+          [
+             "Battle Academia Ezreal",
+             "1820",
+             "15-May-2019"
+          ],
+          [
+             "Nottingham Ezreal",
+             "520",
+             "16-Mar-2010"
+          ],
+          [
+             "Striker Ezreal",
+             "520",
+             "24-Jun-2010"
+          ],
+          [
+             "Explorer Ezreal",
+             "750",
+             "13-Oct-2010"
+          ],
+          [
+             "TPA Ezreal",
+             "750",
+             "23-May-2013"
+          ]
+       ]
+    ],
+    "Fiddlesticks":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Spectral Fiddlesticks",
+             "520",
+             "16-Mar-2010"
+          ],
+          [
+             "Bandito Fiddlesticks",
+             "520",
+             "10-Aug-2010"
+          ],
+          [
+             "Surprise Party Fiddlesticks",
+             "975",
+             "27-Oct-2011"
+          ],
+          [
+             "Risen Fiddlesticks",
+             "1350",
+             "29-Apr-2015"
+          ],
+          [
+             "Praetorian Fiddlesticks",
+             "1350",
+             "08-Nov-2018"
+          ],
+          [
+             "Union Jack Fiddlesticks",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Pumpkinhead Fiddlesticks",
+             "520",
+             "19-Oct-2010"
+          ],
+          [
+             "Fiddle Me Timbers",
+             "750",
+             "26-Apr-2010"
+          ]
+       ]
+    ],
+    "Fiora":[
+       [
+          [
+             "default",
+             "880",
+             "29-Feb-2012"
+          ],
+          [
+             "Royal Guard Fiora",
+             "520",
+             "29-Feb-2012"
+          ],
+          [
+             "Nightraven Fiora",
+             "750",
+             "29-Feb-2012"
+          ],
+          [
+             "PROJECT: Fiora",
+             "1350",
+             "07-Sep-2015"
+          ],
+          [
+             "Pool Party Fiora",
+             "1350",
+             "13-Jul-2016"
+          ],
+          [
+             "Soaring Sword Fiora",
+             "1350",
+             "27-Sep-2017"
+          ],
+          [
+             "Pulsefire Fiora",
+             "1350",
+             "14-May-2020"
+          ],
+          [
+             "Headmistress Fiora",
+             "975",
+             "26-Oct-2012"
+          ],
+          [
+             "Heartpiercer Fiora",
+             "1350",
+             "11-Feb-2019"
+          ]
+       ]
+    ],
+    "Fizz":[
+       [
+          [
+             "default",
+             "880",
+             "15-Nov-2011"
+          ],
+          [
+             "Atlantean Fizz",
+             "520",
+             "15-Nov-2011"
+          ],
+          [
+             "Tundra Fizz",
+             "750",
+             "15-Nov-2011"
+          ],
+          [
+             "Fisherman Fizz",
+             "975",
+             "01-Apr-2012"
+          ],
+          [
+             "Void Fizz",
+             "1350",
+             "06-Apr-2014"
+          ],
+          [
+             "Cottontail Fizz",
+             "975",
+             "09-Aug-2015"
+          ],
+          [
+             "Super Galaxy Fizz",
+             "1350",
+             "25-May-2016"
+          ],
+          [
+             "Omega Squad Fizz",
+             "1350",
+             "26-Jul-2017"
+          ],
+          [
+             "Fuzz Fizz",
+             "1350",
+             "27-Mar-2019"
+          ]
+       ]
+    ],
+    "Galio":[
+       [
+          [
+             "default",
+             "790",
+             "10-Aug-2010"
+          ],
+          [
+             "Enchanted Galio",
+             "520",
+             "10-Aug-2010"
+          ],
+          [
+             "Commando Galio",
+             "520",
+             "18-Jan-2011"
+          ],
+          [
+             "Gatekeeper Galio",
+             "1820",
+             "23-Apr-2012"
+          ],
+          [
+             "Debonair Galio",
+             "750",
+             "13-Apr-2015"
+          ],
+          [
+             "Birdio",
+             "975",
+             "29-Mar-2018"
+          ],
+          [
+             "Infernal Galio",
+             "1350",
+             "05-Sep-2019"
+          ]
+       ]
+    ],
+    "Gangplank":[
+       [
+          [
+             "default",
+             "790",
+             "18-Aug-2009"
+          ],
+          [
+             "Spooky Gangplank",
+             "520",
+             "16-Mar-2010"
+          ],
+          [
+             "Minuteman Gangplank",
+             "520",
+             "03-Jul-2010"
+          ],
+          [
+             "Special Forces Gangplank",
+             "975",
+             "12-Sep-2012"
+          ],
+          [
+             "Sultan Gangplank",
+             "975",
+             "13-Nov-2013"
+          ],
+          [
+             "Captain Gangplank",
+             "975",
+             "09-Aug-2015"
+          ],
+          [
+             "Dreadnova Gangplank",
+             "1350",
+             "12-Jan-2017"
+          ],
+          [
+             "Pool Party Gangplank",
+             "1350",
+             "02-Aug-2018"
+          ],
+          [
+             "Sailor Gangplank",
+             "750",
+             "10-Jan-2011"
+          ],
+          [
+             "Toy Soldier Gangplank",
+             "975",
+             "14-Dec-2011"
+          ]
+       ]
+    ],
+    "Garen":[
+       [
+          [
+             "default",
+             "260",
+             "27-Apr-2010"
+          ],
+          [
+             "Commando Garen",
+             "520",
+             "08-Sep-2010"
+          ],
+          [
+             "Dreadknight Garen",
+             "975",
+             "18-Jan-2011"
+          ],
+          [
+             "Rugged Garen",
+             "750",
+             "15-Aug-2011"
+          ],
+          [
+             "Steel Legion Garen",
+             "1350",
+             "01-Feb-2013"
+          ],
+          [
+             "Rogue Admiral Garen",
+             "750",
+             "22-Jul-2015"
+          ],
+          [
+             "God-King Garen",
+             "1820",
+             "27-Jun-2018"
+          ],
+          [
+             "Demacia Vice Garen",
+             "1350",
+             "18-Jul-2019"
+          ],
+          [
+             "Mecha Kingdoms Garen",
+             "1350",
+             "15-Jan-2020"
+          ],
+          [
+             "Sanguine Garen",
+             "520",
+             "27-Apr-2010"
+          ],
+          [
+             "Desert Trooper Garen",
+             "520",
+             "27-Apr-2010"
+          ],
+          [
+             "Warring Kingdoms Garen",
+             "1350",
+             "19-Jan-2017"
+          ]
+       ]
+    ],
+    "Gnar":[
+       [
+          [
+             "default",
+             "975",
+             "13-Aug-2014"
+          ],
+          [
+             "Dino Gnar",
+             "975",
+             "13-Aug-2014"
+          ],
+          [
+             "Gentleman Gnar",
+             "975",
+             "14-Jul-2015"
+          ],
+          [
+             "El Le\u00f3n Gnar",
+             "750",
+             "01-Jun-2016"
+          ],
+          [
+             "Super Galaxy Gnar",
+             "1350",
+             "16-Oct-2017"
+          ],
+          [
+             "Astronaut Gnar",
+             "1350",
+             "28-May-2020"
+          ],
+          [
+             "Snow Day Gnar",
+             "975",
+             "10-Dec-2015"
+          ]
+       ]
+    ],
+    "Gragas":[
+       [
+          [
+             "default",
+             "790",
+             "02-Feb-2010"
+          ],
+          [
+             "Hillbilly Gragas",
+             "520",
+             "01-Aug-2010"
+          ],
+          [
+             "Gragas, Esq.",
+             "975",
+             "12-Apr-2011"
+          ],
+          [
+             "Oktoberfest Gragas",
+             "975",
+             "21-Sep-2012"
+          ],
+          [
+             "Gragas Caskbreaker",
+             "750",
+             "07-Dec-2015"
+          ],
+          [
+             "Arctic Ops Gragas",
+             "1350",
+             "25-Jan-2018"
+          ],
+          [
+             "Scuba Gragas",
+             "975",
+             "03-May-2010"
+          ],
+          [
+             "Santa Gragas",
+             "975",
+             "14-Dec-2010"
+          ],
+          [
+             "Vandal Gragas",
+             "975",
+             "02-Mar-2012"
+          ],
+          [
+             "Superfan Gragas",
+             "750",
+             "18-Jun-2014"
+          ]
+       ]
+    ],
+    "Graves":[
+       [
+          [
+             "default",
+             "880",
+             "19-Oct-2011"
+          ],
+          [
+             "Hired Gun Graves",
+             "520",
+             "19-Oct-2011"
+          ],
+          [
+             "Crime City Graves",
+             "975",
+             "02-Apr-2012"
+          ],
+          [
+             "Pool Party Graves",
+             "1350",
+             "09-Sep-2013"
+          ],
+          [
+             "Cutthroat Graves",
+             "750",
+             "21-Jul-2015"
+          ],
+          [
+             "Praetorian Graves",
+             "1350",
+             "08-Nov-2018"
+          ],
+          [
+             "Battle Professor Graves",
+             "1350",
+             "15-May-2019"
+          ],
+          [
+             "Jailbreak Graves",
+             "975",
+             "19-Oct-2011"
+          ],
+          [
+             "Riot Graves",
+             "975",
+             "16-Aug-2012"
+          ],
+          [
+             "Snow Day Graves",
+             "1350",
+             "14-Dec-2016"
+          ]
+       ]
+    ],
+    "Hecarim":[
+       [
+          [
+             "default",
+             "880",
+             "17-Apr-2012"
+          ],
+          [
+             "Reaper Hecarim",
+             "975",
+             "17-Apr-2012"
+          ],
+          [
+             "Arcade Hecarim",
+             "1350",
+             "21-Aug-2013"
+          ],
+          [
+             "Elderwood Hecarim",
+             "1350",
+             "25-Nov-2015"
+          ],
+          [
+             "Worldbreaker Hecarim",
+             "750",
+             "10-Nov-2016"
+          ],
+          [
+             "High Noon Hecarim",
+             "1350",
+             "10-Oct-2019"
+          ],
+          [
+             "Blood Knight Hecarim",
+             "975",
+             "17-Apr-2012"
+          ],
+          [
+             "Headless Hecarim",
+             "975",
+             "26-Oct-2012"
+          ]
+       ]
+    ],
+    "Heimerdinger":[
+       [
+          [
+             "default",
+             "790",
+             "09-Oct-2009"
+          ],
+          [
+             "Blast Zone Heimerdinger",
+             "520",
+             "24-Jun-2010"
+          ],
+          [
+             "Piltover Customs Heimerdinger",
+             "975",
+             "22-Nov-2010"
+          ],
+          [
+             "Hazmat Heimerdinger",
+             "975",
+             "13-Jul-2014"
+          ],
+          [
+             "Dragon Trainer Heimerdinger",
+             "1820",
+             "11-Oct-2018"
+          ],
+          [
+             "Pool Party Heimerdinger",
+             "1350",
+             "02-Jul-2020"
+          ],
+          [
+             "Alien Invader Heimerdinger",
+             "1820",
+             "13-Jul-2010"
+          ]
+       ]
+    ],
+    "Irelia":[
+       [
+          [
+             "default",
+             "880",
+             "16-Nov-2010"
+          ],
+          [
+             "Nightblade Irelia",
+             "520",
+             "16-Nov-2010"
+          ],
+          [
+             "Aviator Irelia",
+             "520",
+             "16-Nov-2010"
+          ],
+          [
+             "Frostblade Irelia",
+             "975",
+             "30-Apr-2012"
+          ],
+          [
+             "Order of the Lotus Irelia",
+             "750",
+             "03-Jun-2015"
+          ],
+          [
+             "Divine Sword Irelia",
+             "1350",
+             "04-Sep-2018"
+          ],
+          [
+             "PROJECT: Irelia",
+             "1350",
+             "01-Aug-2019"
+          ],
+          [
+             "High Noon Irelia",
+             "1350",
+             "18-Jun-2020"
+          ],
+          [
+             "Infiltrator Irelia",
+             "975",
+             "11-Oct-2011"
+          ],
+          [
+             "iG Irelia",
+             "1350",
+             "23-Apr-2019"
+          ]
+       ]
+    ],
+    "Janna":[
+       [
+          [
+             "default",
+             "585",
+             "01-Sep-2009"
+          ],
+          [
+             "Frost Queen Janna",
+             "975",
+             "05-Dec-2011"
+          ],
+          [
+             "Forecast Janna",
+             "1820",
+             "04-Sep-2013"
+          ],
+          [
+             "Star Guardian Janna",
+             "1350",
+             "05-Oct-2016"
+          ],
+          [
+             "Sacred Sword Janna",
+             "1350",
+             "27-Sep-2017"
+          ],
+          [
+             "Guardian of the Sands Janna",
+             "1350",
+             "22-Jan-2020"
+          ],
+          [
+             "Tempest Janna",
+             "520",
+             "13-Jul-2010"
+          ],
+          [
+             "Hextech Janna",
+             "975",
+             "08-Nov-2010"
+          ],
+          [
+             "Fnatic Janna",
+             "750",
+             "24-Sep-2014"
+          ],
+          [
+             "Bewitching Janna",
+             "1350",
+             "24-Oct-2018"
+          ]
+       ]
+    ],
+    "Jarvan IV":[
+       [
+          [
+             "default",
+             "880",
+             "01-Mar-2011"
+          ],
+          [
+             "Commando Jarvan IV",
+             "520",
+             "01-Mar-2011"
+          ],
+          [
+             "Dragonslayer Jarvan IV",
+             "750",
+             "01-Mar-2011"
+          ],
+          [
+             "Darkforge Jarvan IV",
+             "975",
+             "26-Jul-2011"
+          ],
+          [
+             "Warring Kingdoms Jarvan IV",
+             "1350",
+             "08-Feb-2013"
+          ],
+          [
+             "Dark Star Jarvan IV",
+             "1350",
+             "01-Mar-2018"
+          ],
+          [
+             "Pool Party Jarvan IV",
+             "1350",
+             "02-Jul-2020"
+          ],
+          [
+             "Fnatic Jarvan IV",
+             "750",
+             "24-Sep-2014"
+          ],
+          [
+             "SSG Jarvan IV",
+             "1350",
+             "20-Jul-2018"
+          ],
+          [
+             "Victorious Jarvan IV",
+             "Special pricing",
+             "14-Sep-2011"
+          ]
+       ]
+    ],
+    "Jax":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Jaximus",
+             "975",
+             "10-May-2011"
+          ],
+          [
+             "Temple Jax",
+             "750",
+             "15-Nov-2011"
+          ],
+          [
+             "Nemesis Jax",
+             "975",
+             "14-Sep-2012"
+          ],
+          [
+             "Warden Jax",
+             "750",
+             "30-Sep-2015"
+          ],
+          [
+             "God Staff Jax",
+             "1350",
+             "11-Jan-2018"
+          ],
+          [
+             "Mecha Kingdoms Jax",
+             "1820",
+             "15-Jan-2020"
+          ],
+          [
+             "The Mighty Jax",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Vandal Jax",
+             "520",
+             "24-Feb-2010"
+          ],
+          [
+             "Angler Jax",
+             "975",
+             "08-Jun-2010"
+          ],
+          [
+             "SKT T1 Jax",
+             "750",
+             "04-May-2014"
+          ]
+       ]
+    ],
+    "Jayce":[
+       [
+          [
+             "default",
+             "880",
+             "06-Jul-2012"
+          ],
+          [
+             "Full Metal Jayce",
+             "1350",
+             "06-Jul-2012"
+          ],
+          [
+             "Debonair Jayce",
+             "975",
+             "14-Feb-2013"
+          ],
+          [
+             "Forsaken Jayce",
+             "1350",
+             "03-May-2015"
+          ],
+          [
+             "Jayce Brighthammer",
+             "750",
+             "17-Nov-2016"
+          ]
+       ]
+    ],
+    "Jinx":[
+       [
+          [
+             "default",
+             "975",
+             "09-Oct-2013"
+          ],
+          [
+             "Crime City Jinx",
+             "975",
+             "09-Oct-2013"
+          ],
+          [
+             "Firecracker Jinx",
+             "1350",
+             "10-Feb-2015"
+          ],
+          [
+             "Star Guardian Jinx",
+             "1820",
+             "05-Oct-2016"
+          ],
+          [
+             "Odyssey Jinx",
+             "1350",
+             "12-Sep-2018"
+          ],
+          [
+             "PROJECT: Jinx",
+             "1350",
+             "01-Aug-2019"
+          ],
+          [
+             "Zombie Slayer Jinx",
+             "1350",
+             "05-Nov-2015"
+          ],
+          [
+             "Ambitious Elf Jinx",
+             "1350",
+             "12-Dec-2017"
+          ]
+       ]
+    ],
+    "Kalista":[
+       [
+          [
+             "default",
+             "975",
+             "20-Nov-2014"
+          ],
+          [
+             "Blood Moon Kalista",
+             "975",
+             "20-Nov-2014"
+          ],
+          [
+             "Championship Kalista",
+             "975",
+             "27-Sep-2015"
+          ]
+       ]
+    ],
+    "Karma":[
+       [
+          [
+             "default",
+             "790",
+             "01-Feb-2011"
+          ],
+          [
+             "Sakura Karma",
+             "520",
+             "01-Feb-2011"
+          ],
+          [
+             "Order of the Lotus Karma",
+             "975",
+             "01-Oct-2014"
+          ],
+          [
+             "Warden Karma",
+             "750",
+             "30-Sep-2015"
+          ],
+          [
+             "Dark Star Karma",
+             "1350",
+             "13-Jun-2019"
+          ],
+          [
+             "Sun Goddess Karma",
+             "750",
+             "01-Feb-2011"
+          ],
+          [
+             "Traditional Karma",
+             "975",
+             "29-Mar-2013"
+          ],
+          [
+             "Winter Wonder Karma",
+             "1350",
+             "14-Dec-2016"
+          ],
+          [
+             "Conqueror Karma",
+             "975",
+             "23-Apr-2017"
+          ]
+       ]
+    ],
+    "Karthus":[
+       [
+          [
+             "default",
+             "790",
+             "11-Jun-2009"
+          ],
+          [
+             "Statue of Karthus",
+             "520",
+             "03-Jul-2010"
+          ],
+          [
+             "Grim Reaper Karthus",
+             "975",
+             "26-Sep-2010"
+          ],
+          [
+             "Pentakill Karthus",
+             "750",
+             "29-Aug-2011"
+          ],
+          [
+             "Karthus Lightsbane",
+             "975",
+             "17-Nov-2016"
+          ],
+          [
+             "Infernal Karthus",
+             "1350",
+             "16-Jul-2020"
+          ],
+          [
+             "Phantom Karthus",
+             "460",
+             "13-Jan-2010"
+          ]
+       ]
+    ],
+    "Kassadin":[
+       [
+          [
+             "default",
+             "790",
+             "06-Aug-2009"
+          ],
+          [
+             "Pre-Void Kassadin",
+             "520",
+             "26-Sep-2010"
+          ],
+          [
+             "Harbinger Kassadin",
+             "975",
+             "13-Jul-2011"
+          ],
+          [
+             "Cosmic Reaver Kassadin",
+             "1350",
+             "14-Oct-2015"
+          ],
+          [
+             "Festival Kassadin",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Deep One Kassadin",
+             "520",
+             "01-Aug-2010"
+          ]
+       ]
+    ],
+    "Katarina":[
+       [
+          [
+             "default",
+             "790",
+             "18-Sep-2009"
+          ],
+          [
+             "Mercenary Katarina",
+             "520",
+             "20-Nov-2009"
+          ],
+          [
+             "High Command Katarina",
+             "750",
+             "22-Feb-2011"
+          ],
+          [
+             "Sandstorm Katarina",
+             "975",
+             "02-Jan-2012"
+          ],
+          [
+             "Warring Kingdoms Katarina",
+             "975",
+             "10-Feb-2015"
+          ],
+          [
+             "PROJECT: Katarina",
+             "1350",
+             "01-Aug-2016"
+          ],
+          [
+             "Battle Academia Katarina",
+             "1350",
+             "15-May-2019"
+          ],
+          [
+             "Blood Moon Katarina",
+             "1350",
+             "20-Feb-2020"
+          ],
+          [
+             "Red Card Katarina",
+             "975",
+             "24-Jun-2010"
+          ],
+          [
+             "Bilgewater Katarina",
+             "975",
+             "29-Aug-2010"
+          ],
+          [
+             "Kitty Cat Katarina",
+             "975",
+             "19-Oct-2010"
+          ],
+          [
+             "Slay Belle Katarina",
+             "975",
+             "14-Dec-2012"
+          ]
+       ]
+    ],
+    "Kayle":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Viridian Kayle",
+             "520",
+             "01-Jun-2010"
+          ],
+          [
+             "Battleborn Kayle",
+             "975",
+             "18-Apr-2011"
+          ],
+          [
+             "Aether Wing Kayle",
+             "1820",
+             "18-Jan-2013"
+          ],
+          [
+             "Iron Inquisitor Kayle",
+             "750",
+             "04-May-2016"
+          ],
+          [
+             "Pentakill Kayle",
+             "1350",
+             "08-Aug-2017"
+          ],
+          [
+             "Transcended Kayle",
+             "975",
+             "13-Jul-2010"
+          ],
+          [
+             "Riot Kayle",
+             "975",
+             "12-Aug-2014"
+          ],
+          [
+             "Silver Kayle",
+             "Special pricing",
+             "13-Nov-2009"
+          ]
+       ]
+    ],
+    "Kennen":[
+       [
+          [
+             "default",
+             "880",
+             "08-Apr-2010"
+          ],
+          [
+             "Karate Kennen",
+             "520",
+             "08-Nov-2010"
+          ],
+          [
+             "Kennen M.D.",
+             "975",
+             "29-Mar-2011"
+          ],
+          [
+             "Arctic Ops Kennen",
+             "975",
+             "29-Dec-2011"
+          ],
+          [
+             "Blood Moon Kennen",
+             "975",
+             "25-Feb-2016"
+          ],
+          [
+             "Super Kennen",
+             "750",
+             "29-Mar-2017"
+          ],
+          [
+             "Infernal Kennen",
+             "1350",
+             "16-Jul-2020"
+          ],
+          [
+             "Deadly Kennen",
+             "520",
+             "08-Apr-2010"
+          ]
+       ]
+    ],
+    "Kha'Zix":[
+       [
+          [
+             "default",
+             "880",
+             "26-Sep-2012"
+          ],
+          [
+             "Mecha Kha'Zix",
+             "1350",
+             "26-Sep-2012"
+          ],
+          [
+             "Guardian of the Sands Kha'Zix",
+             "975",
+             "09-Sep-2014"
+          ],
+          [
+             "Death Blossom Kha'Zix",
+             "975",
+             "17-Mar-2016"
+          ],
+          [
+             "Dark Star Kha'Zix",
+             "1350",
+             "03-May-2017"
+          ]
+       ]
+    ],
+    "Kog'Maw":[
+       [
+          [
+             "default",
+             "880",
+             "24-Jun-2010"
+          ],
+          [
+             "Monarch Kog'Maw",
+             "520",
+             "16-Nov-2010"
+          ],
+          [
+             "Lion Dance Kog'Maw",
+             "1350",
+             "01-Feb-2011"
+          ],
+          [
+             "Jurassic Kog'Maw",
+             "975",
+             "23-Mar-2012"
+          ],
+          [
+             "Battlecast Kog'Maw",
+             "1350",
+             "25-Nov-2014"
+          ],
+          [
+             "Pug'Maw",
+             "975",
+             "29-Mar-2017"
+          ],
+          [
+             "Arcanist Kog'Maw",
+             "1350",
+             "09-Jul-2020"
+          ],
+          [
+             "Caterpillar Kog'Maw",
+             "520",
+             "24-Jun-2010"
+          ],
+          [
+             "Sonoran Kog'Maw",
+             "520",
+             "24-Jun-2010"
+          ],
+          [
+             "Reindeer Kog'Maw",
+             "975",
+             "14-Dec-2010"
+          ],
+          [
+             "Deep Sea Kog'Maw",
+             "975",
+             "19-Sep-2011"
+          ]
+       ]
+    ],
+    "LeBlanc":[
+       [
+          [
+             "default",
+             "790",
+             "02-Nov-2010"
+          ],
+          [
+             "Wicked LeBlanc",
+             "750",
+             "02-Nov-2010"
+          ],
+          [
+             "Prestigious LeBlanc",
+             "520",
+             "02-Nov-2010"
+          ],
+          [
+             "Elderwood LeBlanc",
+             "1350",
+             "10-Mar-2016"
+          ],
+          [
+             "Program LeBlanc",
+             "1350",
+             "15-Nov-2018"
+          ],
+          [
+             "Coven LeBlanc",
+             "1350",
+             "16-Apr-2020"
+          ],
+          [
+             "Mistletoe LeBlanc",
+             "975",
+             "14-Dec-2011"
+          ],
+          [
+             "Ravenborn LeBlanc",
+             "975",
+             "28-Oct-2014"
+          ]
+       ]
+    ],
+    "Lee Sin":[
+       [
+          [
+             "default",
+             "880",
+             "01-Apr-2011"
+          ],
+          [
+             "Traditional Lee Sin",
+             "520",
+             "01-Apr-2011"
+          ],
+          [
+             "Acolyte Lee Sin",
+             "750",
+             "01-Apr-2011"
+          ],
+          [
+             "Dragon Fist Lee Sin",
+             "975",
+             "10-Jan-2012"
+          ],
+          [
+             "Muay Thai Lee Sin",
+             "975",
+             "24-Jul-2012"
+          ],
+          [
+             "Pool Party Lee Sin",
+             "975",
+             "09-Sep-2013"
+          ],
+          [
+             "Knockout Lee Sin",
+             "1350",
+             "31-May-2015"
+          ],
+          [
+             "God Fist Lee Sin",
+             "1820",
+             "05-Apr-2017"
+          ],
+          [
+             "Nightbringer Lee Sin",
+             "1350",
+             "12-Dec-2019"
+          ],
+          [
+             "SKT T1 Lee Sin",
+             "750",
+             "04-May-2014"
+          ],
+          [
+             "Playmaker Lee Sin",
+             "975",
+             "14-Jun-2018"
+          ],
+          [
+             "FPX Lee Sin",
+             "1350",
+             "30-Apr-2020"
+          ]
+       ]
+    ],
+    "Leona":[
+       [
+          [
+             "default",
+             "880",
+             "13-Jul-2011"
+          ],
+          [
+             "Valkyrie Leona",
+             "520",
+             "13-Jul-2011"
+          ],
+          [
+             "Iron Solari Leona",
+             "975",
+             "10-Feb-2012"
+          ],
+          [
+             "Pool Party Leona",
+             "975",
+             "09-Sep-2013"
+          ],
+          [
+             "PROJECT: Leona",
+             "1350",
+             "07-Sep-2015"
+          ],
+          [
+             "Barbecue Leona",
+             "750",
+             "07-Sep-2016"
+          ],
+          [
+             "Solar Eclipse Leona",
+             "1820",
+             "27-Nov-2018"
+          ],
+          [
+             "Lunar Eclipse Leona",
+             "1820",
+             "27-Nov-2018"
+          ],
+          [
+             "Mecha Kingdoms Leona",
+             "1350",
+             "15-Jan-2020"
+          ]
+       ]
+    ],
+    "Lissandra":[
+       [
+          [
+             "default",
+             "975",
+             "29-Apr-2013"
+          ],
+          [
+             "Bloodstone Lissandra",
+             "975",
+             "29-Apr-2013"
+          ],
+          [
+             "Blade Queen Lissandra",
+             "1350",
+             "26-May-2014"
+          ],
+          [
+             "Program Lissandra",
+             "1350",
+             "06-Apr-2016"
+          ]
+       ]
+    ],
+    "Lucian":[
+       [
+          [
+             "default",
+             "975",
+             "21-Aug-2013"
+          ],
+          [
+             "Hired Gun Lucian",
+             "975",
+             "21-Aug-2013"
+          ],
+          [
+             "PROJECT: Lucian",
+             "1350",
+             "07-Sep-2015"
+          ],
+          [
+             "High Noon Lucian",
+             "1820",
+             "30-Aug-2018"
+          ],
+          [
+             "Demacia Vice Lucian",
+             "1350",
+             "18-Jul-2019"
+          ],
+          [
+             "Pulsefire Lucian",
+             "1350",
+             "14-May-2020"
+          ],
+          [
+             "Striker Lucian",
+             "750",
+             "18-Jun-2014"
+          ],
+          [
+             "Heartseeker Lucian",
+             "1350",
+             "02-Feb-2017"
+          ]
+       ]
+    ],
+    "Lulu":[
+       [
+          [
+             "default",
+             "880",
+             "20-Mar-2012"
+          ],
+          [
+             "Wicked Lulu",
+             "975",
+             "20-Mar-2012"
+          ],
+          [
+             "Dragon Trainer Lulu",
+             "1350",
+             "13-Nov-2012"
+          ],
+          [
+             "Pool Party Lulu",
+             "1350",
+             "25-Jun-2015"
+          ],
+          [
+             "Star Guardian Lulu",
+             "1350",
+             "05-Oct-2016"
+          ],
+          [
+             "Cosmic Enchantress Lulu",
+             "1350",
+             "21-Aug-2018"
+          ],
+          [
+             "Pajama Guardian Lulu",
+             "1350",
+             "21-Nov-2018"
+          ],
+          [
+             "Bittersweet Lulu",
+             "975",
+             "20-Mar-2012"
+          ]
+       ]
+    ],
+    "Lux":[
+       [
+          [
+             "default",
+             "790",
+             "19-Oct-2010"
+          ],
+          [
+             "Sorceress Lux",
+             "520",
+             "19-Oct-2010"
+          ],
+          [
+             "Spellthief Lux",
+             "750",
+             "19-Oct-2010"
+          ],
+          [
+             "Commando Lux",
+             "520",
+             "17-Jun-2011"
+          ],
+          [
+             "Steel Legion Lux",
+             "975",
+             "01-Feb-2013"
+          ],
+          [
+             "Star Guardian Lux",
+             "1350",
+             "17-May-2015"
+          ],
+          [
+             "Elementalist Lux",
+             "3250",
+             "28-Nov-2016"
+          ],
+          [
+             "Pajama Guardian Lux",
+             "1350",
+             "21-Nov-2018"
+          ],
+          [
+             "Battle Academia Lux",
+             "1350",
+             "15-May-2019"
+          ],
+          [
+             "Dark Cosmic Lux",
+             "1820",
+             "26-Mar-2020"
+          ],
+          [
+             "Cosmic Lux",
+             "1820",
+             "26-Mar-2020"
+          ],
+          [
+             "Imperial Lux",
+             "975",
+             "29-Nov-2011"
+          ],
+          [
+             "Lunar Empress Lux",
+             "1350",
+             "08-Feb-2018"
+          ]
+       ]
+    ],
+    "Malphite":[
+       [
+          [
+             "default",
+             "585",
+             "01-Sep-2009"
+          ],
+          [
+             "Glacial Malphite",
+             "1350",
+             "11-Jul-2012"
+          ],
+          [
+             "Mecha Malphite",
+             "1350",
+             "23-Jul-2014"
+          ],
+          [
+             "Ironside Malphite",
+             "975",
+             "07-Oct-2015"
+          ],
+          [
+             "Odyssey Malphite",
+             "1350",
+             "12-Sep-2018"
+          ],
+          [
+             "Dark Star Malphite",
+             "1350",
+             "26-Mar-2020"
+          ],
+          [
+             "Shamrock Malphite",
+             "520",
+             "16-Mar-2010"
+          ],
+          [
+             "Coral Reef Malphite",
+             "750",
+             "08-Nov-2010"
+          ],
+          [
+             "Marble Malphite",
+             "520",
+             "21-Mar-2011"
+          ],
+          [
+             "Obsidian Malphite",
+             "975",
+             "15-Aug-2011"
+          ],
+          [
+             "FPX Malphite",
+             "1350",
+             "30-Apr-2020"
+          ]
+       ]
+    ],
+    "Malzahar":[
+       [
+          [
+             "default",
+             "880",
+             "01-Jun-2010"
+          ],
+          [
+             "Shadow Prince Malzahar",
+             "520",
+             "01-Jun-2010"
+          ],
+          [
+             "Djinn Malzahar",
+             "520",
+             "01-Feb-2011"
+          ],
+          [
+             "Overlord Malzahar",
+             "975",
+             "19-Sep-2011"
+          ],
+          [
+             "Battle Boss Malzahar",
+             "1350",
+             "08-Aug-2017"
+          ],
+          [
+             "Worldbreaker Malzahar",
+             "1350",
+             "09-Apr-2020"
+          ],
+          [
+             "Vizier Malzahar",
+             "520",
+             "01-Jun-2010"
+          ],
+          [
+             "Snow Day Malzahar",
+             "975",
+             "15-Dec-2014"
+          ]
+       ]
+    ],
+    "Maokai":[
+       [
+          [
+             "default",
+             "880",
+             "16-Feb-2011"
+          ],
+          [
+             "Charred Maokai",
+             "975",
+             "16-Feb-2011"
+          ],
+          [
+             "Totemic Maokai",
+             "520",
+             "16-Feb-2011"
+          ],
+          [
+             "Meowkai",
+             "1350",
+             "31-Mar-2016"
+          ],
+          [
+             "Worldbreaker Maokai",
+             "1350",
+             "09-Apr-2020"
+          ],
+          [
+             "Festive Maokai",
+             "975",
+             "14-Dec-2011"
+          ],
+          [
+             "Haunted Maokai",
+             "975",
+             "26-Oct-2012"
+          ],
+          [
+             "Goalkeeper Maokai",
+             "750",
+             "18-Jun-2014"
+          ]
+       ]
+    ],
+    "Master Yi":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Assassin Master Yi",
+             "390",
+             "17-Dec-2009"
+          ],
+          [
+             "Chosen Master Yi",
+             "520",
+             "03-Jun-2010"
+          ],
+          [
+             "Ionia Master Yi",
+             "975",
+             "12-Sep-2010"
+          ],
+          [
+             "Samurai Yi",
+             "520",
+             "07-Mar-2011"
+          ],
+          [
+             "Headhunter Master Yi",
+             "975",
+             "08-Feb-2012"
+          ],
+          [
+             "PROJECT: Yi",
+             "1820",
+             "07-Sep-2015"
+          ],
+          [
+             "Cosmic Blade Master Yi",
+             "1350",
+             "26-Apr-2017"
+          ],
+          [
+             "Eternal Sword Yi",
+             "1350",
+             "27-Sep-2017"
+          ],
+          [
+             "Blood Moon Master Yi",
+             "1350",
+             "20-Feb-2020"
+          ]
+       ]
+    ],
+    "Miss Fortune":[
+       [
+          [
+             "default",
+             "790",
+             "08-Sep-2010"
+          ],
+          [
+             "Cowgirl Miss Fortune",
+             "750",
+             "08-Sep-2010"
+          ],
+          [
+             "Waterloo Miss Fortune",
+             "520",
+             "08-Sep-2010"
+          ],
+          [
+             "Crime City Miss Fortune",
+             "975",
+             "01-Nov-2011"
+          ],
+          [
+             "Arcade Miss Fortune",
+             "1350",
+             "12-Aug-2014"
+          ],
+          [
+             "Captain Fortune",
+             "975",
+             "30-Jul-2015"
+          ],
+          [
+             "Pool Party Miss Fortune",
+             "1350",
+             "13-Jul-2016"
+          ],
+          [
+             "Star Guardian Miss Fortune",
+             "1350",
+             "06-Sep-2017"
+          ],
+          [
+             "Gun Goddess Miss Fortune",
+             "2775",
+             "22-Mar-2018"
+          ],
+          [
+             "Pajama Guardian Miss Fortune",
+             "1350",
+             "21-Nov-2018"
+          ],
+          [
+             "Secret Agent Miss Fortune",
+             "975",
+             "16-Nov-2010"
+          ],
+          [
+             "Candy Cane Miss Fortune",
+             "975",
+             "14-Dec-2010"
+          ],
+          [
+             "Road Warrior Miss Fortune",
+             "520",
+             "24-May-2011"
+          ],
+          [
+             "Bewitching Miss Fortune",
+             "1350",
+             "24-Oct-2019"
+          ]
+       ]
+    ],
+    "Mordekaiser":[
+       [
+          [
+             "default",
+             "585",
+             "24-Feb-2010"
+          ],
+          [
+             "Infernal Mordekaiser",
+             "520",
+             "24-Feb-2010"
+          ],
+          [
+             "Pentakill Mordekaiser",
+             "975",
+             "21-Sep-2010"
+          ],
+          [
+             "Lord Mordekaiser",
+             "975",
+             "10-May-2011"
+          ],
+          [
+             "King of Clubs Mordekaiser",
+             "750",
+             "20-May-2015"
+          ],
+          [
+             "Dark Star Mordekaiser",
+             "1350",
+             "26-Mar-2020"
+          ]
+       ]
+    ],
+    "Morgana":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Blade Mistress Morgana",
+             "750",
+             "01-Dec-2010"
+          ],
+          [
+             "Blackthorn Morgana",
+             "1350",
+             "23-May-2012"
+          ],
+          [
+             "Ghost Bride Morgana",
+             "975",
+             "13-Jun-2013"
+          ],
+          [
+             "Majestic Empress Morgana",
+             "1350",
+             "26-Sep-2019"
+          ],
+          [
+             "Coven Morgana",
+             "1820",
+             "16-Apr-2020"
+          ],
+          [
+             "Exiled Morgana",
+             "975",
+             "01-Jun-2010"
+          ],
+          [
+             "Sinful Succulence Morgana",
+             "975",
+             "02-Sep-2010"
+          ],
+          [
+             "Lunar Wraith Morgana",
+             "975",
+             "27-Jan-2016"
+          ],
+          [
+             "Bewitching Morgana",
+             "975",
+             "19-Oct-2016"
+          ]
+       ]
+    ],
+    "Nami":[
+       [
+          [
+             "default",
+             "880",
+             "07-Dec-2012"
+          ],
+          [
+             "Koi Nami",
+             "975",
+             "07-Dec-2012"
+          ],
+          [
+             "River Spirit Nami",
+             "975",
+             "01-Jun-2014"
+          ],
+          [
+             "Urf the Nami-tee",
+             "750",
+             "31-Mar-2015"
+          ],
+          [
+             "Deep Sea Nami",
+             "1350",
+             "29-Jun-2016"
+          ],
+          [
+             "Program Nami",
+             "1350",
+             "15-Nov-2018"
+          ],
+          [
+             "Splendid Staff Nami",
+             "1350",
+             "26-Sep-2019"
+          ]
+       ]
+    ],
+    "Nasus":[
+       [
+          [
+             "default",
+             "585",
+             "30-Sep-2009"
+          ],
+          [
+             "Galactic Nasus",
+             "520",
+             "13-Jul-2010"
+          ],
+          [
+             "Pharaoh Nasus",
+             "520",
+             "02-Nov-2010"
+          ],
+          [
+             "Dreadknight Nasus",
+             "975",
+             "26-Apr-2011"
+          ],
+          [
+             "Infernal Nasus",
+             "1820",
+             "20-Nov-2013"
+          ],
+          [
+             "Archduke Nasus",
+             "750",
+             "31-Mar-2015"
+          ],
+          [
+             "Worldbreaker Nasus",
+             "750",
+             "10-Nov-2016"
+          ],
+          [
+             "Riot K-9 Nasus",
+             "975",
+             "16-Aug-2011"
+          ]
+       ]
+    ],
+    "Nautilus":[
+       [
+          [
+             "default",
+             "880",
+             "14-Feb-2012"
+          ],
+          [
+             "Abyssal Nautilus",
+             "975",
+             "14-Feb-2012"
+          ],
+          [
+             "Subterranean Nautilus",
+             "975",
+             "14-Feb-2012"
+          ],
+          [
+             "AstroNautilus",
+             "1350",
+             "04-Sep-2012"
+          ],
+          [
+             "Warden Nautilus",
+             "750",
+             "17-Feb-2015"
+          ],
+          [
+             "Worldbreaker Nautilus",
+             "750",
+             "10-Nov-2016"
+          ]
+       ]
+    ],
+    "Nidalee":[
+       [
+          [
+             "default",
+             "790",
+             "17-Dec-2009"
+          ],
+          [
+             "French Maid Nidalee",
+             "520",
+             "24-Jun-2010"
+          ],
+          [
+             "Pharaoh Nidalee",
+             "520",
+             "10-Jan-2011"
+          ],
+          [
+             "Headhunter Nidalee",
+             "975",
+             "20-Mar-2013"
+          ],
+          [
+             "Warring Kingdoms Nidalee",
+             "975",
+             "10-Feb-2015"
+          ],
+          [
+             "Super Galaxy Nidalee",
+             "1350",
+             "16-Oct-2017"
+          ],
+          [
+             "Dawnbringer Nidalee",
+             "1350",
+             "12-Dec-2019"
+          ],
+          [
+             "Snow Bunny Nidalee",
+             "520",
+             "17-Dec-2009"
+          ],
+          [
+             "Leopard Nidalee",
+             "520",
+             "24-Feb-2010"
+          ],
+          [
+             "Bewitching Nidalee",
+             "975",
+             "19-Oct-2011"
+          ]
+       ]
+    ],
+    "Nocturne":[
+       [
+          [
+             "default",
+             "880",
+             "15-Mar-2011"
+          ],
+          [
+             "Frozen Terror Nocturne",
+             "975",
+             "15-Mar-2011"
+          ],
+          [
+             "Ravager Nocturne",
+             "520",
+             "13-Jul-2011"
+          ],
+          [
+             "Eternum Nocturne",
+             "1820",
+             "05-Dec-2012"
+          ],
+          [
+             "Cursed Revenant Nocturne",
+             "750",
+             "04-May-2016"
+          ],
+          [
+             "Elderwood Nocturne",
+             "1350",
+             "29-Aug-2019"
+          ],
+          [
+             "Void Nocturne",
+             "520",
+             "15-Mar-2011"
+          ],
+          [
+             "Haunting Nocturne",
+             "975",
+             "19-Oct-2011"
+          ]
+       ]
+    ],
+    "Nunu":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Grungy Nunu & Willump",
+             "750",
+             "10-Aug-2010"
+          ],
+          [
+             "Nunu & Willump Bot",
+             "1820",
+             "05-May-2011"
+          ],
+          [
+             "Demolisher Nunu & Willump",
+             "975",
+             "24-Aug-2011"
+          ],
+          [
+             "Papercraft Nunu & Willump",
+             "1350",
+             "21-Feb-2019"
+          ],
+          [
+             "Sasquatch Nunu & Willump",
+             "520",
+             "20-Nov-2009"
+          ],
+          [
+             "Workshop Nunu & Willump",
+             "520",
+             "17-Dec-2009"
+          ],
+          [
+             "TPA Nunu & Willump",
+             "750",
+             "23-May-2013"
+          ]
+       ]
+    ],
+    "Olaf":[
+       [
+          [
+             "default",
+             "790",
+             "08-Jun-2010"
+          ],
+          [
+             "Brolaf",
+             "1820",
+             "01-Dec-2010"
+          ],
+          [
+             "Pentakill Olaf",
+             "975",
+             "01-Oct-2012"
+          ],
+          [
+             "Marauder Olaf",
+             "750",
+             "30-Sep-2015"
+          ],
+          [
+             "Butcher Olaf",
+             "750",
+             "07-Sep-2016"
+          ],
+          [
+             "Dragonslayer Olaf",
+             "1350",
+             "30-Jan-2020"
+          ],
+          [
+             "Forsaken Olaf",
+             "520",
+             "08-Jun-2010"
+          ],
+          [
+             "Glacial Olaf",
+             "520",
+             "08-Jun-2010"
+          ]
+       ]
+    ],
+    "Orianna":[
+       [
+          [
+             "default",
+             "880",
+             "01-Jun-2011"
+          ],
+          [
+             "Gothic Orianna",
+             "520",
+             "01-Jun-2011"
+          ],
+          [
+             "Sewn Chaos Orianna",
+             "520",
+             "01-Jun-2011"
+          ],
+          [
+             "Bladecraft Orianna",
+             "975",
+             "29-Feb-2012"
+          ],
+          [
+             "Dark Star Orianna",
+             "1350",
+             "03-May-2017"
+          ],
+          [
+             "Pool Party Orianna",
+             "1350",
+             "02-Jul-2020"
+          ],
+          [
+             "TPA Orianna",
+             "750",
+             "23-May-2013"
+          ],
+          [
+             "Winter Wonder Orianna",
+             "975",
+             "15-Dec-2014"
+          ],
+          [
+             "Heartseeker Orianna",
+             "1350",
+             "11-Feb-2016"
+          ]
+       ]
+    ],
+    "Pantheon":[
+       [
+          [
+             "default",
+             "790",
+             "02-Feb-2010"
+          ],
+          [
+             "Myrmidon Pantheon",
+             "520",
+             "02-Feb-2010"
+          ],
+          [
+             "Full Metal Pantheon",
+             "975",
+             "01-Aug-2011"
+          ],
+          [
+             "Dragonslayer Pantheon",
+             "1350",
+             "14-May-2014"
+          ],
+          [
+             "Baker Pantheon",
+             "975",
+             "07-Sep-2016"
+          ],
+          [
+             "Pulsefire Pantheon",
+             "1350",
+             "14-May-2020"
+          ],
+          [
+             "Ruthless Pantheon",
+             "520",
+             "08-Aug-2010"
+          ],
+          [
+             "Perseus Pantheon",
+             "750",
+             "02-Nov-2010"
+          ],
+          [
+             "Glaive Warrior Pantheon",
+             "975",
+             "30-May-2012"
+          ]
+       ]
+    ],
+    "Poppy":[
+       [
+          [
+             "default",
+             "260",
+             "13-Jan-2010"
+          ],
+          [
+             "Battle Regalia Poppy",
+             "520",
+             "15-Mar-2011"
+          ],
+          [
+             "Scarlet Hammer Poppy",
+             "975",
+             "01-Feb-2012"
+          ],
+          [
+             "Star Guardian Poppy",
+             "1350",
+             "05-Oct-2016"
+          ],
+          [
+             "Astronaut Poppy",
+             "1350",
+             "28-May-2020"
+          ],
+          [
+             "Noxus Poppy",
+             "520",
+             "02-Feb-2010"
+          ],
+          [
+             "Lollipoppy",
+             "975",
+             "19-Oct-2010"
+          ],
+          [
+             "Blacksmith Poppy",
+             "975",
+             "24-Aug-2010"
+          ],
+          [
+             "Ragdoll Poppy",
+             "975",
+             "14-Dec-2010"
+          ],
+          [
+             "Snow Fawn Poppy",
+             "1350",
+             "12-Dec-2017"
+          ]
+       ]
+    ],
+    "Quinn":[
+       [
+          [
+             "default",
+             "880",
+             "01-Mar-2013"
+          ],
+          [
+             "Phoenix Quinn",
+             "975",
+             "01-Mar-2013"
+          ],
+          [
+             "Woad Scout Quinn",
+             "975",
+             "09-Jun-2014"
+          ],
+          [
+             "Corsair Quinn",
+             "750",
+             "22-Jul-2015"
+          ]
+       ]
+    ],
+    "Rammus":[
+       [
+          [
+             "default",
+             "585",
+             "09-Jul-2009"
+          ],
+          [
+             "Chrome Rammus",
+             "750",
+             "17-May-2010"
+          ],
+          [
+             "Freljord Rammus",
+             "520",
+             "22-Nov-2010"
+          ],
+          [
+             "Full Metal Rammus",
+             "975",
+             "16-Aug-2012"
+          ],
+          [
+             "Guardian of the Sands Rammus",
+             "975",
+             "26-Apr-2015"
+          ],
+          [
+             "Molten Rammus",
+             "975",
+             "13-Jul-2010"
+          ],
+          [
+             "Ninja Rammus",
+             "975",
+             "17-May-2011"
+          ],
+          [
+             "Sweeper Rammus",
+             "975",
+             "14-Jun-2018"
+          ],
+          [
+             "King Rammus",
+             "Special pricing",
+             "20-Oct-2009"
+          ]
+       ]
+    ],
+    "Rek'Sai":[
+       [
+          [
+             "default",
+             "975",
+             "11-Dec-2014"
+          ],
+          [
+             "Eternum Rek'Sai",
+             "1350",
+             "11-Dec-2014"
+          ],
+          [
+             "Pool Party Rek'Sai",
+             "1350",
+             "25-Jun-2015"
+          ]
+       ]
+    ],
+    "Renekton":[
+       [
+          [
+             "default",
+             "880",
+             "18-Jan-2011"
+          ],
+          [
+             "Bloodfury Renekton",
+             "975",
+             "26-Jul-2011"
+          ],
+          [
+             "Scorched Earth Renekton",
+             "975",
+             "10-Feb-2014"
+          ],
+          [
+             "Pool Party Renekton",
+             "975",
+             "09-Sep-2013"
+          ],
+          [
+             "Prehistoric Renekton",
+             "750",
+             "14-Jun-2015"
+          ],
+          [
+             "Renektoy",
+             "750",
+             "29-Mar-2017"
+          ],
+          [
+             "Blackfrost Renekton",
+             "1350",
+             "05-Mar-2020"
+          ],
+          [
+             "Galactic Renekton",
+             "520",
+             "18-Jan-2011"
+          ],
+          [
+             "Outback Renekton",
+             "520",
+             "18-Jan-2011"
+          ],
+          [
+             "Rune Wars Renekton",
+             "975",
+             "30-Apr-2012"
+          ],
+          [
+             "SKT T1 Renekton",
+             "975",
+             "17-Aug-2016"
+          ]
+       ]
+    ],
+    "Rengar":[
+       [
+          [
+             "default",
+             "880",
+             "21-Aug-2012"
+          ],
+          [
+             "Headhunter Rengar",
+             "975",
+             "21-Aug-2012"
+          ],
+          [
+             "Night Hunter Rengar",
+             "975",
+             "19-May-2014"
+          ],
+          [
+             "Mecha Rengar",
+             "1350",
+             "09-Nov-2017"
+          ],
+          [
+             "Pretty Kitty Rengar",
+             "1350",
+             "27-Mar-2019"
+          ],
+          [
+             "Guardian of the Sands Rengar",
+             "1350",
+             "22-Jan-2020"
+          ]
+       ]
+    ],
+    "Riven":[
+       [
+          [
+             "default",
+             "880",
+             "14-Sep-2011"
+          ],
+          [
+             "Redeemed Riven",
+             "975",
+             "14-Sep-2011"
+          ],
+          [
+             "Crimson Elite Riven",
+             "520",
+             "14-Sep-2011"
+          ],
+          [
+             "Battle Bunny Riven",
+             "975",
+             "06-Apr-2012"
+          ],
+          [
+             "Arcade Riven",
+             "1350",
+             "19-Aug-2015"
+          ],
+          [
+             "Dawnbringer Riven",
+             "1820",
+             "14-Jun-2017"
+          ],
+          [
+             "Pulsefire Riven",
+             "1350",
+             "17-May-2018"
+          ],
+          [
+             "Valiant Sword Riven",
+             "1350",
+             "26-Sep-2019"
+          ],
+          [
+             "Dragonblade Riven",
+             "1350",
+             "28-Jan-2014"
+          ],
+          [
+             "Championship Riven 2016",
+             "975",
+             "25-Sep-2016"
+          ],
+          [
+             "Championship Riven",
+             "975",
+             "13-Oct-2012"
+          ],
+          [
+             "Valiant Sword Riven Prestige Edition",
+             "Special pricing",
+             "26-Sep-2019"
+          ]
+       ]
+    ],
+    "Rumble":[
+       [
+          [
+             "default",
+             "880",
+             "26-Apr-2011"
+          ],
+          [
+             "Rumble in the Jungle",
+             "975",
+             "26-Apr-2011"
+          ],
+          [
+             "Super Galaxy Rumble",
+             "1820",
+             "02-Apr-2014"
+          ],
+          [
+             "Badlands Baron Rumble",
+             "1350",
+             "11-Apr-2018"
+          ]
+       ]
+    ],
+    "Ryze":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Uncle Ryze",
+             "520",
+             "03-Jul-2010"
+          ],
+          [
+             "Dark Crystal Ryze",
+             "975",
+             "20-Feb-2012"
+          ],
+          [
+             "Ryze Whitebeard",
+             "750",
+             "07-Dec-2015"
+          ],
+          [
+             "Guardian of the Sands Ryze",
+             "1350",
+             "22-Jan-2020"
+          ],
+          [
+             "Tribal Ryze",
+             "520",
+             "04-Mar-2010"
+          ],
+          [
+             "Professor Ryze",
+             "975",
+             "05-Oct-2010"
+          ],
+          [
+             "Zombie Ryze",
+             "975",
+             "19-Oct-2010"
+          ],
+          [
+             "Pirate Ryze",
+             "975",
+             "26-Oct-2012"
+          ],
+          [
+             "SKT T1 Ryze",
+             "975",
+             "17-Aug-2016"
+          ],
+          [
+             "Championship Ryze",
+             "1350",
+             "26-Sep-2019"
+          ],
+          [
+             "Young Ryze",
+             "Special pricing",
+             "17-Jul-2009"
+          ]
+       ]
+    ],
+    "Sejuani":[
+       [
+          [
+             "default",
+             "880",
+             "17-Jan-2012"
+          ],
+          [
+             "Darkrider Sejuani",
+             "975",
+             "17-Jan-2012"
+          ],
+          [
+             "Bear Cavalry Sejuani",
+             "1350",
+             "31-Jul-2013"
+          ],
+          [
+             "Beast Hunter Sejuani",
+             "750",
+             "04-Feb-2016"
+          ],
+          [
+             "Sejuani Dawnchaser",
+             "750",
+             "17-Nov-2016"
+          ],
+          [
+             "Sabretusk Sejuani",
+             "975",
+             "17-Jan-2012"
+          ],
+          [
+             "Traditional Sejuani",
+             "975",
+             "30-Apr-2013"
+          ],
+          [
+             "Poro Rider Sejuani",
+             "975",
+             "15-Dec-2014"
+          ],
+          [
+             "Firecracker Sejuani",
+             "1350",
+             "28-Jan-2019"
+          ]
+       ]
+    ],
+    "Shaco":[
+       [
+          [
+             "default",
+             "790",
+             "09-Oct-2009"
+          ],
+          [
+             "Mad Hatter Shaco",
+             "520",
+             "08-Jun-2010"
+          ],
+          [
+             "Royal Shaco",
+             "520",
+             "12-Sep-2010"
+          ],
+          [
+             "Asylum Shaco",
+             "975",
+             "07-Nov-2011"
+          ],
+          [
+             "Masked Shaco",
+             "975",
+             "08-Jan-2013"
+          ],
+          [
+             "Wild Card Shaco",
+             "750",
+             "20-May-2015"
+          ],
+          [
+             "Dark Star Shaco",
+             "1350",
+             "13-Jun-2019"
+          ],
+          [
+             "Arcanist Shaco",
+             "1350",
+             "09-Jul-2020"
+          ],
+          [
+             "Nutcracko",
+             "975",
+             "14-Dec-2010"
+          ]
+       ]
+    ],
+    "Shen":[
+       [
+          [
+             "default",
+             "790",
+             "24-Mar-2010"
+          ],
+          [
+             "Surgeon Shen",
+             "975",
+             "04-Jan-2011"
+          ],
+          [
+             "Blood Moon Shen",
+             "750",
+             "07-Jun-2011"
+          ],
+          [
+             "Warlord Shen",
+             "975",
+             "17-Apr-2012"
+          ],
+          [
+             "Pulsefire Shen",
+             "1350",
+             "17-May-2018"
+          ],
+          [
+             "Infernal Shen",
+             "1350",
+             "05-Sep-2019"
+          ],
+          [
+             "Frozen Shen",
+             "520",
+             "24-Mar-2010"
+          ],
+          [
+             "Yellow Jacket Shen",
+             "520",
+             "24-Mar-2010"
+          ]
+       ]
+    ],
+    "Shyvana":[
+       [
+          [
+             "default",
+             "790",
+             "01-Nov-2011"
+          ],
+          [
+             "Ironscale Shyvana",
+             "750",
+             "01-Nov-2011"
+          ],
+          [
+             "Boneclaw Shyvana",
+             "520",
+             "01-Nov-2011"
+          ],
+          [
+             "Darkflame Shyvana",
+             "975",
+             "28-May-2012"
+          ],
+          [
+             "Ice Drake Shyvana",
+             "975",
+             "29-Apr-2013"
+          ],
+          [
+             "Super Galaxy Shyvana",
+             "1350",
+             "25-May-2016"
+          ]
+       ]
+    ],
+    "Singed":[
+       [
+          [
+             "default",
+             "260",
+             "17-Apr-2009"
+          ],
+          [
+             "Surfer Singed",
+             "975",
+             "06-Dec-2010"
+          ],
+          [
+             "Augmented Singed",
+             "975",
+             "09-Jul-2012"
+          ],
+          [
+             "Black Scourge Singed",
+             "750",
+             "04-May-2016"
+          ],
+          [
+             "Beekeeper Singed",
+             "1350",
+             "11-Oct-2017"
+          ],
+          [
+             "Hextech Singed",
+             "520",
+             "15-Aug-2010"
+          ],
+          [
+             "Mad Scientist Singed",
+             "750",
+             "26-Sep-2011"
+          ],
+          [
+             "Snow Day Singed",
+             "975",
+             "19-Dec-2013"
+          ],
+          [
+             "SSW Singed",
+             "750",
+             "13-May-2015"
+          ]
+       ]
+    ],
+    "Sion":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Barbarian Sion",
+             "750",
+             "26-Sep-2010"
+          ],
+          [
+             "Lumberjack Sion",
+             "520",
+             "24-Jan-2011"
+          ],
+          [
+             "Warmonger Sion",
+             "975",
+             "18-Jul-2011"
+          ],
+          [
+             "Mecha Zero Sion",
+             "1820",
+             "13-Apr-2016"
+          ],
+          [
+             "Worldbreaker Sion",
+             "1350",
+             "09-Apr-2020"
+          ]
+       ]
+    ],
+    "Sivir":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Warrior Princess Sivir",
+             "520",
+             "27-Apr-2010"
+          ],
+          [
+             "Bandit Sivir",
+             "750",
+             "21-Mar-2011"
+          ],
+          [
+             "Warden Sivir",
+             "750",
+             "17-Feb-2015"
+          ],
+          [
+             "Pizza Delivery Sivir",
+             "1350",
+             "29-Mar-2018"
+          ],
+          [
+             "Blood Moon Sivir",
+             "1350",
+             "10-Jan-2019"
+          ],
+          [
+             "Spectacular Sivir",
+             "975",
+             "08-Jun-2010"
+          ],
+          [
+             "Snowstorm Sivir",
+             "975",
+             "19-Dec-2013"
+          ],
+          [
+             "Huntress Sivir",
+             "Special pricing",
+             "07-Feb-2011"
+          ],
+          [
+             "PAX Sivir",
+             "Special pricing",
+             "25-Aug-2011"
+          ],
+          [
+             "Victorious Sivir",
+             "Special pricing",
+             "12-Nov-2015"
+          ]
+       ]
+    ],
+    "Skarner":[
+       [
+          [
+             "default",
+             "880",
+             "09-Aug-2011"
+          ],
+          [
+             "Sandscourge Skarner",
+             "975",
+             "09-Aug-2011"
+          ],
+          [
+             "Earthrune Skarner",
+             "520",
+             "09-Aug-2011"
+          ],
+          [
+             "Battlecast Alpha Skarner",
+             "1820",
+             "25-Nov-2014"
+          ]
+       ]
+    ],
+    "Sona":[
+       [
+          [
+             "default",
+             "790",
+             "21-Sep-2010"
+          ],
+          [
+             "Pentakill Sona",
+             "975",
+             "21-Sep-2010"
+          ],
+          [
+             "Guqin Sona",
+             "975",
+             "10-Jan-2012"
+          ],
+          [
+             "Arcade Sona",
+             "1350",
+             "31-Aug-2012"
+          ],
+          [
+             "DJ Sona",
+             "3250",
+             "25-Feb-2015"
+          ],
+          [
+             "Odyssey Sona",
+             "1350",
+             "12-Sep-2018"
+          ],
+          [
+             "Muse Sona",
+             "975",
+             "21-Sep-2010"
+          ],
+          [
+             "Silent Night Sona",
+             "520",
+             "14-Dec-2010"
+          ]
+       ]
+    ],
+    "Soraka":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Dryad Soraka",
+             "520",
+             "03-Jun-2010"
+          ],
+          [
+             "Divine Soraka",
+             "975",
+             "02-Nov-2010"
+          ],
+          [
+             "Celestine Soraka",
+             "975",
+             "05-Mar-2013"
+          ],
+          [
+             "Order of the Banana Soraka",
+             "750",
+             "31-Mar-2015"
+          ],
+          [
+             "Program Soraka",
+             "1350",
+             "06-Apr-2016"
+          ],
+          [
+             "Star Guardian Soraka",
+             "1350",
+             "06-Sep-2017"
+          ],
+          [
+             "Pajama Guardian Soraka",
+             "1350",
+             "21-Nov-2018"
+          ],
+          [
+             "Dawnbringer Soraka",
+             "1820",
+             "12-Dec-2019"
+          ],
+          [
+             "Nightbringer Soraka",
+             "1820",
+             "12-Dec-2019"
+          ],
+          [
+             "Reaper Soraka",
+             "1350",
+             "05-Nov-2014"
+          ]
+       ]
+    ],
+    "Swain":[
+       [
+          [
+             "default",
+             "880",
+             "05-Oct-2010"
+          ],
+          [
+             "Northern Front Swain",
+             "750",
+             "05-Oct-2010"
+          ],
+          [
+             "Bilgewater Swain",
+             "520",
+             "05-Oct-2010"
+          ],
+          [
+             "Tyrant Swain",
+             "1350",
+             "22-May-2012"
+          ],
+          [
+             "Dragon Master Swain",
+             "1350",
+             "22-Feb-2018"
+          ]
+       ]
+    ],
+    "Syndra":[
+       [
+          [
+             "default",
+             "880",
+             "12-Sep-2012"
+          ],
+          [
+             "Justicar Syndra",
+             "975",
+             "12-Sep-2012"
+          ],
+          [
+             "Atlantean Syndra",
+             "975",
+             "29-Apr-2014"
+          ],
+          [
+             "Queen of Diamonds Syndra",
+             "750",
+             "20-May-2015"
+          ],
+          [
+             "Star Guardian Syndra",
+             "1350",
+             "06-Sep-2017"
+          ],
+          [
+             "Pool Party Syndra",
+             "1350",
+             "02-Jul-2020"
+          ],
+          [
+             "Snow Day Syndra",
+             "1350",
+             "10-Dec-2015"
+          ]
+       ]
+    ],
+    "Talon":[
+       [
+          [
+             "default",
+             "880",
+             "24-Aug-2011"
+          ],
+          [
+             "Renegade Talon",
+             "520",
+             "24-Aug-2011"
+          ],
+          [
+             "Crimson Elite Talon",
+             "750",
+             "24-Aug-2011"
+          ],
+          [
+             "Dragonblade Talon",
+             "975",
+             "10-Jan-2012"
+          ],
+          [
+             "Blood Moon Talon",
+             "1350",
+             "09-Feb-2017"
+          ],
+          [
+             "Enduring Sword Talon",
+             "1350",
+             "04-Sep-2018"
+          ],
+          [
+             "Talon Blackwood",
+             "1350",
+             "19-Mar-2020"
+          ]
+       ]
+    ],
+    "Taric":[
+       [
+          [
+             "default",
+             "585",
+             "18-Aug-2009"
+          ],
+          [
+             "Armor of the Fifth Age Taric",
+             "750",
+             "08-Apr-2010"
+          ],
+          [
+             "Bloodstone Taric",
+             "975",
+             "09-Aug-2011"
+          ],
+          [
+             "Pool Party Taric",
+             "1350",
+             "13-Jul-2016"
+          ],
+          [
+             "Taric Luminshield",
+             "1350",
+             "19-Mar-2020"
+          ]
+       ]
+    ],
+    "Teemo":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Astronaut Teemo",
+             "1350",
+             "27-Oct-2010"
+          ],
+          [
+             "Cottontail Teemo",
+             "975",
+             "18-Apr-2011"
+          ],
+          [
+             "Super Teemo",
+             "975",
+             "10-Oct-2011"
+          ],
+          [
+             "Panda Teemo",
+             "975",
+             "09-Jul-2012"
+          ],
+          [
+             "Omega Squad Teemo",
+             "1820",
+             "08-Apr-2015"
+          ],
+          [
+             "Beemo",
+             "1350",
+             "01-May-2018"
+          ],
+          [
+             "Happy Elf Teemo",
+             "520",
+             "17-Dec-2009"
+          ],
+          [
+             "Recon Teemo",
+             "520",
+             "17-Dec-2009"
+          ],
+          [
+             "Badger Teemo",
+             "520",
+             "13-Jan-2010"
+          ],
+          [
+             "Little Devil Teemo",
+             "1350",
+             "19-Oct-2016"
+          ],
+          [
+             "Spirit Blossom Teemo",
+             "1350",
+             "A"
+          ]
+       ]
+    ],
+    "Thresh":[
+       [
+          [
+             "default",
+             "880",
+             "23-Jan-2013"
+          ],
+          [
+             "Deep Terror Thresh",
+             "975",
+             "23-Jan-2013"
+          ],
+          [
+             "Blood Moon Thresh",
+             "975",
+             "08-Jan-2015"
+          ],
+          [
+             "Dark Star Thresh",
+             "1820",
+             "15-Jun-2016"
+          ],
+          [
+             "High Noon Thresh",
+             "1350",
+             "30-Aug-2018"
+          ],
+          [
+             "Pulsefire Thresh",
+             "1350",
+             "21-Nov-2019"
+          ],
+          [
+             "Championship Thresh",
+             "975",
+             "03-Oct-2013"
+          ],
+          [
+             "SSW Thresh",
+             "750",
+             "13-May-2015"
+          ],
+          [
+             "FPX Thresh",
+             "1350",
+             "30-Apr-2020"
+          ],
+          [
+             "Pulsefire Thresh Prestige Edition",
+             "Special pricing",
+             "21-Nov-2019"
+          ]
+       ]
+    ],
+    "Tristana":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Buccaneer Tristana",
+             "520",
+             "27-Jun-2011"
+          ],
+          [
+             "Rocket Girl Tristana",
+             "975",
+             "19-Oct-2012"
+          ],
+          [
+             "Dragon Trainer Tristana",
+             "1820",
+             "03-Dec-2015"
+          ],
+          [
+             "Omega Squad Tristana",
+             "1350",
+             "26-Jul-2017"
+          ],
+          [
+             "Little Demon Tristana",
+             "1350",
+             "30-May-2019"
+          ],
+          [
+             "Pengu Cosplay Tristana",
+             "1350",
+             "01-Apr-2020"
+          ],
+          [
+             "Earnest Elf Tristana",
+             "520",
+             "31-Dec-2009"
+          ],
+          [
+             "Firefighter Tristana",
+             "1820",
+             "03-Jun-2010"
+          ],
+          [
+             "Guerilla Tristana",
+             "975",
+             "10-Aug-2010"
+          ],
+          [
+             "Bewitching Tristana",
+             "1350",
+             "19-Oct-2016"
+          ]
+       ]
+    ],
+    "Trundle":[
+       [
+          [
+             "default",
+             "880",
+             "01-Dec-2010"
+          ],
+          [
+             "Lil' Slugger Trundle",
+             "520",
+             "01-Dec-2010"
+          ],
+          [
+             "Junkyard Trundle",
+             "750",
+             "01-Dec-2010"
+          ],
+          [
+             "Constable Trundle",
+             "750",
+             "28-Nov-2014"
+          ],
+          [
+             "Worldbreaker Trundle",
+             "750",
+             "10-Nov-2016"
+          ],
+          [
+             "Dragonslayer Trundle",
+             "1350",
+             "30-Jan-2020"
+          ]
+       ]
+    ],
+    "Tryndamere":[
+       [
+          [
+             "default",
+             "585",
+             "30-Apr-2009"
+          ],
+          [
+             "King Tryndamere",
+             "520",
+             "21-Sep-2010"
+          ],
+          [
+             "Demonblade Tryndamere",
+             "1820",
+             "01-Aug-2011"
+          ],
+          [
+             "Sultan Tryndamere",
+             "975",
+             "26-Sep-2012"
+          ],
+          [
+             "Nightmare Tryndamere",
+             "750",
+             "07-Jun-2015"
+          ],
+          [
+             "Beast Hunter Tryndamere",
+             "750",
+             "04-Feb-2016"
+          ],
+          [
+             "Chemtech Tryndamere",
+             "975",
+             "05-Jun-2017"
+          ],
+          [
+             "Blood Moon Tryndamere",
+             "1350",
+             "20-Feb-2020"
+          ],
+          [
+             "Highland Tryndamere",
+             "520",
+             "16-Mar-2010"
+          ],
+          [
+             "Viking Tryndamere",
+             "750",
+             "24-Jun-2011"
+          ]
+       ]
+    ],
+    "Twisted Fate":[
+       [
+          [
+             "default",
+             "585",
+             "21-Feb-2009"
+          ],
+          [
+             "Jack of Hearts Twisted Fate",
+             "520",
+             "10-Feb-2010"
+          ],
+          [
+             "Tango Twisted Fate",
+             "520",
+             "05-Oct-2010"
+          ],
+          [
+             "High Noon Twisted Fate",
+             "975",
+             "17-May-2011"
+          ],
+          [
+             "Musketeer Twisted Fate",
+             "750",
+             "21-Nov-2011"
+          ],
+          [
+             "Cutpurse Twisted Fate",
+             "750",
+             "21-Jul-2015"
+          ],
+          [
+             "Blood Moon Twisted Fate",
+             "1350",
+             "09-Feb-2017"
+          ],
+          [
+             "Pulsefire Twisted Fate",
+             "1350",
+             "17-May-2018"
+          ],
+          [
+             "The Magnificent Twisted Fate",
+             "1820",
+             "17-May-2010"
+          ],
+          [
+             "Underworld Twisted Fate",
+             "975",
+             "26-Oct-2012"
+          ],
+          [
+             "Red Card Twisted Fate",
+             "750",
+             "18-Jun-2014"
+          ]
+       ]
+    ],
+    "Twitch":[
+       [
+          [
+             "default",
+             "790",
+             "30-Apr-2009"
+          ],
+          [
+             "Crime City Twitch",
+             "975",
+             "13-Oct-2010"
+          ],
+          [
+             "Pickpocket Twitch",
+             "750",
+             "28-Nov-2014"
+          ],
+          [
+             "Omega Squad Twitch",
+             "1350",
+             "26-Jul-2017"
+          ],
+          [
+             "Twitch Shadowfoot",
+             "1350",
+             "19-Mar-2020"
+          ],
+          [
+             "Kingpin Twitch",
+             "520",
+             "20-Nov-2009"
+          ],
+          [
+             "Whistler Village Twitch",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Vandal Twitch",
+             "975",
+             "22-Feb-2011"
+          ],
+          [
+             "SSW Twitch",
+             "750",
+             "13-May-2015"
+          ],
+          [
+             "Ice King Twitch",
+             "1350",
+             "06-Dec-2018"
+          ]
+       ]
+    ],
+    "Udyr":[
+       [
+          [
+             "default",
+             "585",
+             "02-Dec-2009"
+          ],
+          [
+             "Black Belt Udyr",
+             "520",
+             "18-Jul-2010"
+          ],
+          [
+             "Spirit Guard Udyr",
+             "3250",
+             "16-Jul-2013"
+          ],
+          [
+             "Definitely Not Udyr",
+             "975",
+             "31-Mar-2015"
+          ],
+          [
+             "Dragon Oracle Udyr",
+             "1350",
+             "15-Aug-2019"
+          ]
+       ]
+    ],
+    "Urgot":[
+       [
+          [
+             "default",
+             "790",
+             "24-Aug-2010"
+          ],
+          [
+             "Giant Enemy Crabgot",
+             "520",
+             "24-Aug-2010"
+          ],
+          [
+             "Battlecast Urgot",
+             "1350",
+             "05-Mar-2012"
+          ],
+          [
+             "High Noon Urgot",
+             "1350",
+             "30-Aug-2018"
+          ],
+          [
+             "Pajama Guardian Cosplay Urgot",
+             "1350",
+             "01-Apr-2020"
+          ]
+       ]
+    ],
+    "Varus":[
+       [
+          [
+             "default",
+             "880",
+             "08-May-2012"
+          ],
+          [
+             "Blight Crystal Varus",
+             "975",
+             "08-May-2012"
+          ],
+          [
+             "Arclight Varus",
+             "975",
+             "05-Dec-2012"
+          ],
+          [
+             "Arctic Ops Varus",
+             "1350",
+             "20-Mar-2014"
+          ],
+          [
+             "Varus Swiftbolt",
+             "750",
+             "07-Dec-2015"
+          ],
+          [
+             "Dark Star Varus",
+             "1350",
+             "15-Jun-2016"
+          ],
+          [
+             "Infernal Varus",
+             "1350",
+             "05-Sep-2019"
+          ],
+          [
+             "Heartseeker Varus",
+             "1350",
+             "13-Feb-2015"
+          ]
+       ]
+    ],
+    "Vayne":[
+       [
+          [
+             "default",
+             "880",
+             "10-May-2011"
+          ],
+          [
+             "Aristocrat Vayne",
+             "520",
+             "10-May-2011"
+          ],
+          [
+             "Dragonslayer Vayne",
+             "975",
+             "24-Aug-2011"
+          ],
+          [
+             "Arclight Vayne",
+             "975",
+             "20-Apr-2015"
+          ],
+          [
+             "PROJECT: Vayne",
+             "1820",
+             "22-Nov-2017"
+          ],
+          [
+             "Vindicator Vayne",
+             "520",
+             "10-May-2011"
+          ],
+          [
+             "Heartseeker Vayne",
+             "975",
+             "14-Feb-2012"
+          ],
+          [
+             "SKT T1 Vayne",
+             "750",
+             "04-May-2014"
+          ],
+          [
+             "Firecracker Vayne",
+             "1350",
+             "28-Jan-2019"
+          ],
+          [
+             "FPX Vayne",
+             "1350",
+             "30-Apr-2020"
+          ],
+          [
+             "Soulstealer Vayne",
+             "Special pricing",
+             "28-Jul-2016"
+          ],
+          [
+             "Firecracker Vayne Prestige Edition",
+             "Special pricing",
+             "28-Jan-2019"
+          ]
+       ]
+    ],
+    "Veigar":[
+       [
+          [
+             "default",
+             "585",
+             "23-Jul-2009"
+          ],
+          [
+             "White Mage Veigar",
+             "390",
+             "17-Dec-2009"
+          ],
+          [
+             "Veigar Greybeard",
+             "750",
+             "08-Sep-2010"
+          ],
+          [
+             "Leprechaun Veigar",
+             "520",
+             "15-Mar-2011"
+          ],
+          [
+             "Superb Villain Veigar",
+             "975",
+             "02-Jan-2012"
+          ],
+          [
+             "Final Boss Veigar",
+             "1820",
+             "27-Aug-2014"
+          ],
+          [
+             "Omega Squad Veigar",
+             "1350",
+             "26-Jul-2017"
+          ],
+          [
+             "Elderwood Veigar",
+             "1350",
+             "29-Aug-2019"
+          ],
+          [
+             "Furyhorn Cosplay Veigar",
+             "1350",
+             "01-Apr-2020"
+          ],
+          [
+             "Curling Veigar",
+             "520",
+             "12-Feb-2010"
+          ],
+          [
+             "Baron Von Veigar",
+             "975",
+             "27-Jun-2011"
+          ]
+       ]
+    ],
+    "Vel'Koz":[
+       [
+          [
+             "default",
+             "975",
+             "27-Feb-2014"
+          ],
+          [
+             "Battlecast Vel'Koz",
+             "1350",
+             "27-Feb-2014"
+          ],
+          [
+             "Arclight Vel'Koz",
+             "1350",
+             "28-Jan-2015"
+          ],
+          [
+             "Definitely Not Vel'Koz",
+             "750",
+             "31-Mar-2016"
+          ]
+       ]
+    ],
+    "Vi":[
+       [
+          [
+             "default",
+             "880",
+             "19-Dec-2012"
+          ],
+          [
+             "Neon Strike Vi",
+             "975",
+             "19-Dec-2012"
+          ],
+          [
+             "Officer Vi",
+             "975",
+             "29-Oct-2013"
+          ],
+          [
+             "Debonair Vi",
+             "750",
+             "05-Aug-2014"
+          ],
+          [
+             "Demon Vi",
+             "1350",
+             "19-Oct-2015"
+          ],
+          [
+             "PROJECT: Vi",
+             "1350",
+             "22-Nov-2017"
+          ],
+          [
+             "Warring Kingdoms Vi",
+             "1350",
+             "19-Jan-2017"
+          ]
+       ]
+    ],
+    "Viktor":[
+       [
+          [
+             "default",
+             "880",
+             "29-Dec-2011"
+          ],
+          [
+             "Full Machine Viktor",
+             "975",
+             "29-Dec-2011"
+          ],
+          [
+             "Creator Viktor",
+             "1350",
+             "30-Sep-2013"
+          ],
+          [
+             "Prototype Viktor",
+             "520",
+             "29-Dec-2011"
+          ]
+       ]
+    ],
+    "Vladimir":[
+       [
+          [
+             "default",
+             "790",
+             "27-Jul-2010"
+          ],
+          [
+             "Marquis Vladimir",
+             "520",
+             "27-Jul-2010"
+          ],
+          [
+             "Blood Lord Vladimir",
+             "1820",
+             "21-Nov-2011"
+          ],
+          [
+             "Soulstealer Vladimir",
+             "1350",
+             "09-Jul-2014"
+          ],
+          [
+             "Academy Vladimir",
+             "750",
+             "26-Aug-2015"
+          ],
+          [
+             "Dark Waters Vladimir",
+             "1350",
+             "31-May-2018"
+          ],
+          [
+             "Nightbringer Vladimir",
+             "1350",
+             "12-Dec-2019"
+          ],
+          [
+             "Count Vladimir",
+             "520",
+             "27-Jul-2010"
+          ],
+          [
+             "Nosferatu Vladimir",
+             "975",
+             "19-Oct-2010"
+          ]
+       ]
+    ],
+    "Volibear":[
+       [
+          [
+             "default",
+             "880",
+             "29-Nov-2011"
+          ],
+          [
+             "Thunder Lord Volibear",
+             "520",
+             "29-Nov-2011"
+          ],
+          [
+             "Runeguard Volibear",
+             "975",
+             "29-Apr-2013"
+          ],
+          [
+             "Captain Volibear",
+             "750",
+             "28-Nov-2014"
+          ],
+          [
+             "El Rayo Volibear",
+             "750",
+             "01-Jun-2016"
+          ],
+          [
+             "The Thousand-Pierced Bear",
+             "975",
+             "28-May-2020"
+          ]
+       ]
+    ],
+    "Warwick":[
+       [
+          [
+             "default",
+             "260",
+             "21-Feb-2009"
+          ],
+          [
+             "Tundra Hunter Warwick",
+             "520",
+             "15-Aug-2010"
+          ],
+          [
+             "Firefang Warwick",
+             "975",
+             "29-Mar-2011"
+          ],
+          [
+             "Hyena Warwick",
+             "975",
+             "05-Dec-2011"
+          ],
+          [
+             "Marauder Warwick",
+             "750",
+             "17-Feb-2015"
+          ],
+          [
+             "PROJECT: Warwick",
+             "1350",
+             "01-Aug-2019"
+          ],
+          [
+             "Big Bad Warwick",
+             "520",
+             "27-Apr-2010"
+          ],
+          [
+             "Feral Warwick",
+             "975",
+             "16-Nov-2010"
+          ],
+          [
+             "Lunar Guardian Warwick",
+             "1350",
+             "08-Feb-2018"
+          ],
+          [
+             "Grey Warwick",
+             "2400",
+             "08-Jul-2010"
+          ],
+          [
+             "Urf the Manatee",
+             "5000",
+             "31-Mar-2010"
+          ]
+       ]
+    ],
+    "Wukong":[
+       [
+          [
+             "default",
+             "880",
+             "26-Jul-2011"
+          ],
+          [
+             "Volcanic Wukong",
+             "975",
+             "26-Jul-2011"
+          ],
+          [
+             "General Wukong",
+             "750",
+             "26-Jul-2011"
+          ],
+          [
+             "Jade Dragon Wukong",
+             "975",
+             "10-Jan-2012"
+          ],
+          [
+             "Radiant Wukong",
+             "1350",
+             "27-Jan-2016"
+          ],
+          [
+             "Lancer Stratus Wukong",
+             "1350",
+             "04-Apr-2018"
+          ]
+       ]
+    ],
+    "Xerath":[
+       [
+          [
+             "default",
+             "880",
+             "05-Oct-2011"
+          ],
+          [
+             "Runeborn Xerath",
+             "750",
+             "05-Oct-2011"
+          ],
+          [
+             "Battlecast Xerath",
+             "520",
+             "05-Oct-2011"
+          ],
+          [
+             "Scorched Earth Xerath",
+             "1350",
+             "13-Jul-2012"
+          ],
+          [
+             "Guardian of the Sands Xerath",
+             "1350",
+             "26-Apr-2015"
+          ]
+       ]
+    ],
+    "Xin Zhao":[
+       [
+          [
+             "default",
+             "585",
+             "13-Jul-2010"
+          ],
+          [
+             "Commando Xin Zhao",
+             "520",
+             "13-Jul-2010"
+          ],
+          [
+             "Warring Kingdoms Xin Zhao",
+             "1350",
+             "08-Feb-2013"
+          ],
+          [
+             "Secret Agent Xin Zhao",
+             "975",
+             "16-Mar-2015"
+          ],
+          [
+             "Dragonslayer Xin Zhao",
+             "1350",
+             "09-Mar-2017"
+          ],
+          [
+             "Cosmic Defender Xin Zhao",
+             "1350",
+             "21-Aug-2018"
+          ],
+          [
+             "Imperial Xin Zhao",
+             "520",
+             "13-Jul-2010"
+          ],
+          [
+             "Viscero Xin Zhao",
+             "975",
+             "22-Nov-2010"
+          ]
+       ]
+    ],
+    "Yasuo":[
+       [
+          [
+             "default",
+             "975",
+             "13-Dec-2013"
+          ],
+          [
+             "High Noon Yasuo",
+             "975",
+             "13-Dec-2013"
+          ],
+          [
+             "PROJECT: Yasuo",
+             "1350",
+             "31-Aug-2014"
+          ],
+          [
+             "Blood Moon Yasuo",
+             "975",
+             "25-Feb-2016"
+          ],
+          [
+             "Nightbringer Yasuo",
+             "1820",
+             "14-Jun-2017"
+          ],
+          [
+             "Odyssey Yasuo",
+             "1350",
+             "12-Sep-2018"
+          ],
+          [
+             "Battle Boss Yasuo",
+             "1350",
+             "28-Jun-2019"
+          ],
+          [
+             "True Damage Yasuo",
+             "1350",
+             "10-Nov-2019"
+          ]
+       ]
+    ],
+    "Yorick":[
+       [
+          [
+             "default",
+             "880",
+             "22-Jun-2011"
+          ],
+          [
+             "Undertaker Yorick",
+             "520",
+             "21-Jun-2011"
+          ],
+          [
+             "Pentakill Yorick",
+             "975",
+             "21-Jun-2011"
+          ],
+          [
+             "Arclight Yorick",
+             "1350",
+             "02-Oct-2017"
+          ]
+       ]
+    ],
+    "Zac":[
+       [
+          [
+             "default",
+             "975",
+             "29-Mar-2013"
+          ],
+          [
+             "Special Weapon Zac",
+             "975",
+             "29-Mar-2013"
+          ],
+          [
+             "Pool Party Zac",
+             "1350",
+             "25-Jun-2015"
+          ]
+       ]
+    ],
+    "Zed":[
+       [
+          [
+             "default",
+             "880",
+             "13-Nov-2012"
+          ],
+          [
+             "Shockblade Zed",
+             "975",
+             "13-Nov-2012"
+          ],
+          [
+             "PROJECT: Zed",
+             "1350",
+             "07-Sep-2015"
+          ],
+          [
+             "Galaxy Slayer Zed",
+             "1820",
+             "18-Apr-2019"
+          ],
+          [
+             "SKT T1 Zed",
+             "750",
+             "04-May-2014"
+          ],
+          [
+             "Championship Zed",
+             "975",
+             "25-Sep-2016"
+          ]
+       ]
+    ],
+    "Ziggs":[
+       [
+          [
+             "default",
+             "880",
+             "01-Feb-2012"
+          ],
+          [
+             "Mad Scientist Ziggs",
+             "975",
+             "01-Feb-2012"
+          ],
+          [
+             "Pool Party Ziggs",
+             "1350",
+             "04-Sep-2012"
+          ],
+          [
+             "Master Arcanist Ziggs",
+             "1350",
+             "06-May-2015"
+          ],
+          [
+             "Battle Boss Ziggs",
+             "1350",
+             "08-Aug-2017"
+          ],
+          [
+             "Sugar Rush Ziggs",
+             "1350",
+             "17-Dec-2019"
+          ],
+          [
+             "Major Ziggs",
+             "975",
+             "01-Feb-2012"
+          ],
+          [
+             "Snow Day Ziggs",
+             "975",
+             "14-Dec-2012"
+          ]
+       ]
+    ],
+    "Zilean":[
+       [
+          [
+             "default",
+             "585",
+             "17-Apr-2009"
+          ],
+          [
+             "Groovy Zilean",
+             "520",
+             "27-Jul-2010"
+          ],
+          [
+             "Shurima Desert Zilean",
+             "975",
+             "08-Sep-2010"
+          ],
+          [
+             "Blood Moon Zilean",
+             "975",
+             "10-May-2015"
+          ],
+          [
+             "Sugar Rush Zilean",
+             "1350",
+             "17-Dec-2019"
+          ],
+          [
+             "Old Saint Zilean",
+             "520",
+             "23-Dec-2009"
+          ]
+       ]
+    ],
+    "Zyra":[
+       [
+          [
+             "default",
+             "880",
+             "24-Jul-2012"
+          ],
+          [
+             "Wildfire Zyra",
+             "975",
+             "24-Jul-2012"
+          ],
+          [
+             "Haunted Zyra",
+             "1350",
+             "29-Oct-2013"
+          ],
+          [
+             "Dragon Sorceress Zyra",
+             "1350",
+             "09-Mar-2017"
+          ],
+          [
+             "Coven Zyra",
+             "1350",
+             "16-Apr-2020"
+          ],
+          [
+             "SKT T1 Zyra",
+             "750",
+             "04-May-2014"
+          ]
+       ]
+    ],
+    "Sett":[
+       [
+          [
+             "default",
+             "975",
+             "14-Jan-2020"
+          ]
+       ]
+    ],
+    "Aphelios":[
+       [
+          [
+             "default",
+             "975",
+             "11-Dec-2019"
+          ]
+       ]
+    ],
+    "Senna":[
+       [
+          [
+             "default",
+             "975",
+             "10-Nov-2019"
+          ],
+          [
+             "True Damage Senna",
+             "1350",
+             "10-Nov-2019"
+          ],
+          [
+             "High Noon Senna",
+             "1820",
+             "18-Jun-2020"
+          ]
+       ]
+    ],
+    "Qiyana":[
+       [
+          [
+             "default",
+             "975",
+             "28-Jun-2019"
+          ],
+          [
+             "Battle Boss Qiyana",
+             "1350",
+             "28-Jun-2019"
+          ],
+          [
+             "True Damage Qiyana",
+             "1350",
+             "10-Nov-2019"
+          ]
+       ]
+    ],
+    "Yuumi":[
+       [
+          [
+             "default",
+             "975",
+             "14-May-2019"
+          ],
+          [
+             "Battle Principal Yuumi",
+             "1350",
+             "14-May-2019"
+          ]
+       ]
+    ],
+    "Sylas":[
+       [
+          [
+             "default",
+             "975",
+             "25-Jan-2019"
+          ],
+          [
+             "Lunar Wraith Sylas",
+             "1350",
+             "25-Jan-2019"
+          ]
+       ]
+    ],
+    "Neeko":[
+       [
+          [
+             "default",
+             "975",
+             "05-Dec-2018"
+          ],
+          [
+             "Winter Wonder Neeko",
+             "1350",
+             "05-Dec-2018"
+          ],
+          [
+             "Star Guardian Neeko",
+             "1350",
+             "12-Sep-2019"
+          ]
+       ]
+    ],
+    "Pyke":[
+       [
+          [
+             "default",
+             "975",
+             "31-May-2018"
+          ],
+          [
+             "Sand Wraith Pyke",
+             "1350",
+             "31-May-2018"
+          ],
+          [
+             "Blood Moon Pyke",
+             "1350",
+             "10-Jan-2019"
+          ]
+       ]
+    ],
+    "Kai'Sa":[
+       [
+          [
+             "default",
+             "975",
+             "07-Mar-2018"
+          ],
+          [
+             "Bullet Angel Kai'Sa",
+             "1350",
+             "07-Mar-2018"
+          ],
+          [
+             "K/DA Kai'Sa",
+             "1350",
+             "03-Nov-2018"
+          ],
+          [
+             "Arcade Kai'Sa",
+             "1350",
+             "28-Jun-2019"
+          ],
+          [
+             "iG Kai'Sa",
+             "1350",
+             "23-Apr-2019"
+          ]
+       ]
+    ],
+    "Zoe":[
+       [
+          [
+             "default",
+             "975",
+             "21-Nov-2017"
+          ],
+          [
+             "Cyber Pop Zoe",
+             "1350",
+             "21-Nov-2017"
+          ],
+          [
+             "Pool Party Zoe",
+             "1350",
+             "02-Aug-2018"
+          ],
+          [
+             "Star Guardian Zoe",
+             "1350",
+             "12-Sep-2019"
+          ],
+          [
+             "Arcanist Zoe",
+             "1350",
+             "09-Jul-2020"
+          ]
+       ]
+    ],
+    "Ornn":[
+       [
+          [
+             "default",
+             "975",
+             "22-Aug-2017"
+          ]
+       ]
+    ],
+    "Kayn":[
+       [
+          [
+             "default",
+             "975",
+             "11-Jul-2017"
+          ],
+          [
+             "Soulhunter Kayn",
+             "1350",
+             "11-Jul-2017"
+          ]
+       ]
+    ],
+    "Rakan":[
+       [
+          [
+             "default",
+             "975",
+             "18-Apr-2017"
+          ],
+          [
+             "Cosmic Dawn Rakan",
+             "1350",
+             "18-Apr-2017"
+          ],
+          [
+             "Star Guardian Rakan",
+             "1820",
+             "12-Sep-2019"
+          ],
+          [
+             "Sweetheart Rakan",
+             "1350",
+             "12-Feb-2018"
+          ],
+          [
+             "SSG Rakan",
+             "1350",
+             "20-Jul-2018"
+          ]
+       ]
+    ],
+    "Xayah":[
+       [
+          [
+             "default",
+             "975",
+             "18-Apr-2017"
+          ],
+          [
+             "Cosmic Dusk Xayah",
+             "1350",
+             "18-Apr-2017"
+          ],
+          [
+             "Star Guardian Xayah",
+             "1820",
+             "12-Sep-2019"
+          ],
+          [
+             "Sweetheart Xayah",
+             "1350",
+             "12-Feb-2018"
+          ]
+       ]
+    ],
+    "Camille":[
+       [
+          [
+             "default",
+             "975",
+             "07-Dec-2016"
+          ],
+          [
+             "Program Camille",
+             "1350",
+             "12-Dec-2016"
+          ],
+          [
+             "Coven Camille",
+             "1350",
+             "27-Nov-2018"
+          ]
+       ]
+    ],
+    "Ivern":[
+       [
+          [
+             "default",
+             "975",
+             "04-Oct-2016"
+          ],
+          [
+             "Candy King Ivern",
+             "1350",
+             "04-Oct-2016"
+          ]
+       ]
+    ],
+    "Kled":[
+       [
+          [
+             "default",
+             "975",
+             "09-Aug-2016"
+          ],
+          [
+             "Sir Kled",
+             "975",
+             "09-Aug-2016"
+          ]
+       ]
+    ],
+    "Taliyah":[
+       [
+          [
+             "default",
+             "975",
+             "17-May-2016"
+          ],
+          [
+             "Freljord Taliyah",
+             "1350",
+             "17-May-2016"
+          ],
+          [
+             "Pool Party Taliyah",
+             "1350",
+             "02-Jul-2020"
+          ]
+       ]
+    ],
+    "Aurelion Sol":[
+       [
+          [
+             "default",
+             "975",
+             "24-Mar-2016"
+          ],
+          [
+             "Ashen Lord Aurelion Sol",
+             "1350",
+             "24-Mar-2016"
+          ]
+       ]
+    ],
+    "Jhin":[
+       [
+          [
+             "default",
+             "975",
+             "01-Feb-2016"
+          ],
+          [
+             "High Noon Jhin",
+             "1350",
+             "01-Feb-2016"
+          ],
+          [
+             "Blood Moon Jhin",
+             "1350",
+             "09-Feb-2017"
+          ],
+          [
+             "PROJECT: Jhin",
+             "1350",
+             "22-Nov-2017"
+          ],
+          [
+             "Dark Cosmic Jhin",
+             "1820",
+             "13-Jun-2019"
+          ]
+       ]
+    ],
+    "Illaoi":[
+       [
+          [
+             "default",
+             "975",
+             "24-Nov-2015"
+          ],
+          [
+             "Void Bringer Illaoi",
+             "1350",
+             "24-Nov-2015"
+          ]
+       ]
+    ],
+    "Kindred":[
+       [
+          [
+             "default",
+             "975",
+             "13-Oct-2015"
+          ],
+          [
+             "Shadowfire Kindred",
+             "1350",
+             "13-Oct-2015"
+          ],
+          [
+             "Super Galaxy Kindred",
+             "1350",
+             "25-May-2016"
+          ]
+       ]
+    ],
+    "Tahm Kench":[
+       [
+          [
+             "default",
+             "975",
+             "08-Jul-2015"
+          ],
+          [
+             "Master Chef Tahm Kench",
+             "975",
+             "08-Jul-2015"
+          ],
+          [
+             "Urf Kench",
+             "750",
+             "31-Mar-2016"
+          ]
+       ]
+    ],
+    "Ekko":[
+       [
+          [
+             "default",
+             "975",
+             "27-May-2015"
+          ],
+          [
+             "Sandstorm Ekko",
+             "975",
+             "27-May-2015"
+          ],
+          [
+             "Academy Ekko",
+             "750",
+             "26-Aug-2015"
+          ],
+          [
+             "PROJECT: Ekko",
+             "1350",
+             "01-Aug-2016"
+          ],
+          [
+             "True Damage Ekko",
+             "1820",
+             "10-Nov-2019"
+          ],
+          [
+             "Pulsefire Ekko",
+             "1350",
+             "14-May-2020"
+          ],
+          [
+             "SKT T1 Ekko",
+             "1350",
+             "27-Jun-2017"
+          ]
+       ]
+    ],
+    "Bard":[
+       [
+          [
+             "default",
+             "975",
+             "12-Mar-2015"
+          ],
+          [
+             "Elderwood Bard",
+             "975",
+             "12-Mar-2015"
+          ],
+          [
+             "Snow Day Bard",
+             "1350",
+             "10-Dec-2015"
+          ],
+          [
+             "Bard Bard",
+             "750",
+             "17-Nov-2016"
+          ]
+       ]
+    ]
+ }

@@ -80,6 +80,13 @@
 <img src="{{rank.icon}}">
 <img src="{{rank.levelBorder}}">
 <h3>Level: {{ rank.lvl }}</h3>
+<h1>Champion Masteries:</h1>
+{{#each rank.mastery}}
+<h3>{{ this.[0] }}</h3>
+<img src="{{ this.[1] }}">
+<img src="{{ this.[2] }}">
+<h3>Points: {{ this.[3] }}</h3>
+{{/each}}
 {{#if rank.soloDuo.tier}}
 <h3>Solo Duo</h3>
 <h3>Rank: {{ rank.soloDuo.rank }}</h3>

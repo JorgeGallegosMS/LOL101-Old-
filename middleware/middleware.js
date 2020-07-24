@@ -32,7 +32,27 @@ const setChampionsData = async (req, res, next) => {
         console.error(err)
     }
 }
-
+const setChampIDs = async (req, res, next) => {
+    try {
+        if (!fs.existsSync('ids.json')){
+            const data = await utils.getChampIds(res.version)
+            fs.writeFileSync('ids.json', JSON.stringify(data, null, 4))
+            ids = JSON.parse(fs.readFileSync('ids.json', {encoding: 'utf-8'}))
+        } else {
+            ids = JSON.parse(fs.readFileSync('ids.json'))
+            if (res.version != ids.version){
+                const data = await utils.getChampIds(res.version)
+                fs.writeFileSync('ids.json', JSON.stringify(data, null, 4))
+                ids = JSON.parse(fs.readFileSync('ids.json', {encoding: 'utf-8'}))
+            }
+        }
+    
+        res.ids = ids
+        next()
+    } catch (err) {
+        console.error(err)
+    }
+}
 const setItemsData = async (req, res, next) => {
     try {
         if (!fs.existsSync('items.json')){
@@ -104,4 +124,5 @@ module.exports = {
     setItemsData,
     setSpellsData,
     setRunesData,
+    setChampIDs,
 }

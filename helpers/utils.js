@@ -2,13 +2,15 @@ require('dotenv').config()
 const fetch = require('node-fetch')
 
 const key = process.env.RIOT_API_KEY
+const fs = require('fs');
+
 
 
 const capitalize = word => {
     return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
-const getAccountInfo = async (query) => {
+const getAccountInfo = async (query, champsDict) => {
     let region = 'na'
     // console.log(region)
     // console.log(query)
@@ -20,12 +22,27 @@ const getAccountInfo = async (query) => {
     const summonerID = resOneData.id
     const resTwo = await fetch(`https://${region}1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=${key}`)
     const resTwoData = await resTwo.json()
+    const resThree = await fetch(`https://${region}1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${summonerID}?api_key=${key}`)
+    const resThreeData = await resThree.json()
+    const champIDs = [resThreeData[0]["championId"], resThreeData[1]["championId"], resThreeData[2]["championId"]]
+    const champion_mastery = []
+    let rawdata = fs.readFileSync('ids.json');
+    let ids = JSON.parse(rawdata);
+    // console.log(resThreeData)
+    // console.log(champIDs)
+    for (id in champIDs) {
+        const id_info = [ids[champIDs[id]].name, ids[champIDs[id]].icon, `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${resThreeData[id]["championLevel"]}.png`, resThreeData[id]["championPoints"]]
+        // champion_mastery.push([ids[champIDs[id]].name, ids[champIDs[id]].icon], `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${resThreeData[id]["championLevel"]}.png`, resThreeData[id]["championPoints"])
+        champion_mastery.push(id_info)
+    }
+    // console.log(champion_mastery)
     try {
         const summonerInfo = {
             'lvl': resOneData.summonerLevel,
             'icon': `http://ddragon.leagueoflegends.com/cdn/10.14.1/img/profileicon/${resOneData.profileIconId}.png`,
             'levelBorder': `http://raw.communitydragon.org/pbe/game/assets/loadouts/regalia/crests/prestige/prestige_crest_lvl_${decideBorderLevel(resOneData.summonerLevel)}.png`,
             'summonerName': resOneData.name,
+            'mastery': champion_mastery,
             'soloDuo': { 
                 'rank': resTwoData[1].tier,
                 'tier': resTwoData[1].rank,
@@ -107,6 +124,7 @@ const getVersion = async () => {
  * @param version
  * The current version of the API
  */
+
 const getChampionsData = async version => {
     try {
         const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
@@ -206,13 +224,24 @@ const getSingleChampionData = async (version, champsDict, itemsDict) => {
 }
 
 const getSkins = (champion, champsDict) => {
-    const name = getCleanedName(champion.name)
+    // let rawdata = fs.readFileSync('skins.json');
+    // let skins_info = JSON.parse(rawdata);
+    // console.log(name)
+    console.log('---------------------------------')
+    // console.log(skins_info)
+    // let length = length(skins_info[name])
     champion.skins.forEach(skin => {
+        const name = getCleanedName(champion.name)
+        // console.log(index)
+        console.log(name)
         const current_skin =  {
             'skin_name': skin.name,
             'splash_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`,
             'loadingScreen_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_${skin.num}.jpg`,
-            'icon': `http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.id}_${skin.num}.jpg`
+            'icon': `http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.id}_${skin.num}.jpg`,
+            'skin_name_json': skins_info[name][0][index][0],
+            'skin_cost_json': skins_info[name][0][index][1],
+            'skin_release_date_json': skins_info[name][0][index][2]
         }
 
         champsDict[name].skins.push(current_skin)
@@ -514,6 +543,26 @@ const getSummonerSpellData = async version => {
         console.error(err)
     }
 }
+const getChampIds = async (version) => {
+    try {
+        const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
+        const data = await response.json()
+        const champions = data.data
+        const ids = {
+            "version": version
+        }
+        for (champion in champions) {
+            ids[champions[champion]['key']] = {
+                "name": champions[champion]['name'],
+                "icon": `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champions[champion]['image']['full']}`
+            }
+        }
+        console.log(ids)
+        return ids
+    } catch (error) {
+        console.log(error)
+    }
+}
 const getRunesData = async version => {
     try {
         const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/runesReforged.json`)
@@ -642,4 +691,5 @@ module.exports = {
     getItemsData,
     getSummonerSpellData,
     getRunesData,
+    getChampIds,
 }
