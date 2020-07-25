@@ -100,7 +100,8 @@
 <img src="{{ this.[2] }}">
 <h3>Points: {{ this.[3] }}</h3>
 {{/if}}
-
+{{!-- If no mastery on champion put a default image or no image. --}}
+{{!-- https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-social/global/default/mastery.png --}}
 {{/each}}
 {{#if rank.soloDuo.tier}}
 <h3>Solo Duo</h3>

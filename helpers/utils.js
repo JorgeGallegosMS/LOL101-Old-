@@ -167,12 +167,14 @@ const dataSetup = (version, champsList, champsDict, data) => {
         champsDict[current_champ].icon = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champ_name}.png`
         champsDict[current_champ].lore = ''
         champsDict[current_champ].tags = data[champ_name].tags
-        champsDict[current_champ].abilities = []
-        champsDict[current_champ].recommended = []
+        champsDict[current_champ].winrates = []
         champsDict[current_champ].skins = []
         champsDict[current_champ].tips = {}
         champsDict[current_champ].tips.playingAs = []
         champsDict[current_champ].tips.playingAgainst = []
+        champsDict[current_champ].abilities = []
+        champsDict[current_champ].recommended = []
+
     })
 }
 const getChampionRotations = async champsDict => {
@@ -215,6 +217,7 @@ const getSingleChampionData = async (version, champsDict, itemsDict) => {
                 // getAccountInfo(query)
                 // stripItemDescription("beh")
                 getRecommendedItems(current_champ, champsDict, itemDict)
+                getWinrates(current_champ, champsDict)
                 getLore(current_champ, champsDict)
                 getSkins(current_champ, champsDict)
                 getTips(current_champ, champsDict)
@@ -230,21 +233,20 @@ const getSkins = (champion, champsDict) => {
     // let rawdata = fs.readFileSync('skins.json');
     // let skins_info = JSON.parse(rawdata);
     // console.log(name)
-    console.log('---------------------------------')
     // console.log(skins_info)
     // let length = length(skins_info[name])
     champion.skins.forEach(skin => {
         const name = getCleanedName(champion.name)
         // console.log(index)
-        console.log(name)
+        // console.log(name)
         const current_skin =  {
             'skin_name': skin.name,
             'splash_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`,
             'loadingScreen_url': `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_${skin.num}.jpg`,
-            'icon': `http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.id}_${skin.num}.jpg`,
-            'skin_name_json': skins_info[name][0][index][0],
-            'skin_cost_json': skins_info[name][0][index][1],
-            'skin_release_date_json': skins_info[name][0][index][2]
+            'icon': `http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.id}_${skin.num}.jpg`
+            // 'skin_name_json': skins_info[name][0][index][0],
+            // 'skin_cost_json': skins_info[name][0][index][1],
+            // 'skin_release_date_json': skins_info[name][0][index][2]
         }
 
         champsDict[name].skins.push(current_skin)
@@ -265,6 +267,28 @@ const getTips = (champion, champsDict) => {
     champion.enemytips.forEach(tip =>{
         champsDict[name].tips.playingAgainst.push(tip)
     })
+}
+
+const getWinrates = async (champion, champsDict) => {
+    try {
+        const key = String(champion.key)
+        const name = getCleanedName(champion.name)
+        const response = await fetch('http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json')
+        const data = await response.json()
+        const winrates = data.data
+        for (role in winrates[key]) {
+            const winrate =  {
+                'role': role,
+                'playRate': (winrates[key][role].playRate * 100).toFixed(2),
+                'winRate': (winrates[key][role].winRate * 100).toFixed(2),
+                'banRate': (winrates[key][role].banRate * 100).toFixed(2)
+            }
+
+            champsDict[name].winrates.push(winrate)
+        }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 const getAbilities = (version, champion, champsDict) => {
