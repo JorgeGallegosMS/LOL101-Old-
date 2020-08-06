@@ -1,5 +1,5 @@
 {
-    "version": "10.14.1",
+    "version": "10.16.1",
     "SummonerBarrier": {
         "name": "Barrier",
         "id": "SummonerBarrier",
@@ -9,7 +9,7 @@
             180
         ],
         "unlock-level": 4,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerBarrier.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerBarrier.png"
     },
     "SummonerBoost": {
         "name": "Cleanse",
@@ -20,7 +20,7 @@
             210
         ],
         "unlock-level": 9,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerBoost.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerBoost.png"
     },
     "SummonerDot": {
         "name": "Ignite",
@@ -31,7 +31,7 @@
             180
         ],
         "unlock-level": 9,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerDot.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerDot.png"
     },
     "SummonerExhaust": {
         "name": "Exhaust",
@@ -42,7 +42,7 @@
             210
         ],
         "unlock-level": 4,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerExhaust.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerExhaust.png"
     },
     "SummonerFlash": {
         "name": "Flash",
@@ -53,7 +53,7 @@
             300
         ],
         "unlock-level": 7,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerFlash.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerFlash.png"
     },
     "SummonerHaste": {
         "name": "Ghost",
@@ -64,7 +64,7 @@
             210
         ],
         "unlock-level": 1,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerHaste.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerHaste.png"
     },
     "SummonerHeal": {
         "name": "Heal",
@@ -75,7 +75,7 @@
             240
         ],
         "unlock-level": 1,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerHeal.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerHeal.png"
     },
     "SummonerMana": {
         "name": "Clarity",
@@ -86,7 +86,7 @@
             240
         ],
         "unlock-level": 6,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerMana.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerMana.png"
     },
     "SummonerPoroRecall": {
         "name": "To the King!",
@@ -97,7 +97,7 @@
             10
         ],
         "unlock-level": 1,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerPoroRecall.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerPoroRecall.png"
     },
     "SummonerPoroThrow": {
         "name": "Poro Toss",
@@ -108,7 +108,7 @@
             20
         ],
         "unlock-level": 1,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerPoroThrow.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerPoroThrow.png"
     },
     "SummonerSmite": {
         "name": "Smite",
@@ -119,7 +119,7 @@
             15
         ],
         "unlock-level": 9,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerSmite.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerSmite.png"
     },
     "SummonerSnowURFSnowball_Mark": {
         "name": "Mark",
@@ -130,7 +130,7 @@
             80
         ],
         "unlock-level": 6,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerSnowURFSnowball_Mark.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerSnowURFSnowball_Mark.png"
     },
     "SummonerSnowball": {
         "name": "Mark",
@@ -141,7 +141,7 @@
             80
         ],
         "unlock-level": 6,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerSnowball.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerSnowball.png"
     },
     "SummonerTeleport": {
         "name": "Teleport",
@@ -152,6 +152,6 @@
             0
         ],
         "unlock-level": 7,
-        "icon": "http://ddragon.leagueoflegends.com/cdn/10.14.1/img/spell/SummonerTeleport.png"
+        "icon": "http://ddragon.leagueoflegends.com/cdn/10.16.1/img/spell/SummonerTeleport.png"
     }
 }

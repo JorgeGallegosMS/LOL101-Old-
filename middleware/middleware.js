@@ -15,13 +15,13 @@ const setChampionsData = async (req, res, next) => {
     try {
         if (!fs.existsSync('champions.json')){
             const data = await utils.getChampionsData(res.version)
-            fs.writeFileSync('champions.json', JSON.stringify(data, null, 4))
+            fs.writeFileSync('champions.json', JSON.stringify(data, null, 2))
             champs = JSON.parse(fs.readFileSync('champions.json'))
         } else {
             champs = JSON.parse(fs.readFileSync('champions.json'))
             if (res.version != champs.version){
                 const data = await utils.getChampionsData(res.version)
-                fs.writeFileSync('champions.json', JSON.stringify(data, null, 4))
+                fs.writeFileSync('champions.json', JSON.stringify(data, null, 2))
                 champs = JSON.parse(fs.readFileSync('champions.json'))
             }
         }

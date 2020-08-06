@@ -248,7 +248,7 @@ const getAbilities = (version, champion, champsDict) => {
         const spell_id = spell.id
         const spell_name = spell.name
         const description = spell.description
-        const tooltip = cleanSpellTooltip(spell, spell.tooltip.split(" "))
+        const tooltip = cleanSpellTooltip(spell, spell.tooltip)
         const cooldown = spell.cooldown
         const cooldownString = spell.cooldownBurn
         const damage = spell.effect[1][0] == 0 ? "?" : spell.effect[1]
@@ -277,58 +277,46 @@ const getCleanedName = name => {
 }
 
 const cleanSpellTooltip = (spell, tooltip) => {
+    tooltip = tooltip.split(" ")
     const markers = getMarkers(tooltip)
     
     const values = getMarkerValues(spell, markers)
-    
+
     fillMarkerValues(tooltip, markers, values)
     
-    const cleanedTooltip = cleanToolTip(tooltip)
+    const filledTooltip = tooltip.join(" ")
+    
+    const cleanedTooltip = cleanTooltip(filledTooltip)
+
+    if (spell.id == 'ApheliosQ_ClientTooltipWrapper'){
+        console.log(cleanedTooltip)
+    }
 
     return cleanedTooltip;
 }
 
-const cleanToolTip = tooltip => {
-    for (let i = 0; i < tooltip.length; i++){
-        let current = tooltip[i]
-        if (current.includes('<') || current.includes('>')){
-            while (current.includes('<') || current.includes('>')){
-                let openingIndex = current.indexOf('<')
-                let closingIndex = current.indexOf('>')
-                
-                const chars = current.split("")
-                
-                if (closingIndex > -1 && openingIndex > -1){
-                    if(openingIndex > closingIndex){
-                        chars.splice(0, closingIndex + 1)
-                        current = chars.join("")
-                    } else {
-                        chars.splice(openingIndex, closingIndex - openingIndex + 1)
-                        current = chars.join("")
-                    }
-                } else if (openingIndex > -1){
-                    chars.splice(openingIndex, current.length - openingIndex + 1)
-                    current = chars.join("")
-                } else if (closingIndex > -1) {
-                    chars.splice(0, closingIndex + 1)
-                    current = chars.join("")
-                } else {
-                    break
-                }
-            }
-        } else if (current.includes('(')){
-            tooltip[i] = current.replace(/[^(+]/g, '')
-        } else if (current.includes(')')){
-            tooltip[i] = current.replace(/[^)]/g, '')
-        } else if (current.includes('class')){
-            index = tooltip.indexOf(current)
-            if (index > -1){
-                tooltip.splice(index, 1)
-            }
-        }
-        tooltip[i] = current
-    }
-    return tooltip.join(" ").replace(/[{}]/g, '').replace(/\s\s+/g, ' ').replace(/[_]/g, '').replace(/\s%/g, '').replace(/\s[s]\s/g, 's ')
+const cleanItemTooltip = tooltip => {
+    tooltip = cleanTooltip(tooltip)
+    tooltip = tooltip.replace(/\s?UNIQUE/g, '\nUNIQUE')
+    tooltip = tooltip.replace(/\s?\+/g, ' +')
+    tooltip = tooltip.replace(/\.Active/, '.\nActive')
+    tooltip = tooltip.replace(/\.\s?/g, '.\n')
+    return tooltip
+}
+
+const cleanTooltip = tooltip => {
+    const replace = [/<\/?[a-z]+\s?.*?>/gi, /\{\{\s/g, /\s\}\}/g]
+    const addNewLine = [/(\s+)?<br(\s+\/)?>(\s+)?/g]
+
+    replace.forEach(expression => {
+        tooltip = tooltip.replace(expression, '')
+    })
+
+    addNewLine.forEach(expression => {
+        tooltip = tooltip.replace(expression, '\n')
+    })
+
+    return tooltip
 }
 
 const getMarkers = tooltip => {
@@ -340,7 +328,6 @@ const getMarkers = tooltip => {
                 marker = marker.substring(0,2)
                 tooltip[i] = marker
             }
-
             markers.push(marker)
         } else {
             if (i > 0){
@@ -441,9 +428,11 @@ const getRecommendedItems = async (champion, champsDict, itemDict) => {
                 let list = item_block[test[n].blocks[i].type].items
                 for (j= 0; j < list.length; j++) {
                     const id = list[j].id
-                    // itemDict[id].description = cleanTooltip()
-                    list[j]["info"] = itemDict[id]
-
+                    const info = itemDict[id]
+                    console.log(info)
+                    const description = cleanItemTooltip(info.description)
+                    info.description = description
+                    list[j]["info"] = info
                 }
 
             }
@@ -470,7 +459,7 @@ const getItemsData = async version => {
             const singleItem = {
                 'name': current.name,
                 'id': `${item}`,
-                'description': stripItemDescription(current.description),
+                'description': cleanItemTooltip(current.description),
                 'text': current.plaintext,
                 'totalGold': current.gold.total,
                 'icon': `http://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item}.png`
