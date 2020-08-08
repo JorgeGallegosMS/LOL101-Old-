@@ -1,5 +1,6 @@
 const utils = require('../helpers/utils')
 const fs = require('fs')
+const fsPromises = fs.promises
 
 const setAPIVersion = async (req, res, next) => {
     try {
@@ -12,17 +13,24 @@ const setAPIVersion = async (req, res, next) => {
 }
 
 const setChampionsData = async (req, res, next) => {
+    // Testing fs.promises
     try {
+        let champs
         if (!fs.existsSync('champions.json')){
             const data = await utils.getChampionsData(res.version)
-            fs.writeFileSync('champions.json', JSON.stringify(data, null, 2))
-            champs = JSON.parse(fs.readFileSync('champions.json'))
+            // fs.writeFileSync('champions.json', JSON.stringify(data, null, 2))
+            // champs = JSON.parse(fs.readFileSync('champions.json'))
+            await fsPromises.writeFile('champions.json', JSON.stringify(data, null, 2))
+            champs = JSON.parse(await fsPromises.readFile('champions.json', 'utf-8'))
+            
         } else {
-            champs = JSON.parse(fs.readFileSync('champions.json'))
+            champs = JSON.parse(await fsPromises.readFile('champions.json', 'utf-8'))
             if (res.version != champs.version){
                 const data = await utils.getChampionsData(res.version)
-                fs.writeFileSync('champions.json', JSON.stringify(data, null, 2))
-                champs = JSON.parse(fs.readFileSync('champions.json'))
+                // fs.writeFileSync('champions.json', JSON.stringify(data, null, 2))
+                // champs = JSON.parse(fs.readFileSync('champions.json'))
+                await fsPromises.writeFile('champions.json', JSON.stringify(data, null, 2))
+                champs = JSON.parse(await fsPromises.readFile('champions.json', 'utf-8'))
             }
         }
     
